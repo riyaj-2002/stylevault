@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StyleVault - Phone Covers</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="StyleVault"/><span>StyleVault</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html" class="cart-icon">🛒 Cart <span id="cart-count">0</span></a>
+    <a href="login.html" id="auth-link">Login</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Your Phone Deserves to Turn Heads 🔥</h1>
+  <p>Handpicked covers that blend <strong>style, protection & personality</strong></p>
+</div>
+
+<h2 class="section-title" id="products">Our Collection</h2>
+
+<div class="collection-carousel-wrapper">
+  <div class="collection-carousel" id="collection-carousel"></div>
+</div>
+
+<div class="products-grid" id="products-grid"></div>
+
+<footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const collections = [
+    { name: "Aesthetic", ids: [37,1,9,19,32,33,46,31,45,22,4,40,53,59,42,17,10,14,44,62,47,71,83,87,89] },
+    { name: "No Filter", ids: [35,36,49,51,16,57,95,98] },
+    { name: "Pretty", ids: [3,38,39,48,63,56,12,18,54,61,72,76,78,79,82,85,88,94] },
+    { name: "Black", ids: [5,29,30,58,50,20,21,43,68,69,96] },
+    { name: "Harry Potter", ids: [7,41,65,66] },
+    { name: "BTS", ids: [2,6,8,11,34,60] },
+    { name: "Boys", ids: [26,27,23,67,73,74,75,77,80,86,91,97] },
+    { name: "Classy", ids: [13,24,64,15,25,28,55,70,81,84,90,92,93] },
+  ];
+
+  const carousel = document.getElementById('collection-carousel');
+  // render twice for seamless infinite loop
+  [1, 2].forEach(() => {
+    collections.forEach(col => {
+      const a = document.createElement('a');
+      a.className = 'carousel-card';
+      a.href = `collection.html?name=${encodeURIComponent(col.name)}&ids=${col.ids.join(',')}`;
+      a.textContent = col.name;
+      carousel.appendChild(a);
+    });
+  });
+</script>
+</body>
+</html>

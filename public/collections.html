@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collections - StyleVault</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 40px 60px;
+    }
+    .collection-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(80,40,120,0.12);
+      cursor: pointer;
+      transition: transform 0.25s, box-shadow 0.25s;
+      text-decoration: none;
+    }
+    .collection-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(80,40,120,0.2); }
+    .preview-grid {
+      position: relative;
+      height: 200px;
+      background: #9575cd;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 10px;
+      gap: 0;
+      overflow: hidden;
+    }
+    .preview-grid img {
+      width: 72px;
+      height: 155px;
+      object-fit: cover;
+      border-radius: 18px;
+      position: absolute;
+      bottom: 18px;
+      background: #fff;
+      padding: 6px;
+    }
+    .preview-grid img:nth-child(1) {
+      left: 50%;
+      transform: translateX(-125%) rotate(-15deg) translateY(10px) scale(0.88);
+      z-index: 1;
+      box-shadow: 4px 12px 24px rgba(60,20,90,0.35);
+      filter: brightness(0.82);
+    }
+    .preview-grid img:nth-child(2) {
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      height: 168px;
+      width: 80px;
+      box-shadow: 0 20px 40px rgba(60,20,90,0.38), 0 6px 12px rgba(60,20,90,0.22);
+      filter: brightness(1);
+    }
+    .preview-grid img:nth-child(3) {
+      left: 50%;
+      transform: translateX(25%) rotate(15deg) translateY(10px) scale(0.88);
+      z-index: 1;
+      box-shadow: -4px 12px 24px rgba(60,20,90,0.35);
+      filter: brightness(0.82);
+    }
+    .preview-grid img:nth-child(4) { display: none; }
+    .collection-card .label {
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .collection-card .label h3 { color: #3a2a4a; font-size: 1rem; font-weight: 700; }
+    .collection-card .label span { color: #9575cd; font-size: 0.9rem; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="StyleVault"/><span>StyleVault</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html" class="cart-icon">🛒 Cart <span id="cart-count">0</span></a>
+    <a href="login.html" id="auth-link">Login</a>
+  </div>
+</nav>
+
+<h2 class="section-title">Shop by Collection</h2>
+
+<div class="collections-grid" id="collections-grid"></div>
+
+<footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const collections = [
+    { name: "Aesthetic", ids: [37,1,9,19,32,33,46,31,45,22,4,40,53,59,42,17,10,14,44,62,47,71,83,87,89] },
+    { name: "No Filter", ids: [35,36,49,51,16,57,95,98] },
+    { name: "Pretty", ids: [3,38,39,48,63,56,12,18,54,61,72,76,78,79,82,85,88,94] },
+    { name: "Black", ids: [5,29,30,58,50,20,21,43,68,69,96] },
+    { name: "Harry Potter", ids: [7,41,65,66] },
+    { name: "BTS", ids: [2,6,8,11,34,60] },
+    { name: "Boys", ids: [26,27,23,67,73,74,75,77,80,86,91,97] },
+    { name: "Classy", ids: [13,24,64,15,25,28,55,70,81,84,90,92,93] },
+  ];
+
+  const collectionBg = {
+    "Aesthetic": "#c5a8d8",
+    "No Filter": "#c5a8d8",
+    "Pretty":    "#c5a8d8",
+    "Black":     "#c5a8d8",
+    "Harry Potter": "#c5a8d8",
+    "BTS":       "#c5a8d8",
+    "Boys":      "#c5a8d8",
+    "Classy":    "#c5a8d8",
+  };
+
+  const grid = document.getElementById('collections-grid');
+
+  collections.forEach(col => {
+    const preview = col.ids.slice(0, 4).map(id => products.find(p => p.id === id)).filter(Boolean);
+    const idsParam = col.ids.join(',');
+    const card = document.createElement('a');
+    card.href = `collection.html?name=${encodeURIComponent(col.name)}&ids=${idsParam}`;
+    card.className = 'collection-card';
+    card.innerHTML = `
+      <div class="preview-grid">
+        ${preview.map(p => `<img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>`).join('')}
+      </div>
+      <div class="label">
+        <h3>${col.name} Collection</h3>
+        <span>See More →</span>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+</script>
+</body>
+</html>

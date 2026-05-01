@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collection - StyleVault</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="StyleVault"/><span>StyleVault</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html" class="cart-icon">🛒 Cart <span id="cart-count">0</span></a>
+    <a href="login.html" id="auth-link">Login</a>
+  </div>
+</nav>
+
+<a href="collections.html" class="back-link" style="display:inline-block;margin:30px 20px 0;color:#1a1a2e;text-decoration:none;font-size:0.95rem;">← Back to Collections</a>
+
+<h2 class="section-title" id="collection-title"></h2>
+<div class="products-grid" id="products-grid"></div>
+
+<footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get('name');
+  const ids = params.get('ids').split(',').map(Number);
+
+  document.getElementById('collection-title').textContent = name;
+  document.title = name + ' - StyleVault';
+
+  const grid = document.getElementById('products-grid');
+  const seenVariantGroups = new Set();
+  const items = ids.map(id => products.find(p => p.id === id)).filter(p => {
+    if (!p) return false;
+    if (!p.variants) return true;
+    const key = p.variants.slice().sort((a, b) => a - b).join(',');
+    if (seenVariantGroups.has(key)) return false;
+    seenVariantGroups.add(key);
+    return true;
+  });
+
+  const backParam = `back=collection&name=${encodeURIComponent(name)}&ids=${params.get('ids')}`;
+
+  grid.innerHTML = items.map(p => `
+    <div class="product-card" onclick="window.location.href='product.html?id=${p.id}&${backParam}'" style="cursor:pointer">
+      <img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
+      <div class="info">
+        <h3>${p.name}</h3>
+        <small style="color:#888">${p.model}</small>
+        <p class="price">&#8377;${p.price}</p>
+        <button onclick="event.stopPropagation(); window.location.href='product.html?id=${p.id}&${backParam}'">View Details</button>
+      </div>
+    </div>
+  `).join('');
+</script>
+</body>
+</html>

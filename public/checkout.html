@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - StyleVault</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    .checkout-page {
+      max-width: 480px;
+      margin: 50px auto;
+      padding: 0 20px 60px;
+    }
+    .checkout-page h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #3a2a4a;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .checkout-page .subtitle {
+      text-align: center;
+      font-size: 0.88rem;
+      color: #888;
+      margin-bottom: 28px;
+    }
+    .amount-box {
+      background: #f3eeff;
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .amount-box span { font-size: 0.9rem; color: #555; }
+    .amount-box strong { font-size: 1.3rem; color: #9575cd; font-weight: 700; }
+
+    .pay-section {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(80,40,120,0.08);
+      margin-bottom: 16px;
+    }
+    .pay-section h3 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #3a2a4a;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .upi-input-wrap {
+      position: relative;
+      margin-bottom: 14px;
+    }
+    .upi-input-wrap label {
+      position: absolute;
+      top: -9px;
+      left: 12px;
+      background: #fff;
+      padding: 0 4px;
+      font-size: 0.78rem;
+      color: #9575cd;
+      font-weight: 600;
+    }
+    .upi-input-wrap input {
+      width: 100%;
+      padding: 14px;
+      border: 1.5px solid #d1c4e9;
+      border-radius: 10px;
+      font-size: 1rem;
+      color: #3a2a4a;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+    .upi-input-wrap input:focus { border-color: #9575cd; }
+
+    .pay-btn {
+      width: 100%;
+      padding: 14px;
+      background: #3a2a4a;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .pay-btn:hover { background: #9575cd; }
+    .pay-btn:disabled { background: #aaa; cursor: not-allowed; }
+
+    .loading-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 9999;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .loading-overlay.show { display: flex; }
+    .loading-bottom {
+      background: #fff;
+      width: 100%;
+      border-radius: 24px 24px 0 0;
+      padding: 40px 30px 50px;
+      text-align: center;
+      animation: slideUp 0.3s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    .loading-overlay .spinner {
+      width: 44px;
+      height: 44px;
+      border: 4px solid #eee;
+      border-top-color: #3a2a4a;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 28px;
+    }
+    .loading-overlay p {
+      color: #222;
+      font-size: 1.05rem;
+      font-weight: 500;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .loading-overlay .cancel-link {
+      display: inline-block;
+      font-size: 0.95rem;
+      color: #222;
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .cancel-link {
+      display: block;
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.88rem;
+      color: #9575cd;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .success-msg {
+      display: none;
+      text-align: center;
+      background: #f3eeff;
+      border-radius: 12px;
+      padding: 24px;
+      color: #3a2a4a;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="StyleVault"/><span>StyleVault</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html" class="cart-icon">🛒 Cart <span id="cart-count">0</span></a>
+    <a href="login.html" id="auth-link">Login</a>
+  </div>
+</nav>
+
+<!-- Loading overlay -->
+<div class="loading-overlay" id="loading-overlay">
+  <div class="loading-bottom">
+    <div class="spinner"></div>
+    <p>Please open your UPI app and approve the request to place your order.</p>
+    <a class="cancel-link" onclick="cancelPayment()">Cancel Payment</a>
+  </div>
+</div>
+
+<div class="checkout-page">
+  <h2>Complete Payment</h2>
+  <p class="subtitle">Pay securely via UPI</p>
+
+  <div class="amount-box">
+    <span>Amount to Pay</span>
+    <strong>₹<span id="total-amount">0</span></strong>
+  </div>
+
+  <div class="pay-section">
+    <h3>Pay via UPI ID</h3>
+    <p style="font-size:0.82rem;color:#888;margin-bottom:14px;">Powered by <strong style="color:#3a2a4a">Razorpay</strong> <img src="https://razorpay.com/favicon.ico" style="width:14px;height:14px;vertical-align:middle;margin-left:4px;"/></p>
+    <div class="upi-input-wrap">
+      <label>Enter UPI ID</label>
+      <input type="text" id="upi-id" placeholder="e.g. 9876543210@upi"/>
+    </div>
+    <button class="pay-btn" id="pay-btn" onclick="initiatePayment()">Verify and Pay</button>
+  </div>
+
+  <div class="success-msg" id="success-msg">
+    🎉 Order placed successfully! Thank you for shopping with StyleVault.<br><br>
+    You will receive a confirmation email shortly.
+  </div>
+
+  <!-- TEST ONLY - remove before going live -->
+  <button onclick="testOrder()" style="margin-top:16px;width:100%;padding:12px;background:#4caf50;color:#fff;border:none;border-radius:10px;font-size:0.9rem;cursor:pointer;">🧪 Test Order (skip payment)</button>
+</div>
+
+<footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const total = localStorage.getItem('cart_total') || '0';
+  document.getElementById('total-amount').textContent = total;
+  let paymentTimer;
+
+  async function initiatePayment() {
+    const upiId = document.getElementById('upi-id').value.trim();
+    if (!upiId) { alert('Please enter your UPI ID.'); return; }
+    if (!upiId.includes('@')) { alert('Please enter a valid UPI ID (e.g. 9876543210@upi).'); return; }
+
+    document.getElementById('pay-btn').disabled = true;
+
+    let orderData;
+    try {
+      const orderRes = await fetch('/api/razorpay/create-order', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ amount: total })
+      });
+      orderData = await orderRes.json();
+      console.log('Order created:', orderData);
+    } catch(e) {
+      alert('Network error: ' + e.message); 
+      document.getElementById('pay-btn').disabled = false; 
+      return;
+    }
+
+    if (!orderData.success) { 
+      alert('Failed to initiate payment: ' + (orderData.message || 'Try again.')); 
+      document.getElementById('pay-btn').disabled = false; 
+      return; 
+    }
+
+    const address = JSON.parse(localStorage.getItem('delivery_address') || '{}');
+    const shipping = address.country === 'India' || !address.country ? 0 : 499;
+
+    const options = {
+      key: 'rzp_test_Sk1r1ZMhTUYG3z',
+      amount: orderData.order.amount,
+      currency: 'INR',
+      name: 'StyleVault',
+      description: 'Phone Case Order',
+      order_id: orderData.order.id,
+      prefill: { vpa: upiId, method: 'upi' },
+      method: {
+        upi: true,
+        card: false,
+        netbanking: false,
+        wallet: false,
+        emi: false,
+        paylater: false,
+        bank_transfer: false
+      },
+      config: {
+        display: {
+          blocks: {
+            upi: {
+              name: 'Pay via UPI',
+              instruments: [
+                { method: 'upi', flow: 'collect' }
+              ]
+            }
+          },
+          sequence: ['block.upi'],
+          preferences: { show_default_blocks: false }
+        }
+      },
+      theme: { color: '#9575cd' },
+      handler: async function(response) {
+        // Verify payment
+        const verifyRes = await fetch('/api/razorpay/verify', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            razorpay_order_id: response.razorpay_order_id,
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_signature: response.razorpay_signature,
+            total, shipping, address
+          })
+        });
+        const verifyData = await verifyRes.json();
+        if (verifyData.success) {
+          document.getElementById('success-msg').style.display = 'block';
+          document.getElementById('pay-btn').style.display = 'none';
+          localStorage.removeItem('cart_total');
+          localStorage.removeItem('delivery_address');
+          setTimeout(() => window.location.href = 'index.html', 4000);
+        } else {
+          alert('Payment verification failed. Contact support.');
+          document.getElementById('pay-btn').disabled = false;
+        }
+      },
+      modal: {
+        ondismiss: function() {
+          document.getElementById('pay-btn').disabled = false;
+        }
+      }
+    };
+
+    const rzp = new Razorpay(options);
+    rzp.open();
+  }
+
+  function cancelPayment() {
+    clearTimeout(paymentTimer);
+    document.getElementById('loading-overlay').classList.remove('show');
+    document.getElementById('pay-btn').disabled = false;
+  }
+
+  async function testOrder() {
+    const address = JSON.parse(localStorage.getItem('delivery_address') || '{}');
+    const shipping = address.country === 'India' || !address.country ? 0 : 499;
+    const res = await fetch('/api/razorpay/test-order', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ total, shipping, address })
+    });
+    const data = await res.json();
+    if (data.success) {
+      document.getElementById('success-msg').style.display = 'block';
+      localStorage.removeItem('cart_total');
+      localStorage.removeItem('delivery_address');
+      setTimeout(() => window.location.href = 'index.html', 4000);
+    } else {
+      alert('Test failed: ' + (data.message || 'Make sure you are logged in'));
+    }
+  }
+</script>
+</body>
+</html>

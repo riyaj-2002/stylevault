@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verify - StyleVault</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    .verify-container {
+      max-width: 360px;
+      margin: 80px auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px 36px;
+      box-shadow: 0 4px 24px rgba(80,40,120,0.15);
+      text-align: center;
+    }
+    .verify-container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #3a2a4a;
+      margin-bottom: 8px;
+    }
+    .verify-container .subtitle {
+      font-size: 0.88rem;
+      color: #888;
+      margin-bottom: 28px;
+    }
+    .verify-container .subtitle span {
+      color: #3a2a4a;
+      font-weight: 600;
+    }
+
+    /* Step 1 - phone input */
+    .phone-input-row {
+      display: flex;
+      align-items: center;
+      border: 1.5px solid #d1c4e9;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .phone-input-row .prefix {
+      padding: 12px 14px;
+      background: #f3eeff;
+      color: #3a2a4a;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-right: 1.5px solid #d1c4e9;
+      white-space: nowrap;
+    }
+    .phone-input-row input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 12px 14px;
+      font-size: 1rem;
+      color: #3a2a4a;
+    }
+
+    /* OTP boxes */
+    .otp-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .otp-row input {
+      width: 52px;
+      height: 58px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      border: 1.5px solid #d1c4e9;
+      border-radius: 10px;
+      outline: none;
+      color: #3a2a4a;
+      transition: border-color 0.2s;
+    }
+    .otp-row input:focus { border-color: #9575cd; }
+
+    .continue-btn {
+      width: 100%;
+      padding: 13px;
+      background: #3a2a4a;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.2s;
+      margin-bottom: 20px;
+    }
+    .continue-btn:hover { background: #9575cd; }
+
+    .resend-row {
+      font-size: 0.85rem;
+      color: #888;
+    }
+    .resend-row a {
+      color: #3a2a4a;
+      font-weight: 600;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .resend-row a.disabled {
+      color: #aaa;
+      cursor: default;
+      pointer-events: none;
+    }
+    .error-msg { color: #e53935; font-size: 0.85rem; margin-bottom: 12px; display: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="StyleVault"/><span>StyleVault</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html" class="cart-icon">🛒 Cart <span id="cart-count">0</span></a>
+    <a href="login.html" id="auth-link">Login</a>
+  </div>
+</nav>
+
+<div class="verify-container">
+
+  <!-- Step 1: Enter mobile -->
+  <div id="step-phone">
+    <h2>Verify Mobile<br>Number</h2>
+    <p class="subtitle">We'll send an OTP to confirm your number</p>
+    <div class="phone-input-row">
+      <span class="prefix">+91</span>
+      <input type="tel" id="phone-number" maxlength="10" placeholder="Enter mobile number"/>
+    </div>
+    <p class="error-msg" id="phone-error">Please enter a valid 10-digit number.</p>
+    <button class="continue-btn" onclick="sendOtp()">Continue &rarr;</button>
+  </div>
+
+  <!-- Step 2: Enter OTP -->
+  <div id="step-otp" style="display:none">
+    <h2>Verify Mobile<br>Number</h2>
+    <p class="subtitle">OTP sent to <span id="display-number"></span></p>
+    <div class="otp-row">
+      <input type="tel" maxlength="1" class="otp-input" id="otp0"/>
+      <input type="tel" maxlength="1" class="otp-input" id="otp1"/>
+      <input type="tel" maxlength="1" class="otp-input" id="otp2"/>
+      <input type="tel" maxlength="1" class="otp-input" id="otp3"/>
+    </div>
+    <p class="error-msg" id="otp-error">Incorrect OTP. Please try again.</p>
+    <button class="continue-btn" onclick="verifyOtp()">Continue &rarr;</button>
+    <div class="resend-row">
+      <a id="resend-btn" class="disabled" onclick="resendOtp()">Resend OTP</a>
+      <span id="countdown"></span>
+    </div>
+  </div>
+
+</div>
+
+<footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
+
+<script src="js/main.js"></script>
+<script>
+  let generatedOtp = '';
+  let countdownTimer;
+
+  function sendOtp() {
+    const phone = document.getElementById('phone-number').value.trim();
+    const err = document.getElementById('phone-error');
+    if (!/^\d{10}$/.test(phone)) { err.style.display = 'block'; return; }
+    err.style.display = 'none';
+
+    generatedOtp = Math.floor(1000 + Math.random() * 9000).toString();
+    console.log('OTP:', generatedOtp); // for testing
+
+    localStorage.setItem('verify_phone', phone);
+    document.getElementById('display-number').textContent = '+91 ' + phone;
+    document.getElementById('step-phone').style.display = 'none';
+    document.getElementById('step-otp').style.display = 'block';
+    document.getElementById('otp0').focus();
+    startCountdown();
+  }
+
+  // Auto-jump between OTP boxes
+  document.querySelectorAll('.otp-input').forEach((input, i, inputs) => {
+    input.addEventListener('input', () => {
+      if (input.value && i < inputs.length - 1) inputs[i + 1].focus();
+    });
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Backspace' && !input.value && i > 0) inputs[i - 1].focus();
+    });
+  });
+
+  function verifyOtp() {
+    const entered = [0,1,2,3].map(i => document.getElementById('otp'+i).value).join('');
+    const err = document.getElementById('otp-error');
+    if (entered === generatedOtp) {
+      err.style.display = 'none';
+      window.location.href = 'address.html';
+    } else {
+      err.style.display = 'block';
+    }
+  }
+
+  function startCountdown() {
+    let secs = 10;
+    const btn = document.getElementById('resend-btn');
+    const cd = document.getElementById('countdown');
+    btn.classList.add('disabled');
+    cd.textContent = ' (' + secs + 's)';
+    clearInterval(countdownTimer);
+    countdownTimer = setInterval(() => {
+      secs--;
+      cd.textContent = ' (' + secs + 's)';
+      if (secs <= 0) {
+        clearInterval(countdownTimer);
+        cd.textContent = '';
+        btn.classList.remove('disabled');
+      }
+    }, 1000);
+  }
+
+  function resendOtp() {
+    generatedOtp = Math.floor(1000 + Math.random() * 9000).toString();
+    console.log('Resent OTP:', generatedOtp);
+    startCountdown();
+  }
+</script>
+</body>
+</html>

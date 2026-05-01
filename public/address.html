@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shipping Address - StyleVault</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    .address-container {
+      max-width: 480px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px 36px;
+      box-shadow: 0 4px 24px rgba(80,40,120,0.15);
+    }
+    .address-container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #3a2a4a;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+    .address-container .subtitle {
+      text-align: center;
+      font-size: 0.88rem;
+      color: #888;
+      margin-bottom: 28px;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #3a2a4a;
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid #d1c4e9;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      color: #3a2a4a;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: #9575cd; }
+    .form-group textarea { resize: none; height: 80px; }
+    .form-row {
+      display: flex;
+      gap: 14px;
+    }
+    .form-row .form-group { flex: 1; }
+    .continue-btn {
+      width: 100%;
+      padding: 13px;
+      background: #3a2a4a;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    .continue-btn:hover { background: #9575cd; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="StyleVault"/><span>StyleVault</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html" class="cart-icon">🛒 Cart <span id="cart-count">0</span></a>
+    <a href="login.html" id="auth-link">Login</a>
+  </div>
+</nav>
+
+<div class="address-container">
+  <h2>Shipping Address</h2>
+  <p class="subtitle">Where should we send your order?</p>
+
+  <div class="form-group">
+    <label>Mobile Number</label>
+    <div style="display:flex;align-items:center;border:1.5px solid #d1c4e9;border-radius:10px;overflow:hidden;">
+      <span style="padding:11px 12px;background:#f3eeff;color:#3a2a4a;font-weight:600;font-size:0.95rem;border-right:1.5px solid #d1c4e9;white-space:nowrap;">+91</span>
+      <input type="tel" id="mobile" maxlength="10" placeholder="Enter mobile number" style="border:none;border-radius:0;flex:1;"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Full Name</label>
+    <input type="text" id="full-name" placeholder="Enter your full name"/>
+  </div>
+
+  <div class="form-group">
+    <label>Address Line 1</label>
+    <input type="text" id="address1" placeholder="House / Flat no., Building name"/>
+  </div>
+
+  <div class="form-group">
+    <label>Address Line 2 (Optional)</label>
+    <input type="text" id="address2" placeholder="Street, Area, Locality"/>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>City</label>
+      <input type="text" id="city" placeholder="City"/>
+    </div>
+    <div class="form-group">
+      <label>State</label>
+      <select id="state">
+        <option value="">Select State</option>
+        <option>Andhra Pradesh</option>
+        <option>Arunachal Pradesh</option>
+        <option>Assam</option>
+        <option>Bihar</option>
+        <option>Chhattisgarh</option>
+        <option>Goa</option>
+        <option>Gujarat</option>
+        <option>Haryana</option>
+        <option>Himachal Pradesh</option>
+        <option>Jharkhand</option>
+        <option>Karnataka</option>
+        <option>Kerala</option>
+        <option>Madhya Pradesh</option>
+        <option>Maharashtra</option>
+        <option>Manipur</option>
+        <option>Meghalaya</option>
+        <option>Mizoram</option>
+        <option>Nagaland</option>
+        <option>Odisha</option>
+        <option>Punjab</option>
+        <option>Rajasthan</option>
+        <option>Sikkim</option>
+        <option>Tamil Nadu</option>
+        <option>Telangana</option>
+        <option>Tripura</option>
+        <option>Uttar Pradesh</option>
+        <option>Uttarakhand</option>
+        <option>West Bengal</option>
+        <option>Delhi</option>
+        <option>Jammu & Kashmir</option>
+        <option>Ladakh</option>
+        <option>Puducherry</option>
+        <option>Chandigarh</option>
+        <option>Andaman & Nicobar</option>
+        <option>Dadra & Nagar Haveli</option>
+        <option>Lakshadweep</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Pincode</label>
+      <input type="tel" id="pincode" maxlength="6" placeholder="6-digit pincode"/>
+    </div>
+    <div class="form-group">
+      <label>Country</label>
+      <select id="country">
+        <option value="">Select Country</option>
+        <option selected>India</option>
+        <option>Afghanistan</option>
+        <option>Australia</option>
+        <option>Bahrain</option>
+        <option>Bangladesh</option>
+        <option>Canada</option>
+        <option>China</option>
+        <option>France</option>
+        <option>Germany</option>
+        <option>Indonesia</option>
+        <option>Iraq</option>
+        <option>Japan</option>
+        <option>Jordan</option>
+        <option>Kenya</option>
+        <option>Kuwait</option>
+        <option>Malaysia</option>
+        <option>Maldives</option>
+        <option>Myanmar</option>
+        <option>Nepal</option>
+        <option>Netherlands</option>
+        <option>New Zealand</option>
+        <option>Nigeria</option>
+        <option>Oman</option>
+        <option>Pakistan</option>
+        <option>Philippines</option>
+        <option>Qatar</option>
+        <option>Saudi Arabia</option>
+        <option>Singapore</option>
+        <option>South Africa</option>
+        <option>South Korea</option>
+        <option>Sri Lanka</option>
+        <option>Thailand</option>
+        <option>Turkey</option>
+        <option>UAE</option>
+        <option>UK</option>
+        <option>USA</option>
+        <option>Vietnam</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Landmark (Optional)</label>
+    <input type="text" id="landmark" placeholder="Near..."/>
+  </div>
+
+  <button class="continue-btn" onclick="saveAddress()">Continue &rarr;</button>
+</div>
+
+<footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
+
+<script src="js/main.js"></script>
+<script>
+  function saveAddress() {
+    const mobile  = document.getElementById('mobile').value.trim();
+    const name     = document.getElementById('full-name').value.trim();
+    const address1 = document.getElementById('address1').value.trim();
+    const city     = document.getElementById('city').value.trim();
+    const state    = document.getElementById('state').value;
+    const pincode  = document.getElementById('pincode').value.trim();
+    const country  = document.getElementById('country').value;
+
+    if (!/^\d{10}$/.test(mobile))     { alert('Please enter a valid 10-digit mobile number.'); return; }
+    if (!name)                        { alert('Please enter your full name.'); return; }
+    if (!address1)                    { alert('Please enter your address.'); return; }
+    if (!city)                        { alert('Please enter your city.'); return; }
+    if (!state)                       { alert('Please select your state.'); return; }
+    if (!/^\d{6}$/.test(pincode))     { alert('Please enter a valid 6-digit pincode.'); return; }
+    if (!country)                     { alert('Please select your country.'); return; }
+
+    localStorage.setItem('delivery_address', JSON.stringify({
+      mobile,
+      name,
+      address1,
+      address2: document.getElementById('address2').value.trim(),
+      city,
+      state,
+      pincode,
+      country,
+      landmark: document.getElementById('landmark').value.trim()
+    }));
+
+    window.location.href = 'order-summary.html';
+  }
+</script>
+</body>
+</html>

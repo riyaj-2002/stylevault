@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product - StyleVault</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    .product-detail {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+    }
+    .product-detail img {
+      width: 360px;
+      height: 360px;
+      object-fit: contain;
+      background: #fdf6f0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      flex-shrink: 0;
+    }
+    .product-detail .details { flex: 1; }
+    .product-detail .details .model {
+      color: #c0496a;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    .product-detail .details h1 { font-size: 1.8rem; color: #2d2d2d; margin-bottom: 12px; }
+    .product-detail .details .price { font-size: 2rem; color: #c0496a; font-weight: 700; margin-bottom: 16px; }
+    .product-detail .details .desc { color: #555; line-height: 1.7; font-size: 1rem; margin-bottom: 24px; }
+    .variants-section { margin-bottom: 20px; }
+    .variants-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .variant-thumb {
+      width: 60px; height: 60px;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s;
+      background: #f9f9f9;
+    }
+    .variant-thumb:hover { border-color: #2d2d2d; }
+    .variant-thumb.active { border-color: #c0496a; }
+    .variant-thumb img { width: 100%; height: 100%; object-fit: contain; }
+    .phone-selector { margin-bottom: 18px; }
+    .phone-selector label { display: block; font-weight: 600; color: #1a1a2e; margin-bottom: 6px; font-size: 0.95rem; }
+    .phone-selector select, .phone-selector input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: #333;
+      outline: none;
+      margin-bottom: 14px;
+      box-sizing: border-box;
+    }
+    .phone-selector select:focus, .phone-selector input:focus { border-color: #c0496a; }
+    .qty-selector {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+    .qty-selector label { font-weight: 600; color: #2d2d2d; font-size: 0.95rem; }
+    .qty-selector button {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid #c0496a;
+      background: #fff;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: #c0496a;
+      font-weight: 700;
+      line-height: 1;
+      transition: all 0.2s;
+    }
+    .qty-selector button:hover { background: #c0496a; color: #fff; }
+    .qty-selector span { font-size: 1.2rem; font-weight: 700; min-width: 24px; text-align: center; }
+    .btn-cart {
+      padding: 13px 35px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      background: #c0496a;
+      color: #fff;
+      transition: background 0.2s;
+    }
+    .btn-cart:hover { background: #a03050; }
+    .back-link { display: inline-block; margin: 30px 20px 0; color: #c0496a; text-decoration: none; font-size: 0.95rem; }
+    .back-link:hover { color: #a03050; }
+    @media(max-width: 700px) {
+      .product-detail { flex-direction: column; }
+      .product-detail img { width: 100%; height: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="StyleVault"/><span>StyleVault</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html" class="cart-icon">🛒 Cart <span id="cart-count">0</span></a>
+    <a href="login.html" id="auth-link">Login</a>
+  </div>
+</nav>
+
+<a id="back-link" href="collections.html" class="back-link">← Back</a>
+
+<div class="product-detail" id="product-detail"></div>
+
+<footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get('id'));
+  const product = products.find(p => p.id === id);
+
+  // Set back link
+  const backLink = document.getElementById('back-link');
+  if (params.get('back') === 'collection' && params.get('name') && params.get('ids')) {
+    backLink.href = `collection.html?name=${encodeURIComponent(params.get('name'))}&ids=${params.get('ids')}`;
+    backLink.textContent = `← Back to ${params.get('name')} Collection`;
+  } else {
+    backLink.href = 'collections.html';
+    backLink.textContent = '← Back to Collections';
+  }
+
+  const brands = [
+    'Apple', 'Samsung', 'Xiaomi', 'Redmi', 'POCO', 'OnePlus', 'Realme', 'Vivo', 'Oppo',
+    'Google Pixel', 'Motorola', 'Nothing', 'iQOO', 'Nokia', 'Sony', 'LG', 'Huawei', 'Honor',
+    'Tecno', 'Infinix', 'itel', 'Lava', 'Micromax', 'Karbonn', 'Lenovo', 'Asus ROG',
+    'Asus ZenFone', 'BlackBerry', 'HTC', 'ZTE', 'Nubia', 'Red Magic', 'Meizu', 'Coolpad',
+    'Gionee', 'Panasonic', 'Sharp', 'Fujitsu', 'Alcatel', 'CAT', 'Doogee', 'Ulefone',
+    'Oukitel', 'Cubot', 'Blackview', 'Umidigi', 'Wiko', 'BLU', 'Boost Mobile', 'Others'
+  ];
+
+  if (!product) {
+    document.getElementById('product-detail').innerHTML = '<p style="padding:40px;color:#aaa">Product not found.</p>';
+  } else {
+    document.title = product.name + ' - StyleVault';
+
+    const backParam = params.get('back') === 'collection'
+      ? `back=collection&name=${encodeURIComponent(params.get('name'))}&ids=${params.get('ids')}`
+      : '';
+
+    document.getElementById('product-detail').innerHTML = `
+      <img src="${product.image}" alt="${product.name}" onerror="this.src='images/placeholder.png'"/>
+      <div class="details">
+        <div class="model">${product.model}</div>
+        <h1>${product.name}</h1>
+        <div class="price">₹${product.price}</div>
+        <p class="desc">${product.description}</p>
+
+        ${product.variants && product.variants.length > 1 ? `
+        <div class="variants-section">
+          <label style="font-weight:600;color:#1a1a2e;font-size:0.95rem;display:block;margin-bottom:8px">Other Colours</label>
+          <div class="variants-row">
+            ${product.variants.map(vid => {
+              const v = products.find(p => p.id === vid);
+              if (!v) return '';
+              return `<div class="variant-thumb ${vid === product.id ? 'active' : ''}" onclick="window.location.href='product.html?id=${vid}&${backParam}'">
+                <img src="${v.image}" alt="${v.name}" title="${v.name}"/>
+              </div>`;
+            }).join('')}
+          </div>
+        </div>` : ''}
+
+        <div class="phone-selector">
+          <label>Select Phone Brand</label>
+          <select id="phone-brand" onchange="onBrandChange()">
+            <option value="">-- Select Brand --</option>
+            ${brands.map(b => `<option>${b}</option>`).join('')}
+          </select>
+          <div id="others-brand-box" style="display:none">
+            <label>Enter Your Brand</label>
+            <input type="text" id="custom-brand" placeholder="e.g. Tecno, Infinix..."/>
+          </div>
+          <label>Enter Phone Model</label>
+          <input type="text" id="phone-model" placeholder="e.g. iPhone 15, Galaxy S24..."/>
+        </div>
+
+        <div class="qty-selector">
+          <label>Quantity</label>
+          <button onclick="changeQty(-1)">&#8722;</button>
+          <span id="qty">1</span>
+          <button onclick="changeQty(1)">&#43;</button>
+        </div>
+
+        <button class="btn-cart" onclick="addToCartQty()">🛒 Add to Cart</button>
+      </div>
+    `;
+  }
+
+  function onBrandChange() {
+    const brand = document.getElementById('phone-brand').value;
+    document.getElementById('others-brand-box').style.display = brand === 'Others' ? 'block' : 'none';
+  }
+
+  function changeQty(val) {
+    const el = document.getElementById('qty');
+    el.textContent = Math.max(1, parseInt(el.textContent) + val);
+  }
+
+  async function addToCartQty() {
+    const brand = document.getElementById('phone-brand').value;
+    const customBrand = document.getElementById('custom-brand') ? document.getElementById('custom-brand').value.trim() : '';
+    const model = document.getElementById('phone-model').value.trim();
+    if (!brand) { alert('Please select your phone brand.'); return; }
+    if (brand === 'Others' && !customBrand) { alert('Please enter your phone brand.'); return; }
+    if (!model) { alert('Please enter your phone model.'); return; }
+    const qty = parseInt(document.getElementById('qty').textContent);
+    for (let i = 0; i < qty; i++) {
+      await addToCart({ product_id: product.id, product_name: product.name, price: product.price, image: product.image });
+    }
+  }
+</script>
+</body>
+</html>
