@@ -1,10 +1,9 @@
-require('dotenv').config();
-const { Resend } = require('resend');
+import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const FROM = process.env.FROM_EMAIL;
 const OWNER = process.env.OWNER_EMAIL;
-const SITE = 'http://localhost:3000';
+const SITE = 'https://stylevault.live';
 
 async function sendEmail(to, subject, html) {
   try {
@@ -180,7 +179,7 @@ async function notifyOwnerPaymentConfirmed(order_id, name, email, total) {
   `);
 }
 
-module.exports = {
+export {
   emailWelcome,
   emailOrderPlaced,
   emailPaymentConfirmed,

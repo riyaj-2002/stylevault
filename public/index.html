@@ -1,42 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>StyleVault - Phone Covers</title>
   <link rel="stylesheet" href="css/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700;400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="logo"><img src="images/logo.png" alt="StyleVault"/><span>StyleVault</span></a>
+<!-- Page loader -->
+<div id="page-loader">
+  <div class="loader-logo">
+    <span>StyleVault</span>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- Scroll progress bar -->
+<div id="scroll-progress"></div>
+
+<nav id="navbar">
+  <a href="index.html" class="logo">
+    <img src="images/logo.png" alt="StyleVault"/>
+    <span>StyleVault</span>
+  </a>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
+    <a href="customize.html">Customize ✦</a>
     <a href="contact.html">Contact</a>
-    <a href="cart.html" class="cart-icon">🛒 Cart <span id="cart-count">0</span></a>
+    <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
     <a href="login.html" id="auth-link">Login</a>
   </div>
 </nav>
 
-<div class="hero">
-  <h1>Your Phone Deserves to Turn Heads 🔥</h1>
-  <p>Handpicked covers that blend <strong>style, protection & personality</strong></p>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-orb orb1"></div>
+  <div class="hero-bg-orb orb2"></div>
+  <div class="hero-bg-orb orb3"></div>
+  <div class="hero-content">
+    <p class="hero-tag animate-tag">✦ Premium Phone Cases</p>
+    <h1 class="animate-h1">Your Phone Deserves<br>to Turn Heads 🔥</h1>
+    <p class="animate-sub">Handpicked covers that blend <strong>style, protection & personality</strong></p>
+    <div class="hero-btns animate-btns">
+      <a href="collections.html" class="btn-primary">Shop Now →</a>
+      <a href="customize.html" class="btn-ghost">Customize ✦</a>
+    </div>
+    <div class="hero-stats animate-stats">
+      <div class="stat"><strong>98+</strong><span>Designs</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>8</strong><span>Collections</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>₹249</strong><span>Starting at</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE STRIP -->
+<div class="feature-strip">
+  <div class="feature-item">
+    <span class="feature-icon">🚚</span>
+    <div><strong>Free Shipping</strong><small>On all India orders</small></div>
+  </div>
+  <div class="feature-divider"></div>
+  <div class="feature-item">
+    <span class="feature-icon">✨</span>
+    <div><strong>Customization</strong><small>Make it yours</small></div>
+  </div>
+  <div class="feature-divider"></div>
+  <div class="feature-item">
+    <span class="feature-icon">🏆</span>
+    <div><strong>Premium Quality</strong><small>Built to last</small></div>
+  </div>
+  <div class="feature-divider"></div>
+  <div class="feature-item">
+    <span class="feature-icon">🔒</span>
+    <div><strong>Secure Payment</strong><small>100% safe checkout</small></div>
+  </div>
 </div>
 
-<h2 class="section-title" id="products">Our Collection</h2>
-
+<!-- MARQUEE -->
 <div class="collection-carousel-wrapper">
   <div class="collection-carousel" id="collection-carousel"></div>
 </div>
 
+<!-- SECTION TITLE -->
+<h2 class="section-title reveal" id="products">Our Collection</h2>
+
+<!-- PRODUCTS GRID -->
 <div class="products-grid" id="products-grid"></div>
 
-<footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">StyleVault</a>
+        <p>Premium phone cases that blend style, protection & personality. Express yourself, one case at a time.</p>
+      </div>
+      <div class="footer-features">
+        <div class="footer-feat">
+          <div class="footer-feat-icon">🔒</div>
+          <div><strong>Secure Payments</strong><span>via Razorpay</span></div>
+        </div>
+        <div class="footer-feat">
+          <div class="footer-feat-icon">🔄</div>
+          <div><strong>7-Day Returns</strong><span>Easy & hassle-free</span></div>
+        </div>
+        <div class="footer-feat">
+          <div class="footer-feat-icon">🛡️</div>
+          <div><strong>SSL Encrypted</strong><span>100% safe & secure</span></div>
+        </div>
+        <div class="footer-feat">
+          <div class="footer-feat-icon">🚚</div>
+          <div><strong>Free Shipping</strong><span>On orders above ₹1999</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StyleVault. All rights reserved. Made with ♥</p>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="shipping.html">Shipping Policy</a>
+        <a href="returns.html">Return Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scroll-top" title="Back to top">↑</button>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner">
+  <div class="cookie-content">
+    <div class="cookie-text">
+      <span class="cookie-icon">🍪</span>
+      <div>
+        <strong>We use cookies</strong>
+        <p>We use cookies to improve your experience, remember your cart, and keep you logged in. By continuing, you agree to our use of cookies.</p>
+      </div>
+    </div>
+    <div class="cookie-btns">
+      <button id="cookie-decline">Decline</button>
+      <button id="cookie-accept">Accept All</button>
+    </div>
+  </div>
+</div>
 
 <script src="js/products.js"></script>
 <script src="js/main.js"></script>
+<script src="js/animations.js"></script>
 <script>
   const collections = [
     { name: "Aesthetic", ids: [37,1,9,19,32,33,46,31,45,22,4,40,53,59,42,17,10,14,44,62,47,71,83,87,89] },
@@ -50,16 +168,14 @@
   ];
 
   const carousel = document.getElementById('collection-carousel');
-  // render twice for seamless infinite loop
-  [1, 2].forEach(() => {
-    collections.forEach(col => {
-      const a = document.createElement('a');
-      a.className = 'carousel-card';
-      a.href = `collection.html?name=${encodeURIComponent(col.name)}&ids=${col.ids.join(',')}`;
-      a.textContent = col.name;
-      carousel.appendChild(a);
-    });
+  const text = '✨ Customize Phone Cases — Create your own case with monogram initials or memories.';
+  [1,2,3,4].forEach(() => {
+    const span = document.createElement('span');
+    span.textContent = text + '\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0';
+    carousel.appendChild(span);
   });
 </script>
+<script src="js/cookies.js"></script>
+<script src="js/footer.js"></script>
 </body>
 </html>

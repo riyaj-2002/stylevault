@@ -39,8 +39,8 @@ router.post('/confirm', async (req, res) => {
     const cartResult = await pool.query('SELECT * FROM cart WHERE user_id = $1', [user_id]);
     for (const item of cartResult.rows) {
       await pool.query(
-        'INSERT INTO order_items (order_id, product_id, product_name, price, quantity, image) VALUES ($1,$2,$3,$4,$5,$6)',
-        [order_id, item.product_id, item.product_name, item.price, item.quantity, item.image]
+        'INSERT INTO order_items (order_id, product_id, product_name, price, quantity, image, phone_brand, phone_model, case_material) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9)',
+        [order_id, item.product_id, item.product_name, item.price, item.quantity, item.image, item.phone_brand, item.phone_model, item.case_material]
       );
     }
 

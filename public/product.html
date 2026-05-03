@@ -16,24 +16,25 @@
       align-items: flex-start;
     }
     .product-detail img {
-      width: 360px;
-      height: 360px;
+      width: 360px; height: 360px;
       object-fit: contain;
-      background: #fdf6f0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      background: #fdf5ec;
+      border-radius: 16px;
+      box-shadow: 0 6px 28px rgba(100,50,10,0.14);
+      border: 1px solid #e8d5b8;
       flex-shrink: 0;
     }
     .product-detail .details { flex: 1; }
     .product-detail .details .model {
-      color: #c0496a;
-      font-size: 0.9rem;
+      color: #b06633;
+      font-size: 0.85rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       margin-bottom: 10px;
     }
-    .product-detail .details h1 { font-size: 1.8rem; color: #2d2d2d; margin-bottom: 12px; }
-    .product-detail .details .price { font-size: 2rem; color: #c0496a; font-weight: 700; margin-bottom: 16px; }
+    .product-detail .details h1 { font-size: 1.8rem; color: #282828; margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+    .product-detail .details .price { font-size: 2rem; color: #b06633; font-weight: 700; margin-bottom: 16px; }
     .product-detail .details .desc { color: #555; line-height: 1.7; font-size: 1rem; margin-bottom: 24px; }
     .variants-section { margin-bottom: 20px; }
     .variants-row { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -46,44 +47,60 @@
       transition: border-color 0.2s;
       background: #f9f9f9;
     }
-    .variant-thumb:hover { border-color: #2d2d2d; }
-    .variant-thumb.active { border-color: #c0496a; }
+    .variant-thumb:hover { border-color: #d4af37; }
+    .variant-thumb.active { border-color: #b06633; }
     .variant-thumb img { width: 100%; height: 100%; object-fit: contain; }
     .phone-selector { margin-bottom: 18px; }
-    .phone-selector label { display: block; font-weight: 600; color: #1a1a2e; margin-bottom: 6px; font-size: 0.95rem; }
+    .phone-selector label { display: block; font-weight: 600; color: #282828; margin-bottom: 6px; font-size: 0.92rem; }
     .phone-selector select, .phone-selector input {
-      width: 100%;
-      padding: 10px 14px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      color: #333;
-      outline: none;
-      margin-bottom: 14px;
-      box-sizing: border-box;
+      width: 100%; padding: 11px 14px;
+      border: 1.5px solid #e8d5b8;
+      border-radius: 8px; font-size: 0.95rem;
+      color: #282828; outline: none;
+      margin-bottom: 14px; box-sizing: border-box;
+      background: #fffaf4;
     }
-    .phone-selector select:focus, .phone-selector input:focus { border-color: #c0496a; }
+    .phone-selector select:focus, .phone-selector input:focus { border-color: #b06633; }
+    /* Material selector */
+    .material-selector { margin-bottom: 20px; }
+    .material-selector label { display: block; font-weight: 600; color: #282828; margin-bottom: 10px; font-size: 0.92rem; }
+    .material-options { display: flex; gap: 10px; flex-wrap: wrap; }
+    .material-btn {
+      padding: 12px 18px;
+      border: 2px solid #e8d5b8;
+      border-radius: 12px;
+      background: #fffaf4;
+      color: #555;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      user-select: none;
+      text-align: center;
+      min-width: 100px;
+    }
+    .material-btn .mat-name { display: block; font-size: 0.9rem; font-weight: 700; color: #282828; margin-bottom: 4px; }
+    .material-btn .mat-price { display: block; font-size: 0.95rem; font-weight: 700; color: #b06633; }
+    .material-btn:hover { border-color: #b06633; background: #fff5ec; }
+    .material-btn.selected { background: #b06633; border-color: #b06633; }
+    .material-btn.selected .mat-name { color: #fff; }
+    .material-btn.selected .mat-price { color: #ffe0b2; }
+    /* Live price display */
+    .price-display { font-size: 2rem; color: #b06633; font-weight: 700; margin-bottom: 16px; transition: all 0.2s; }
     .qty-selector {
       display: flex;
       align-items: center;
       gap: 18px;
       margin-bottom: 24px;
     }
-    .qty-selector label { font-weight: 600; color: #2d2d2d; font-size: 0.95rem; }
+    .qty-selector label { font-weight: 600; color: #282828; font-size: 0.92rem; }
     .qty-selector button {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      border: 2px solid #c0496a;
-      background: #fff;
-      font-size: 1.3rem;
-      cursor: pointer;
-      color: #c0496a;
-      font-weight: 700;
-      line-height: 1;
-      transition: all 0.2s;
+      width: 38px; height: 38px; border-radius: 50%;
+      border: 2px solid #b06633; background: #fffaf4;
+      font-size: 1.3rem; cursor: pointer; color: #b06633;
+      font-weight: 700; line-height: 1; transition: all 0.2s;
     }
-    .qty-selector button:hover { background: #c0496a; color: #fff; }
+    .qty-selector button:hover { background: #b06633; color: #fff; }
     .qty-selector span { font-size: 1.2rem; font-weight: 700; min-width: 24px; text-align: center; }
     .btn-cart {
       padding: 13px 35px;
@@ -92,13 +109,11 @@
       font-size: 1rem;
       cursor: pointer;
       font-weight: 600;
-      background: #c0496a;
-      color: #fff;
-      transition: background 0.2s;
+      background: #b06633; color: #fff; transition: background 0.2s;
     }
-    .btn-cart:hover { background: #a03050; }
-    .back-link { display: inline-block; margin: 30px 20px 0; color: #c0496a; text-decoration: none; font-size: 0.95rem; }
-    .back-link:hover { color: #a03050; }
+    .btn-cart:hover { background: #7a3d10; }
+    .back-link { display: inline-block; margin: 30px 20px 0; color: #b06633; text-decoration: none; font-size: 0.92rem; font-weight: 500; }
+    .back-link:hover { color: #7a3d10; }
     @media(max-width: 700px) {
       .product-detail { flex-direction: column; }
       .product-detail img { width: 100%; height: 280px; }
@@ -112,6 +127,7 @@
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
+    <a href="customize.html">Customize ✦</a>
     <a href="contact.html">Contact</a>
     <a href="cart.html" class="cart-icon">🛒 Cart <span id="cart-count">0</span></a>
     <a href="login.html" id="auth-link">Login</a>
@@ -142,12 +158,8 @@
   }
 
   const brands = [
-    'Apple', 'Samsung', 'Xiaomi', 'Redmi', 'POCO', 'OnePlus', 'Realme', 'Vivo', 'Oppo',
-    'Google Pixel', 'Motorola', 'Nothing', 'iQOO', 'Nokia', 'Sony', 'LG', 'Huawei', 'Honor',
-    'Tecno', 'Infinix', 'itel', 'Lava', 'Micromax', 'Karbonn', 'Lenovo', 'Asus ROG',
-    'Asus ZenFone', 'BlackBerry', 'HTC', 'ZTE', 'Nubia', 'Red Magic', 'Meizu', 'Coolpad',
-    'Gionee', 'Panasonic', 'Sharp', 'Fujitsu', 'Alcatel', 'CAT', 'Doogee', 'Ulefone',
-    'Oukitel', 'Cubot', 'Blackview', 'Umidigi', 'Wiko', 'BLU', 'Boost Mobile', 'Others'
+    'Apple', 'Samsung', 'Xiaomi', 'Redmi', 'POCO', 'OnePlus', 'Realme', 'Oppo',
+    'Google', 'Motorola', 'Nothing', 'Nokia', 'Sony', 'LG', 'Infinix', 'Lenovo', 'Others'
   ];
 
   if (!product) {
@@ -164,7 +176,7 @@
       <div class="details">
         <div class="model">${product.model}</div>
         <h1>${product.name}</h1>
-        <div class="price">₹${product.price}</div>
+        <div class="price-display" id="price-display">₹${product.price}</div>
         <p class="desc">${product.description}</p>
 
         ${product.variants && product.variants.length > 1 ? `
@@ -189,10 +201,28 @@
           </select>
           <div id="others-brand-box" style="display:none">
             <label>Enter Your Brand</label>
-            <input type="text" id="custom-brand" placeholder="e.g. Tecno, Infinix..."/>
+            <input type="text" id="custom-brand" placeholder="e.g. Vivo, Tecno..."/>
           </div>
           <label>Enter Phone Model</label>
           <input type="text" id="phone-model" placeholder="e.g. iPhone 15, Galaxy S24..."/>
+        </div>
+
+        <div class="material-selector">
+          <label>Choose Case Material</label>
+          <div class="material-options">
+            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Soft Case', 249)">
+              <span class="mat-name">Soft Case</span>
+              <span class="mat-price">₹249</span>
+            </button>
+            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Hard Case', 249)">
+              <span class="mat-name">Hard Case</span>
+              <span class="mat-price">₹249</span>
+            </button>
+            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Glass Case', 349)">
+              <span class="mat-name">Glass Case</span>
+              <span class="mat-price">₹349</span>
+            </button>
+          </div>
         </div>
 
         <div class="qty-selector">
@@ -212,6 +242,17 @@
     document.getElementById('others-brand-box').style.display = brand === 'Others' ? 'block' : 'none';
   }
 
+  let selectedMaterial = '';
+  let selectedPrice = product ? product.price : 249;
+
+  function selectMaterial(btn, material, price) {
+    document.querySelectorAll('.material-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    selectedMaterial = material;
+    selectedPrice = price;
+    document.getElementById('price-display').textContent = '₹' + price;
+  }
+
   function changeQty(val) {
     const el = document.getElementById('qty');
     el.textContent = Math.max(1, parseInt(el.textContent) + val);
@@ -224,11 +265,24 @@
     if (!brand) { alert('Please select your phone brand.'); return; }
     if (brand === 'Others' && !customBrand) { alert('Please enter your phone brand.'); return; }
     if (!model) { alert('Please enter your phone model.'); return; }
+    if (!selectedMaterial) { alert('Please choose a case material.'); return; }
+    const finalBrand = brand === 'Others' ? customBrand : brand;
     const qty = parseInt(document.getElementById('qty').textContent);
+    const productName = `${product.name} (${selectedMaterial} - ${finalBrand} ${model})`;
     for (let i = 0; i < qty; i++) {
-      await addToCart({ product_id: product.id, product_name: product.name, price: product.price, image: product.image });
+      await addToCart({
+        product_id: product.id,
+        product_name: productName,
+        price: selectedPrice,
+        image: product.image,
+        phone_brand: finalBrand,
+        phone_model: model,
+        case_material: selectedMaterial
+      });
     }
   }
 </script>
+<script src="js/cookies.js"></script>
+<script src="js/footer.js"></script>
 </body>
 </html>

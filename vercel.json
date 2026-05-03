@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "functions": {
+    "api/**/*.js": {
+      "memory": 256,
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    { "source": "/api/auth/register",         "destination": "/api/auth/register.js" },
+    { "source": "/api/auth/login",            "destination": "/api/auth/login.js" },
+    { "source": "/api/auth/logout",           "destination": "/api/auth/session.js" },
+    { "source": "/api/session",               "destination": "/api/auth/session.js" },
+    { "source": "/api/cart",                  "destination": "/api/cart/index.js" },
+    { "source": "/api/cart/:path*",           "destination": "/api/cart/index.js" },
+    { "source": "/api/razorpay/create-order", "destination": "/api/payment/create-order.js" },
+    { "source": "/api/razorpay/verify",       "destination": "/api/payment/verify.js" },
+    { "source": "/api/webhook",               "destination": "/api/webhook.js" },
+    { "source": "/api/payment/:path*",        "destination": "/api/payment/update-status.js" },
+    { "source": "/api/orders/:path*",         "destination": "/api/orders/index.js" },
+    { "source": "/api/orders",                "destination": "/api/orders/index.js" }
+  ]
+}

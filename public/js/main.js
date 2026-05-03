@@ -1,5 +1,5 @@
 async function updateCartCount() {
-  const res = await fetch('/api/cart');
+  const res = await fetch('/api/cart', { credentials: 'include' });
   const data = await res.json();
   const el = document.getElementById('cart-count');
   if (el && data.success) el.textContent = data.cart.reduce((sum, i) => sum + i.quantity, 0);
@@ -21,10 +21,11 @@ async function updateAuthLink() {
 }
 
 async function addToCart(product) {
-  const session = await fetch('/api/session').then(r => r.json());
+  const session = await fetch('/api/session', { credentials: 'include' }).then(r => r.json());
   if (!session.loggedIn) { window.location.href = 'login.html'; return; }
   await fetch('/api/cart/add', {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
+    credentials: 'include',
     body: JSON.stringify(product)
   });
   updateCartCount();
@@ -63,7 +64,7 @@ function renderProducts() {
     </div>
   `).join('');
   if (isHome) {
-    grid.insertAdjacentHTML('afterend', '<div style="text-align:center;padding:30px 0 60px"><a href="collections.html" style="background:#9575cd;color:#fff;padding:13px 35px;border-radius:25px;text-decoration:none;font-size:1rem;font-weight:600;">See All Covers &#8594;</a></div>');
+    grid.insertAdjacentHTML('afterend', '<div style="text-align:center;padding:30px 0 70px"><a href="collections.html" style="background:#b06633;color:#fff;padding:14px 38px;border-radius:30px;text-decoration:none;font-size:1rem;font-weight:700;letter-spacing:0.3px;box-shadow:0 4px 16px rgba(100,50,10,0.2);">See All Covers &#8594;</a></div>');
   }
 }
 
@@ -92,6 +93,6 @@ function showLogoutModal() {
 }
 
 async function confirmLogout() {
-  await fetch('/api/auth/logout', { method: 'POST' });
+  await fetch('/api/auth/logout', { method: 'POST', credentials: 'include' });
   window.location.reload();
 }

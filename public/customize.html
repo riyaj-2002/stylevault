@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customize Your Case - StyleVault</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    .customize-page { max-width: 900px; margin: 60px auto; padding: 0 24px 80px; }
+
+    .customize-hero {
+      text-align: center;
+      margin-bottom: 56px;
+      animation: fadeInUp 0.7s ease both;
+    }
+    @keyframes fadeInUp { from { opacity:0; transform:translateY(28px); } to { opacity:1; transform:translateY(0); } }
+
+    .customize-hero .badge {
+      display: inline-block;
+      background: rgba(176,102,51,0.1);
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+      margin-bottom: 18px;
+    }
+    .customize-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      color: var(--primary-dk);
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+    .customize-hero p {
+      color: #777;
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+      animation: fadeInUp 0.7s ease 0.2s both;
+    }
+    .step-card {
+      background: #fffaf4;
+      border-radius: 16px;
+      padding: 28px 24px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .step-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .step-icon { font-size: 2.2rem; margin-bottom: 14px; display: block; }
+    .step-num {
+      display: inline-block;
+      width: 26px; height: 26px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 26px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .step-card h3 { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .step-card p { font-size: 0.88rem; color: #888; line-height: 1.6; }
+
+    .coming-soon-box {
+      background: linear-gradient(135deg, #b06633, #c97a4a);
+      border-radius: 20px;
+      padding: 52px 40px;
+      text-align: center;
+      color: #fff;
+      animation: fadeInUp 0.7s ease 0.4s both;
+    }
+    .coming-soon-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .coming-soon-box p { font-size: 1rem; color: rgba(255,255,255,0.85); margin-bottom: 28px; line-height: 1.7; }
+    .notify-form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .notify-form input {
+      padding: 13px 18px;
+      border-radius: 50px;
+      border: none;
+      font-size: 0.95rem;
+      width: 280px;
+      outline: none;
+      color: var(--text);
+    }
+    .notify-form button {
+      padding: 13px 28px;
+      background: #fff;
+      color: var(--primary);
+      border: none;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .notify-form button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+    .notify-msg { margin-top: 14px; font-size: 0.88rem; color: rgba(255,255,255,0.8); display: none; }
+
+    @media(max-width: 600px) {
+      .customize-hero h1 { font-size: 1.9rem; }
+      .coming-soon-box { padding: 36px 20px; }
+      .notify-form input { width: 100%; }
+      .notify-form button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="StyleVault"/><span>StyleVault</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="customize.html" class="nav-active">Customize ✦</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+    <a href="login.html" id="auth-link">Login</a>
+  </div>
+</nav>
+
+<div class="customize-page">
+
+  <div class="customize-hero">
+    <span class="badge">✦ Coming Soon</span>
+    <h1>Design Your Own<br>Phone Case</h1>
+    <p>Create a case that's truly yours — add your name, initials, a photo, or a memory. Fully personalized, premium quality.</p>
+  </div>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <span class="step-icon">📱</span>
+      <span class="step-num">1</span>
+      <h3>Choose Your Phone</h3>
+      <p>Select your phone brand and model to get the perfect fit.</p>
+    </div>
+    <div class="step-card">
+      <span class="step-icon">🎨</span>
+      <span class="step-num">2</span>
+      <h3>Pick a Design</h3>
+      <p>Start from a blank canvas or choose from our base templates.</p>
+    </div>
+    <div class="step-card">
+      <span class="step-icon">✏️</span>
+      <span class="step-num">3</span>
+      <h3>Add Your Touch</h3>
+      <p>Upload a photo, add text, monogram initials, or a special memory.</p>
+    </div>
+    <div class="step-card">
+      <span class="step-icon">🛒</span>
+      <span class="step-num">4</span>
+      <h3>Order & Receive</h3>
+      <p>Place your order and receive your unique case within 7 business days.</p>
+    </div>
+  </div>
+
+  <div class="coming-soon-box">
+    <h2>Customization Tool Coming Soon 🚀</h2>
+    <p>We're building a full design studio right here on the website.<br>Be the first to know when it launches.</p>
+    <div class="notify-form">
+      <input type="email" id="notify-email" placeholder="Enter your email address"/>
+      <button onclick="notifyMe()">Notify Me →</button>
+    </div>
+    <p class="notify-msg" id="notify-msg">✅ You're on the list! We'll notify you when it's ready.</p>
+    <p style="margin-top:20px;font-size:0.88rem;color:rgba(255,255,255,0.7)">
+      Meanwhile, contact us directly on
+      <a href="https://instagram.com/stylevault_4" target="_blank" style="color:#fff;font-weight:600;">@stylevault_4</a>
+      or <a href="mailto:stylevault.help@gmail.com" style="color:#fff;font-weight:600;">stylevault.help@gmail.com</a>
+      for custom orders.
+    </p>
+  </div>
+
+</div>
+
+<footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
+
+<script src="js/main.js"></script>
+<script>
+  function notifyMe() {
+    const email = document.getElementById('notify-email').value.trim();
+    if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+    document.getElementById('notify-msg').style.display = 'block';
+    document.getElementById('notify-email').value = '';
+  }
+</script>
+<script src="js/cookies.js"></script>
+<script src="js/footer.js"></script>
+</body>
+</html>
