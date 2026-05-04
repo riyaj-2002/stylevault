@@ -127,6 +127,10 @@ nav .cart-icon span {
   color: var(--primary-dk);
   font-family: 'Playfair Display', serif;
   letter-spacing: 0.5px;
+  width: 100%;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* ── CAROUSEL ── */
