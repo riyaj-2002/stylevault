@@ -18,6 +18,7 @@
     { "source": "/api/webhook",               "destination": "/api/webhook.js" },
     { "source": "/api/payment/:path*",        "destination": "/api/payment/update-status.js" },
     { "source": "/api/orders/:path*",         "destination": "/api/orders/index.js" },
-    { "source": "/api/orders",                "destination": "/api/orders/index.js" }
+    { "source": "/api/orders",                "destination": "/api/orders/index.js" },
+    { "source": "/api/user/profile",           "destination": "/api/user/profile.js" }
   ]
 }

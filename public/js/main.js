@@ -11,9 +11,9 @@ async function updateAuthLink() {
   const link = document.getElementById('auth-link');
   if (!link) return;
   if (data.loggedIn) {
-    link.textContent = 'Logout';
-    link.href = '#';
-    link.onclick = () => showLogoutModal();
+    link.textContent = 'Profile';
+    link.href = 'profile.html';
+    link.onclick = null;
   } else {
     link.textContent = 'Login';
     link.href = 'login.html';
