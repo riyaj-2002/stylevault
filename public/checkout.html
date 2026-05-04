@@ -232,11 +232,14 @@
 
     document.getElementById('pay-btn').disabled = true;
 
+    const address = JSON.parse(localStorage.getItem('delivery_address') || '{}');
+    const shipping = address.country === 'India' || !address.country ? 0 : 499;
+
     let orderData;
     try {
       const orderRes = await fetch('/api/razorpay/create-order', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount: total })
+        body: JSON.stringify({ amount: total, shipping, address })
       });
       orderData = await orderRes.json();
       console.log('Order created:', orderData);
@@ -251,9 +254,6 @@
       document.getElementById('pay-btn').disabled = false; 
       return; 
     }
-
-    const address = JSON.parse(localStorage.getItem('delivery_address') || '{}');
-    const shipping = address.country === 'India' || !address.country ? 0 : 499;
 
     const options = {
       key: 'rzp_test_Sk1r1ZMhTUYG3z',

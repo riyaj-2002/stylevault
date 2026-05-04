@@ -19,12 +19,12 @@ export default async function handler(req, res) {
     const body = req.body;
 
     if (action === 'add') {
-      const { product_id, product_name, price, image } = body;
+      const { product_id, product_name, price, image, phone_brand, phone_model, case_material } = body;
       const existing = await sql`SELECT * FROM cart WHERE user_id = ${user.id} AND product_id = ${product_id}`;
       if (existing.length > 0) {
         await sql`UPDATE cart SET quantity = quantity + 1 WHERE user_id = ${user.id} AND product_id = ${product_id}`;
       } else {
-        await sql`INSERT INTO cart (user_id, product_id, product_name, price, image) VALUES (${user.id}, ${product_id}, ${product_name}, ${price}, ${image})`;
+        await sql`INSERT INTO cart (user_id, product_id, product_name, price, image, phone_brand, phone_model, case_material) VALUES (${user.id}, ${product_id}, ${product_name}, ${price}, ${image}, ${phone_brand || null}, ${phone_model || null}, ${case_material || null})`;
       }
       return res.json({ success: true });
     }
