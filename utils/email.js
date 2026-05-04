@@ -7,11 +7,16 @@ const SITE = 'https://stylevault.live';
 
 async function sendEmail(to, subject, html) {
   if (!to || !FROM) {
-    console.error('sendEmail: missing to or FROM_EMAIL env var');
+    console.error('sendEmail: missing to:', to, 'FROM:', FROM);
     return;
   }
+  console.log('sendEmail: attempting to send to:', to, 'subject:', subject, 'from:', FROM);
   const result = await resend.emails.send({ from: FROM, to, subject, html });
-  if (result.error) console.error('Resend error:', JSON.stringify(result.error));
+  if (result.error) {
+    console.error('Resend error:', JSON.stringify(result.error));
+  } else {
+    console.log('Resend success, id:', result.data?.id);
+  }
 }
 
 const btn = (text, url, color = '#9575cd') =>
@@ -95,7 +100,7 @@ async function emailOutForShipping(to, name, order_id) {
       <h2 style="color:#9575cd">Your Order is On the Way! 🚚</h2>
       <p style="color:#555">Hi ${name}, your StyleVault order <strong>#${order_id}</strong> has been shipped!</p>
       <p style="color:#555">Expected delivery: <strong>5–7 business days</strong></p>
-      <p style="color:#555">For queries, reach us at <a href="mailto:stylevault.help@gmail.com" style="color:#9575cd">stylevault.help@gmail.com</a> or <a href="https://instagram.com/stylevault_4" style="color:#9575cd">@stylevault_4</a></p>
+      <p style="color:#555">For queries, reach us at <a href="mailto:stylevault.0426@gmail.com" style="color:#9575cd">stylevault.0426@gmail.com</a> or <a href="https://instagram.com/stylevault_4" style="color:#9575cd">@stylevault_4</a></p>
       ${btn('Visit StyleVault →', `${SITE}/index.html`)}
       ${footer}
     </div>
