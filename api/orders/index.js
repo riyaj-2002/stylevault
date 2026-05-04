@@ -1,6 +1,6 @@
 import { getDB } from '../../lib/db.js';
 
-export const config = { runtime: 'edge' };
+export const config = { runtime: 'nodejs' };
 
 export default async function handler(req) {
   const adminToken = req.headers.get('x-admin-secret');

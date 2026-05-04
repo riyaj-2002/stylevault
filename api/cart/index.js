@@ -1,7 +1,7 @@
 import { getDB } from '../../lib/db.js';
 import { getUserFromRequest } from '../../lib/auth.js';
 
-export const config = { runtime: 'edge' };
+export const config = { runtime: 'nodejs' };
 
 export default async function handler(req) {
   const user = getUserFromRequest(req);
