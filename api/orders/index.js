@@ -9,8 +9,7 @@ export default async function handler(req) {
   }
 
   const sql = getDB();
-  const url = new URL(req.url);
-  const parts = url.pathname.split('/').filter(Boolean); // ['api','orders','5','items']
+  const parts = req.url.split('?')[0].split('/').filter(Boolean);
 
   try {
     // GET /api/orders

@@ -8,8 +8,8 @@ export default async function handler(req) {
   if (!user) return Response.json({ success: false, message: 'Not logged in' }, { status: 401 });
 
   const sql = getDB();
-  const url = new URL(req.url);
-  const action = url.pathname.split('/').pop(); // get, add, remove, clear
+  const url = req.url.split('?')[0];
+  const action = url.split('/').pop();
 
   try {
     // GET /api/cart

@@ -8,7 +8,7 @@ export const config = { runtime: 'nodejs' };
 export default async function handler(req) {
   if (req.method !== 'POST') return new Response('Method not allowed', { status: 405 });
 
-  const { email, password } = await req.json();
+  const { email, password } = req.body;
   const sql = getDB();
 
   try {

@@ -3,7 +3,7 @@ import { getUserFromRequest } from '../../lib/auth.js';
 export const config = { runtime: 'nodejs' };
 
 export default async function handler(req) {
-  const path = new URL(req.url).pathname;
+  const path = req.url.split('?')[0];
 
   // GET /api/auth/session
   if (req.method === 'GET') {
