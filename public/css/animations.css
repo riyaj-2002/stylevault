@@ -366,7 +366,14 @@ nav .logo img { transition: transform 0.35s ease; }
 nav .logo:hover img { transform: rotate(8deg) scale(1.1); }
 
 /* ── Section title ── */
-.section-title { position: relative; display: inline-block; left: 50%; transform: translateX(-50%); }
+.section-title {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  left: auto;
+  transform: none;
+}
 .section-title::after {
   content: '';
   display: block;
