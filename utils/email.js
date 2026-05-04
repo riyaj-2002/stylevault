@@ -6,11 +6,12 @@ const OWNER = process.env.OWNER_EMAIL;
 const SITE = 'https://stylevault.live';
 
 async function sendEmail(to, subject, html) {
-  try {
-    await resend.emails.send({ from: FROM, to, subject, html });
-  } catch (err) {
-    console.error('Email error:', err);
+  if (!to || !FROM) {
+    console.error('sendEmail: missing to or FROM_EMAIL env var');
+    return;
   }
+  const result = await resend.emails.send({ from: FROM, to, subject, html });
+  if (result.error) console.error('Resend error:', JSON.stringify(result.error));
 }
 
 const btn = (text, url, color = '#9575cd') =>

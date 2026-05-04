@@ -19,7 +19,9 @@ export default async function handler(req, res) {
     .update(rawBody)
     .digest('hex');
 
-  if (!crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(signature))) {
+  const expectedBuf = Buffer.from(expected, 'hex');
+  const sigBuf = Buffer.from(signature, 'hex');
+  if (expectedBuf.length !== sigBuf.length || !crypto.timingSafeEqual(expectedBuf, sigBuf)) {
     return res.status(401).json({ error: 'Invalid signature' });
   }
 

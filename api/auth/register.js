@@ -21,8 +21,14 @@ export default async function handler(req, res) {
     const [user] = await sql`SELECT id, name, email FROM users WHERE email = ${email}`;
     const token = signToken(user);
 
-    emailWelcome(email, name);
-    notifyOwnerRegister(name, email);
+    try {
+      await Promise.all([
+        emailWelcome(email, name),
+        notifyOwnerRegister(name, email)
+      ]);
+    } catch (emailErr) {
+      console.error('Registration email failed:', emailErr.message);
+    }
 
     res.setHeader('Set-Cookie', `token=${token}; HttpOnly; Secure; Path=/; Max-Age=604800; SameSite=Lax`);
     return res.json({ success: true });
