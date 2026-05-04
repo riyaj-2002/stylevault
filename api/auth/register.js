@@ -25,7 +25,7 @@ export default async function handler(req) {
     notifyOwnerRegister(name, email);
 
     return Response.json({ success: true }, {
-      headers: { 'Set-Cookie': `token=${token}; HttpOnly; Path=/; Max-Age=604800; SameSite=Lax` }
+      headers: { 'Set-Cookie': `token=${token}; HttpOnly; Secure; Path=/; Max-Age=604800; SameSite=Lax` }
     });
   } catch {
     return Response.json({ success: false, message: 'Email already exists' });

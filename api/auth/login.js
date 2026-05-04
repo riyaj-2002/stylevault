@@ -24,7 +24,7 @@ export default async function handler(req) {
     notifyOwnerLogin(user.name, user.email);
 
     return Response.json({ success: true, user: { id: user.id, name: user.name, email: user.email } }, {
-      headers: { 'Set-Cookie': `token=${token}; HttpOnly; Path=/; Max-Age=604800; SameSite=Lax` }
+      headers: { 'Set-Cookie': `token=${token}; HttpOnly; Secure; Path=/; Max-Age=604800; SameSite=Lax` }
     });
   } catch {
     return Response.json({ success: false, message: 'Login failed' });

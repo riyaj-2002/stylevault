@@ -15,7 +15,7 @@ export default async function handler(req) {
   // POST /api/auth/logout
   if (req.method === 'POST') {
     return Response.json({ success: true }, {
-      headers: { 'Set-Cookie': 'token=; HttpOnly; Path=/; Max-Age=0; SameSite=Lax' }
+      headers: { 'Set-Cookie': 'token=; HttpOnly; Secure; Path=/; Max-Age=0; SameSite=Lax' }
     });
   }
 

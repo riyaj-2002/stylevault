@@ -3,6 +3,11 @@ import { getDB } from '../../lib/db.js';
 export const config = { runtime: 'edge' };
 
 export default async function handler(req) {
+  const adminToken = req.headers.get('x-admin-secret');
+  if (!adminToken || adminToken !== process.env.ADMIN_SECRET) {
+    return Response.json({ error: 'Forbidden' }, { status: 403 });
+  }
+
   const sql = getDB();
   const url = new URL(req.url);
   const parts = url.pathname.split('/').filter(Boolean); // ['api','orders','5','items']
