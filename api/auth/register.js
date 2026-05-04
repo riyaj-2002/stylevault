@@ -5,12 +5,12 @@ import { emailWelcome, notifyOwnerRegister } from '../../utils/email.js';
 
 export const config = { runtime: 'nodejs' };
 
-export default async function handler(req) {
-  if (req.method !== 'POST') return new Response('Method not allowed', { status: 405 });
+export default async function handler(req, res) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const { name, email, password } = req.body;
   if (!name || !email || !password) {
-    return Response.json({ success: false, message: 'All fields required' }, { status: 400 });
+    return res.status(400).json({ success: false, message: 'All fields required' });
   }
 
   const sql = getDB();
@@ -24,10 +24,9 @@ export default async function handler(req) {
     emailWelcome(email, name);
     notifyOwnerRegister(name, email);
 
-    return Response.json({ success: true }, {
-      headers: { 'Set-Cookie': `token=${token}; HttpOnly; Secure; Path=/; Max-Age=604800; SameSite=Lax` }
-    });
+    res.setHeader('Set-Cookie', `token=${token}; HttpOnly; Secure; Path=/; Max-Age=604800; SameSite=Lax`);
+    return res.json({ success: true });
   } catch {
-    return Response.json({ success: false, message: 'Email already exists' });
+    return res.json({ success: false, message: 'Email already exists' });
   }
 }

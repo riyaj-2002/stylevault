@@ -3,24 +3,21 @@ import { getUserFromRequest } from '../../lib/auth.js';
 
 export const config = { runtime: 'nodejs' };
 
-export default async function handler(req) {
+export default async function handler(req, res) {
   const user = getUserFromRequest(req);
-  if (!user) return Response.json({ success: false, message: 'Not logged in' }, { status: 401 });
+  if (!user) return res.status(401).json({ success: false, message: 'Not logged in' });
 
   const sql = getDB();
-  const url = req.url.split('?')[0];
-  const action = url.split('/').pop();
+  const action = req.url.split('?')[0].split('/').pop();
 
   try {
-    // GET /api/cart
     if (req.method === 'GET') {
       const cart = await sql`SELECT * FROM cart WHERE user_id = ${user.id}`;
-      return Response.json({ success: true, cart });
+      return res.json({ success: true, cart });
     }
 
-    const body = await req.json();
+    const body = req.body;
 
-    // POST /api/cart/add
     if (action === 'add') {
       const { product_id, product_name, price, image } = body;
       const existing = await sql`SELECT * FROM cart WHERE user_id = ${user.id} AND product_id = ${product_id}`;
@@ -29,23 +26,21 @@ export default async function handler(req) {
       } else {
         await sql`INSERT INTO cart (user_id, product_id, product_name, price, image) VALUES (${user.id}, ${product_id}, ${product_name}, ${price}, ${image})`;
       }
-      return Response.json({ success: true });
+      return res.json({ success: true });
     }
 
-    // POST /api/cart/remove
     if (action === 'remove') {
       await sql`DELETE FROM cart WHERE user_id = ${user.id} AND product_id = ${body.product_id}`;
-      return Response.json({ success: true });
+      return res.json({ success: true });
     }
 
-    // POST /api/cart/clear
     if (action === 'clear') {
       await sql`DELETE FROM cart WHERE user_id = ${user.id}`;
-      return Response.json({ success: true });
+      return res.json({ success: true });
     }
 
-    return Response.json({ success: false, message: 'Unknown action' });
+    return res.json({ success: false, message: 'Unknown action' });
   } catch (err) {
-    return Response.json({ success: false, message: err.message });
+    return res.status(500).json({ success: false, message: err.message });
   }
 }

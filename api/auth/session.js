@@ -2,22 +2,19 @@ import { getUserFromRequest } from '../../lib/auth.js';
 
 export const config = { runtime: 'nodejs' };
 
-export default async function handler(req) {
-  const path = req.url.split('?')[0];
-
-  // GET /api/auth/session
+export default async function handler(req, res) {
+  // GET /api/auth/session or /api/session
   if (req.method === 'GET') {
     const user = getUserFromRequest(req);
-    if (user) return Response.json({ loggedIn: true, user });
-    return Response.json({ loggedIn: false });
+    if (user) return res.json({ loggedIn: true, user });
+    return res.json({ loggedIn: false });
   }
 
   // POST /api/auth/logout
   if (req.method === 'POST') {
-    return Response.json({ success: true }, {
-      headers: { 'Set-Cookie': 'token=; HttpOnly; Secure; Path=/; Max-Age=0; SameSite=Lax' }
-    });
+    res.setHeader('Set-Cookie', 'token=; HttpOnly; Secure; Path=/; Max-Age=0; SameSite=Lax');
+    return res.json({ success: true });
   }
 
-  return new Response('Method not allowed', { status: 405 });
+  return res.status(405).json({ error: 'Method not allowed' });
 }
