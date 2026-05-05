@@ -30,7 +30,7 @@ export default async function handler(req, res) {
       console.error('Registration email failed:', emailErr.message);
     }
 
-    res.setHeader('Set-Cookie', `token=${token}; HttpOnly; Secure; Path=/; Max-Age=604800; SameSite=Lax`);
+    res.setHeader('Set-Cookie', `token=${token}; HttpOnly; Secure; Path=/; Max-Age=2592000; SameSite=Lax`);
     return res.json({ success: true });
   } catch {
     return res.json({ success: false, message: 'Email already exists' });

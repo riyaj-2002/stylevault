@@ -27,7 +27,7 @@ export default async function handler(req, res) {
       console.error('Login notify failed:', emailErr.message);
     }
 
-    res.setHeader('Set-Cookie', `token=${token}; HttpOnly; Secure; Path=/; Max-Age=604800; SameSite=Lax`);
+    res.setHeader('Set-Cookie', `token=${token}; HttpOnly; Secure; Path=/; Max-Age=2592000; SameSite=Lax`);
     return res.json({ success: true, user: { id: user.id, name: user.name, email: user.email } });
   } catch {
     return res.json({ success: false, message: 'Login failed' });
