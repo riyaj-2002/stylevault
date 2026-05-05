@@ -70,7 +70,24 @@ export default async function handler(req, res) {
       console.error('Order email failed (non-fatal):', emailErr.message);
     }
 
-    res.json({ success: true, order: rzpOrder, order_id });
+    // ── 7. Generate QR code ──────────────────────────────────────────────────
+    let qr_url = null;
+    try {
+      const qr = await razorpay.qrCode.create({
+        type: 'upi_qr',
+        name: 'StyleVault',
+        usage: 'single_use',
+        fixed_amount: true,
+        payment_amount: Math.round(parseFloat(amount) * 100),
+        description: `Order #${order_id}`,
+        close_by: Math.floor(Date.now() / 1000) + 900 // 15 min expiry
+      });
+      qr_url = qr.image_url;
+    } catch (qrErr) {
+      console.error('QR generation failed (non-fatal):', qrErr.message);
+    }
+
+    res.json({ success: true, order: rzpOrder, order_id, qr_url });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }
