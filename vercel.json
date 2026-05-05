@@ -11,6 +11,8 @@
     { "source": "/api/auth/login",            "destination": "/api/auth/login.js" },
     { "source": "/api/auth/logout",           "destination": "/api/auth/session.js" },
     { "source": "/api/session",               "destination": "/api/auth/session.js" },
+    { "source": "/api/auth/google",           "destination": "/api/auth/google/index.js" },
+    { "source": "/api/auth/callback/google",  "destination": "/api/auth/callback/google.js" },
     { "source": "/api/cart",                  "destination": "/api/cart/index.js" },
     { "source": "/api/cart/:path*",           "destination": "/api/cart/index.js" },
     { "source": "/api/razorpay/create-order", "destination": "/api/payment/create-order.js" },
