@@ -15,7 +15,7 @@
     .checkout-page h2 {
       font-family: 'Playfair Display', serif;
       font-size: 1.6rem;
-      color: #3a2a4a;
+      color: var(--primary-dk);
       margin-bottom: 6px;
       text-align: center;
     }
@@ -26,64 +26,111 @@
       margin-bottom: 28px;
     }
     .amount-box {
-      background: #f3eeff;
+      background: #fdf5ec;
       border-radius: 12px;
       padding: 16px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 24px;
+      border: 1px solid var(--border);
     }
     .amount-box span { font-size: 0.9rem; color: #555; }
-    .amount-box strong { font-size: 1.3rem; color: #9575cd; font-weight: 700; }
+    .amount-box strong { font-size: 1.3rem; color: var(--primary); font-weight: 700; }
+
+    /* ── Payment method tabs ── */
+    .pay-tabs {
+      display: flex;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1.5px solid var(--border);
+      margin-bottom: 20px;
+    }
+    .pay-tab {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      background: #fdf5ec;
+      color: #888;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .pay-tab.active {
+      background: var(--primary);
+      color: #fff;
+    }
+    .pay-tab:first-child { border-right: 1.5px solid var(--border); }
 
     .pay-section {
       background: #fff;
       border-radius: 14px;
       padding: 24px;
-      box-shadow: 0 2px 12px rgba(80,40,120,0.08);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
       margin-bottom: 16px;
     }
-    .pay-section h3 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #3a2a4a;
-      margin-bottom: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+    .pay-panel { display: none; }
+    .pay-panel.active { display: block; }
 
-    .upi-input-wrap {
-      position: relative;
-      margin-bottom: 14px;
-    }
-    .upi-input-wrap label {
-      position: absolute;
-      top: -9px;
-      left: 12px;
-      background: #fff;
-      padding: 0 4px;
+    .pay-label {
       font-size: 0.78rem;
-      color: #9575cd;
+      color: var(--primary);
       font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
     }
-    .upi-input-wrap input {
+    .pay-input {
       width: 100%;
-      padding: 14px;
-      border: 1.5px solid #d1c4e9;
+      padding: 13px 14px;
+      border: 1.5px solid var(--border);
       border-radius: 10px;
       font-size: 1rem;
-      color: #3a2a4a;
+      color: var(--text);
       outline: none;
       box-sizing: border-box;
       transition: border-color 0.2s;
+      margin-bottom: 14px;
     }
-    .upi-input-wrap input:focus { border-color: #9575cd; }
+    .pay-input:focus { border-color: var(--primary); }
+
+    /* QR panel */
+    .qr-hint {
+      text-align: center;
+      color: #888;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      padding: 10px 0 4px;
+    }
+    .qr-hint strong { color: var(--text); display: block; font-size: 0.95rem; margin-bottom: 6px; }
+    .qr-box {
+      display: none;
+      text-align: center;
+      margin-top: 16px;
+    }
+    .qr-box img {
+      width: 200px;
+      height: 200px;
+      border-radius: 12px;
+      border: 2px solid var(--border);
+      margin: 0 auto 12px;
+      display: block;
+    }
+    .qr-box .qr-timer {
+      font-size: 0.82rem;
+      color: #888;
+    }
+    .qr-box .qr-timer span { color: var(--primary); font-weight: 700; }
 
     .pay-btn {
       width: 100%;
       padding: 14px;
-      background: #3a2a4a;
+      background: var(--primary);
       color: #fff;
       border: none;
       border-radius: 10px;
@@ -91,78 +138,31 @@
       font-weight: 600;
       cursor: pointer;
       transition: background 0.2s;
+      margin-top: 4px;
     }
-    .pay-btn:hover { background: #9575cd; }
+    .pay-btn:hover { background: var(--primary-dk); }
     .pay-btn:disabled { background: #aaa; cursor: not-allowed; }
 
-    .loading-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.4);
-      z-index: 9999;
-      align-items: flex-end;
-      justify-content: center;
-    }
-    .loading-overlay.show { display: flex; }
-    .loading-bottom {
-      background: #fff;
-      width: 100%;
-      border-radius: 24px 24px 0 0;
-      padding: 40px 30px 50px;
+    .powered-by {
+      font-size: 0.78rem;
+      color: #aaa;
       text-align: center;
-      animation: slideUp 0.3s ease;
+      margin-bottom: 14px;
     }
-    @keyframes slideUp {
-      from { transform: translateY(100%); }
-      to { transform: translateY(0); }
-    }
-    .loading-overlay .spinner {
-      width: 44px;
-      height: 44px;
-      border: 4px solid #eee;
-      border-top-color: #3a2a4a;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin: 0 auto 28px;
-    }
-    .loading-overlay p {
-      color: #222;
-      font-size: 1.05rem;
-      font-weight: 500;
-      line-height: 1.6;
-      margin-bottom: 32px;
-    }
-    .loading-overlay .cancel-link {
-      display: inline-block;
-      font-size: 0.95rem;
-      color: #222;
-      text-decoration: underline;
-      cursor: pointer;
-      font-weight: 500;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    .cancel-link {
-      display: block;
-      text-align: center;
-      margin-top: 16px;
-      font-size: 0.88rem;
-      color: #9575cd;
-      text-decoration: underline;
-      cursor: pointer;
-    }
+    .powered-by strong { color: var(--text); }
 
     .success-msg {
       display: none;
       text-align: center;
-      background: #f3eeff;
+      background: #fdf5ec;
       border-radius: 12px;
       padding: 24px;
-      color: #3a2a4a;
+      color: var(--text);
       font-size: 1rem;
       margin-top: 20px;
+      border: 1px solid var(--border);
     }
+    @keyframes spin { to { transform: rotate(360deg); } }
   </style>
 </head>
 <body>
@@ -179,41 +179,51 @@
   </div>
 </nav>
 
-<!-- Loading overlay -->
-<div class="loading-overlay" id="loading-overlay">
-  <div class="loading-bottom">
-    <div class="spinner"></div>
-    <p>Please open your UPI app and approve the request to place your order.</p>
-    <a class="cancel-link" onclick="cancelPayment()">Cancel Payment</a>
-  </div>
-</div>
+<!-- Loading overlay removed — Razorpay modal handles this -->
 
 <div class="checkout-page">
   <h2>Complete Payment</h2>
-  <p class="subtitle">Pay securely via UPI</p>
+  <p class="subtitle">Secure checkout powered by Razorpay</p>
 
   <div class="amount-box">
     <span>Amount to Pay</span>
     <strong>₹<span id="total-amount">0</span></strong>
   </div>
 
+  <!-- Payment method tabs -->
+  <div class="pay-tabs">
+    <button class="pay-tab active" id="tab-upi" onclick="switchTab('upi')">📱 UPI ID</button>
+    <button class="pay-tab" id="tab-qr" onclick="switchTab('qr')">⬛ Scan QR</button>
+  </div>
+
   <div class="pay-section">
-    <h3>Pay via UPI ID</h3>
-    <p style="font-size:0.82rem;color:#888;margin-bottom:14px;">Powered by <strong style="color:#3a2a4a">Razorpay</strong> <img src="https://razorpay.com/favicon.ico" style="width:14px;height:14px;vertical-align:middle;margin-left:4px;"/></p>
-    <div class="upi-input-wrap">
-      <label>Enter UPI ID</label>
-      <input type="text" id="upi-id" placeholder="e.g. 9876543210@upi"/>
+    <p class="powered-by">Powered by <strong>Razorpay</strong> <img src="https://razorpay.com/favicon.ico" style="width:13px;height:13px;vertical-align:middle;"/></p>
+
+    <!-- UPI ID panel -->
+    <div class="pay-panel active" id="panel-upi">
+      <label class="pay-label">Enter UPI ID</label>
+      <input class="pay-input" type="text" id="upi-id" placeholder="e.g. 9876543210@upi"/>
+      <button class="pay-btn" id="pay-btn" onclick="initiatePayment()">Verify and Pay →</button>
     </div>
-    <button class="pay-btn" id="pay-btn" onclick="initiatePayment()">Verify and Pay</button>
+
+    <!-- QR panel -->
+    <div class="pay-panel" id="panel-qr">
+      <div class="qr-hint">
+        <strong>Scan & Pay Instantly</strong>
+        Click below to generate a QR code for this order. Scan with any UPI app.
+      </div>
+      <div class="qr-box" id="qr-box">
+        <img id="qr-img" src="" alt="QR Code"/>
+        <p class="qr-timer">Waiting for payment<span id="qr-dots">...</span></p>
+      </div>
+      <button class="pay-btn" id="qr-btn" onclick="initiateQR()">Generate QR Code →</button>
+    </div>
   </div>
 
   <div class="success-msg" id="success-msg">
-    🎉 Order placed successfully! Thank you for shopping with StyleVault.<br><br>
-    You will receive a confirmation email shortly.
+    🎉 Order placed! Thank you for shopping with StyleVault.<br><br>
+    <small style="color:#888">You will receive a confirmation email shortly.</small>
   </div>
-
-  <!-- TEST ONLY - remove before going live -->
-  <button onclick="testOrder()" style="margin-top:16px;width:100%;padding:12px;background:#4caf50;color:#fff;border:none;border-radius:10px;font-size:0.9rem;cursor:pointer;">🧪 Test Order (skip payment)</button>
 </div>
 
 <footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
@@ -223,36 +233,96 @@
 <script>
   const total = localStorage.getItem('cart_total') || '0';
   document.getElementById('total-amount').textContent = total;
-  let paymentTimer;
+  let pollInterval;
 
+  function switchTab(tab) {
+    document.getElementById('tab-upi').classList.toggle('active', tab === 'upi');
+    document.getElementById('tab-qr').classList.toggle('active', tab === 'qr');
+    document.getElementById('panel-upi').classList.toggle('active', tab === 'upi');
+    document.getElementById('panel-qr').classList.toggle('active', tab === 'qr');
+  }
+
+  function showSuccess() {
+    document.getElementById('success-msg').style.display = 'block';
+    document.getElementById('pay-btn') && (document.getElementById('pay-btn').style.display = 'none');
+    document.getElementById('qr-btn') && (document.getElementById('qr-btn').style.display = 'none');
+    localStorage.removeItem('cart_total');
+    localStorage.removeItem('delivery_address');
+    clearInterval(pollInterval);
+    setTimeout(() => window.location.href = 'index.html', 4000);
+  }
+
+  async function createOrder() {
+    const address = JSON.parse(localStorage.getItem('delivery_address') || '{}');
+    const shipping = address.country === 'India' || !address.country ? 0 : 499;
+    const res = await fetch('/api/razorpay/create-order', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ amount: total, shipping, address })
+    });
+    return res.json();
+  }
+
+  // ── UPI ID flow ──
   async function initiatePayment() {
     const upiId = document.getElementById('upi-id').value.trim();
     if (!upiId) { alert('Please enter your UPI ID.'); return; }
     if (!upiId.includes('@')) { alert('Please enter a valid UPI ID (e.g. 9876543210@upi).'); return; }
 
-    document.getElementById('pay-btn').disabled = true;
+    const btn = document.getElementById('pay-btn');
+    btn.disabled = true;
+    btn.textContent = 'Processing...';
 
-    const address = JSON.parse(localStorage.getItem('delivery_address') || '{}');
-    const shipping = address.country === 'India' || !address.country ? 0 : 499;
-
-    let orderData;
-    try {
-      const orderRes = await fetch('/api/razorpay/create-order', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount: total, shipping, address })
-      });
-      orderData = await orderRes.json();
-      console.log('Order created:', orderData);
-    } catch(e) {
-      alert('Network error: ' + e.message); 
-      document.getElementById('pay-btn').disabled = false; 
-      return;
+    const orderData = await createOrder();
+    if (!orderData.success) {
+      alert(orderData.message || 'Failed to create order. Try again.');
+      btn.disabled = false; btn.textContent = 'Verify and Pay →'; return;
     }
 
-    if (!orderData.success) { 
-      alert('Failed to initiate payment: ' + (orderData.message || 'Try again.')); 
-      document.getElementById('pay-btn').disabled = false; 
-      return; 
+    const options = {
+      key: '${process.env.RAZORPAY_KEY_ID || 'rzp_test_Sk1r1ZMhTUYG3z'}',
+      amount: orderData.order.amount,
+      currency: 'INR',
+      name: 'StyleVault',
+      description: 'Phone Case Order',
+      order_id: orderData.order.id,
+      prefill: { vpa: upiId, method: 'upi' },
+      method: { upi: true, card: false, netbanking: false, wallet: false },
+      config: {
+        display: {
+          blocks: { upi: { name: 'Pay via UPI', instruments: [{ method: 'upi', flow: 'collect' }] } },
+          sequence: ['block.upi'],
+          preferences: { show_default_blocks: false }
+        }
+      },
+      theme: { color: '#b06633' },
+      handler: async function(response) {
+        const verifyRes = await fetch('/api/razorpay/verify', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            razorpay_order_id: response.razorpay_order_id,
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_signature: response.razorpay_signature
+          })
+        });
+        const v = await verifyRes.json();
+        if (v.success) showSuccess();
+        else { alert('Payment verification failed. Contact support.'); btn.disabled = false; btn.textContent = 'Verify and Pay →'; }
+      },
+      modal: { ondismiss: () => { btn.disabled = false; btn.textContent = 'Verify and Pay →'; } }
+    };
+    new Razorpay(options).open();
+  }
+
+  // ── QR flow ──
+  async function initiateQR() {
+    const btn = document.getElementById('qr-btn');
+    btn.disabled = true;
+    btn.textContent = 'Generating...';
+
+    const orderData = await createOrder();
+    if (!orderData.success) {
+      alert(orderData.message || 'Failed to create order. Try again.');
+      btn.disabled = false; btn.textContent = 'Generate QR Code →'; return;
     }
 
     const options = {
@@ -262,87 +332,31 @@
       name: 'StyleVault',
       description: 'Phone Case Order',
       order_id: orderData.order.id,
-      prefill: { vpa: upiId, method: 'upi' },
-      method: {
-        upi: true,
-        card: false,
-        netbanking: false,
-        wallet: false,
-        emi: false,
-        paylater: false,
-        bank_transfer: false
-      },
+      method: { upi: true, card: false, netbanking: false, wallet: false },
       config: {
         display: {
-          blocks: {
-            upi: {
-              name: 'Pay via UPI',
-              instruments: [
-                { method: 'upi', flow: 'collect' }
-              ]
-            }
-          },
+          blocks: { upi: { name: 'Scan QR', instruments: [{ method: 'upi', flow: 'qr' }] } },
           sequence: ['block.upi'],
           preferences: { show_default_blocks: false }
         }
       },
-      theme: { color: '#9575cd' },
+      theme: { color: '#b06633' },
       handler: async function(response) {
-        // Verify payment
         const verifyRes = await fetch('/api/razorpay/verify', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             razorpay_order_id: response.razorpay_order_id,
             razorpay_payment_id: response.razorpay_payment_id,
-            razorpay_signature: response.razorpay_signature,
-            total, shipping, address
+            razorpay_signature: response.razorpay_signature
           })
         });
-        const verifyData = await verifyRes.json();
-        if (verifyData.success) {
-          document.getElementById('success-msg').style.display = 'block';
-          document.getElementById('pay-btn').style.display = 'none';
-          localStorage.removeItem('cart_total');
-          localStorage.removeItem('delivery_address');
-          setTimeout(() => window.location.href = 'index.html', 4000);
-        } else {
-          alert('Payment verification failed. Contact support.');
-          document.getElementById('pay-btn').disabled = false;
-        }
+        const v = await verifyRes.json();
+        if (v.success) showSuccess();
+        else alert('Payment verification failed. Contact support.');
       },
-      modal: {
-        ondismiss: function() {
-          document.getElementById('pay-btn').disabled = false;
-        }
-      }
+      modal: { ondismiss: () => { btn.disabled = false; btn.textContent = 'Generate QR Code →'; } }
     };
-
-    const rzp = new Razorpay(options);
-    rzp.open();
-  }
-
-  function cancelPayment() {
-    clearTimeout(paymentTimer);
-    document.getElementById('loading-overlay').classList.remove('show');
-    document.getElementById('pay-btn').disabled = false;
-  }
-
-  async function testOrder() {
-    const address = JSON.parse(localStorage.getItem('delivery_address') || '{}');
-    const shipping = address.country === 'India' || !address.country ? 0 : 499;
-    const res = await fetch('/api/razorpay/test-order', {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ total, shipping, address })
-    });
-    const data = await res.json();
-    if (data.success) {
-      document.getElementById('success-msg').style.display = 'block';
-      localStorage.removeItem('cart_total');
-      localStorage.removeItem('delivery_address');
-      setTimeout(() => window.location.href = 'index.html', 4000);
-    } else {
-      alert('Test failed: ' + (data.message || 'Make sure you are logged in'));
-    }
+    new Razorpay(options).open();
   }
 </script>
 <script src="js/cookies.js"></script>
