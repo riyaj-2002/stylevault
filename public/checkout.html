@@ -345,7 +345,15 @@
       name: 'StyleVault',
       description: 'Phone Case Order',
       order_id: orderData.order.id,
-      prefill: { contact: '', email: '', method: 'upi', vpa: upiId },
+      prefill: { vpa: upiId },
+      method: { upi: true, card: false, netbanking: false, wallet: false, emi: false },
+      config: {
+        display: {
+          blocks: { upi: { name: 'Pay via UPI', instruments: [{ method: 'upi', flow: 'collect' }] } },
+          sequence: ['block.upi'],
+          preferences: { show_default_blocks: false }
+        }
+      },
       theme: { color: '#5D4037' },
       handler: (r) => verifyAndShow(r, () => { btn.disabled = false; btn.textContent = 'Verify and Pay →'; }),
       modal: { ondismiss: () => { btn.disabled = false; btn.textContent = 'Verify and Pay →'; } }
@@ -362,6 +370,14 @@
       currency: 'INR',
       name: 'StyleVault',
       order_id: orderData.order.id,
+      method: { upi: true, card: false, netbanking: false, wallet: false, emi: false },
+      config: {
+        display: {
+          blocks: { upi: { name: 'Scan QR', instruments: [{ method: 'upi', flow: 'qr' }] } },
+          sequence: ['block.upi'],
+          preferences: { show_default_blocks: false }
+        }
+      },
       theme: { color: '#5D4037' },
       handler: (r) => verifyAndShow(r, () => {}),
       modal: { ondismiss: () => {} }
