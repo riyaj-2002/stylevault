@@ -21,6 +21,8 @@
     { "source": "/api/payment/:path*",        "destination": "/api/payment/update-status.js" },
     { "source": "/api/orders/:path*",         "destination": "/api/orders/index.js" },
     { "source": "/api/orders",                "destination": "/api/orders/index.js" },
-    { "source": "/api/user/profile",           "destination": "/api/user/profile.js" }
+    { "source": "/api/user/profile",           "destination": "/api/user/profile.js" },
+    { "source": "/api/payment/update-status",   "destination": "/api/payment/update-status.js" },
+    { "source": "/api/order-action",             "destination": "/api/order-action.js" }
   ]
 }

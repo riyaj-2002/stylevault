@@ -149,6 +149,7 @@ async function notifyOwnerLogin(name, email) {
 async function notifyOwnerOrder(order_id, user, items, address, subtotal, shipping) {
   const itemsHTML = items.map(i => `<li style="color:#555;font-size:0.9rem;margin-bottom:6px">${i.product_name} x${i.quantity} — ₹${(i.price * i.quantity).toFixed(2)}</li>`).join('');
   const total = parseFloat(subtotal) + parseFloat(shipping || 0);
+  const BASE = `https://stylevault.live/api/order-action?token=${process.env.ADMIN_SECRET}&order_id=${order_id}`;
   await sendEmail(OWNER, `🛒 New Order #${order_id} — ₹${total.toFixed(2)}`, `
     <div style="font-family:Segoe UI,sans-serif;max-width:520px;margin:auto;padding:30px;background:#fff;border-radius:12px;border:1px solid #e8e0f0">
       <h2 style="color:#9575cd">New Order Received 🛒</h2>
@@ -166,20 +167,26 @@ async function notifyOwnerOrder(order_id, user, items, address, subtotal, shippi
           ${address.city}, ${address.state} — ${address.pincode}<br>${address.country}
         </p>
       </div>
-      ${btn('View All Orders →', `${SITE}/admin.html`, '#3a2a4a')}
+      <div style="margin-top:24px;display:flex;gap:12px">
+        <a href="${BASE}&action=ship" style="flex:1;display:inline-block;text-align:center;background:#1565c0;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem">🚚 Mark as Shipped</a>
+      </div>
       ${footer}
     </div>
   `);
 }
 
 async function notifyOwnerPaymentConfirmed(order_id, name, email, total) {
+  const BASE = `https://stylevault.live/api/order-action?token=${process.env.ADMIN_SECRET}&order_id=${order_id}`;
   await sendEmail(OWNER, `💰 Payment Confirmed — Order #${order_id}`, `
     <div style="font-family:Segoe UI,sans-serif;max-width:520px;margin:auto;padding:30px;background:#fff;border-radius:12px;border:1px solid #e8e0f0">
       <h2 style="color:#4caf50">Payment Confirmed 💰</h2>
       <p style="color:#555"><strong>Order ID:</strong> #${order_id}</p>
       <p style="color:#555"><strong>Customer:</strong> ${name} (${email})</p>
       <p style="color:#9575cd;font-weight:700;font-size:1.1rem">Amount: ₹${total}</p>
-      ${btn('View All Orders →', `${SITE}/admin.html`, '#4caf50')}
+      <div style="margin-top:24px;display:flex;gap:12px">
+        <a href="${BASE}&action=ship" style="flex:1;display:inline-block;text-align:center;background:#1565c0;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem">🚚 Mark as Shipped</a>
+        <a href="${BASE}&action=deliver" style="flex:1;display:inline-block;text-align:center;background:#6a1b9a;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem">📦 Mark as Delivered</a>
+      </div>
       ${footer}
     </div>
   `);
