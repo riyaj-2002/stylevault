@@ -36,22 +36,14 @@
       height: 220px;
       object-fit: cover;
     }
-    .customize-card .info { padding: 14px 16px; }
-    .customize-card .info h3 { font-size: 0.95rem; font-weight: 700; color: #282828; margin-bottom: 4px; }
-    .customize-card .info p { font-size: 0.82rem; color: #888; line-height: 1.5; }
-    .customize-badge {
-      display: inline-block;
-      background: rgba(176,102,51,0.12);
-      color: #b06633;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 99px;
-      border: 1px solid #e8d5b8;
-      margin-bottom: 6px;
+    .customize-card .info {
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
+    .customize-card .info h3 { font-size: 1rem; font-weight: 700; color: #282828; }
+    .customize-card .info span { color: #b06633; font-size: 0.9rem; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -91,9 +83,8 @@
     card.innerHTML = `
       <img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
       <div class="info">
-        <span class="customize-badge">✦ Customizable</span>
         <h3>${p.name}</h3>
-        <p>${p.description}</p>
+        <span>Customize →</span>
       </div>
     `;
     grid.appendChild(card);
