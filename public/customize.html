@@ -9,41 +9,8 @@
   <style>
     .customize-page { max-width: 1100px; margin: 0 auto; padding: 20px 40px 60px; }
     h2.section-title { text-align: center; margin-bottom: 10px; }
-    .customize-subtitle {
-      text-align: center;
-      color: #888;
-      font-size: 1rem;
-      margin-bottom: 36px;
-    }
-    .customize-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 24px;
-    }
-    .customize-card {
-      background: #fffaf4;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid #e8d5b8;
-      box-shadow: 0 2px 12px rgba(100,50,10,0.10);
-      cursor: pointer;
-      transition: transform 0.25s, box-shadow 0.25s;
-      text-decoration: none;
-    }
-    .customize-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(100,50,10,0.20); }
-    .customize-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .customize-card .info {
-      padding: 14px 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .customize-card .info h3 { font-size: 1rem; font-weight: 700; color: #282828; }
-    .customize-card .info span { color: #b06633; font-size: 0.9rem; font-weight: 600; }
+    .customize-subtitle { text-align: center; color: #888; font-size: 1rem; margin-bottom: 36px; }
+    #customize-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
   </style>
 </head>
 <body>
@@ -63,7 +30,7 @@
 <div class="customize-page">
   <h2 class="section-title">Customize Your Case</h2>
   <p class="customize-subtitle">Pick a design and personalize it with your name, initials, or a special word — made just for you.</p>
-  <div class="customize-grid" id="customize-grid"></div>
+  <div class="products-grid" id="customize-grid"></div>
 </div>
 
 <footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
@@ -77,17 +44,17 @@
   customizeIds.forEach(id => {
     const p = products.find(p => p.id === id);
     if (!p) return;
-    const card = document.createElement('a');
-    card.href = `product.html?id=${p.id}`;
-    card.className = 'customize-card';
-    card.innerHTML = `
-      <img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
-      <div class="info">
-        <h3>${p.name}</h3>
-        <span>Customize →</span>
+    grid.insertAdjacentHTML('beforeend', `
+      <div class="product-card" onclick="window.location.href='product.html?id=${p.id}'" style="cursor:pointer">
+        <img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
+        <div class="info">
+          <h3>${p.name}</h3>
+          <small style="color:#888">${p.model}</small>
+          <p class="price">&#8377;${p.price}</p>
+          <button onclick="event.stopPropagation(); window.location.href='product.html?id=${p.id}'">View Details</button>
+        </div>
       </div>
-    `;
-    grid.appendChild(card);
+    `);
   });
 </script>
 <script src="js/cookies.js"></script>
