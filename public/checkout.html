@@ -250,7 +250,7 @@
 <script src="js/footer.js"></script>
 <script src="js/cookies.js"></script>
 <script>
-  const RZP_KEY = 'rzp_test_Sk1r1ZMhTUYG3z';
+  let RZP_KEY = '';
   let total = '0';
   let orderData = null;
 
@@ -279,6 +279,8 @@
       body: JSON.stringify({ amount: total, shipping, address })
     });
     orderData = await res.json();
+
+    RZP_KEY = orderData.key;
 
     if (!orderData.success) {
       document.getElementById('qr-spinner').style.display = 'none';

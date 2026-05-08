@@ -87,7 +87,7 @@ export default async function handler(req, res) {
       console.error('QR generation failed (non-fatal):', qrErr.message);
     }
 
-    res.json({ success: true, order: rzpOrder, order_id, qr_url });
+    res.json({ success: true, order: rzpOrder, order_id, qr_url, key: process.env.RAZORPAY_KEY_ID });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }
