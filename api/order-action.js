@@ -1,7 +1,15 @@
+import crypto from 'crypto';
 import { getDB } from '../lib/db.js';
 import { emailOutForShipping, emailDelivered } from '../utils/email.js';
 
 export const config = { runtime: 'nodejs' };
+
+function makeToken(order_id, action) {
+  return crypto.createHmac('sha256', process.env.ADMIN_SECRET)
+    .update(`${order_id}:${action}`).digest('hex');
+}
+
+export { makeToken };
 
 export default async function handler(req, res) {
   const url = new URL(req.url, `https://${req.headers.host}`);
@@ -9,12 +17,13 @@ export default async function handler(req, res) {
   const action = url.searchParams.get('action');
   const order_id = url.searchParams.get('order_id');
 
-  if (!token || token !== process.env.ADMIN_SECRET) {
-    return res.status(403).send(page('❌ Forbidden', 'Invalid or missing token.', '#e53935'));
+  if (!token || !order_id || !['ship', 'deliver'].includes(action)) {
+    return res.status(400).send(page('❌ Invalid', 'Missing parameters.', '#e53935'));
   }
 
-  if (!order_id || !['ship', 'deliver'].includes(action)) {
-    return res.status(400).send(page('❌ Invalid', 'Missing order_id or action.', '#e53935'));
+  const expected = makeToken(order_id, action);
+  if (token !== expected) {
+    return res.status(403).send(page('❌ Forbidden', 'Invalid or missing token.', '#e53935'));
   }
 
   const statusMap = { ship: 'shipped', deliver: 'delivered' };

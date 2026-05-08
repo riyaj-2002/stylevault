@@ -8,12 +8,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
   <style>
     .checkout-wrap {
-      max-width: 780px;
+      max-width: 520px;
       margin: 50px auto;
       padding: 0 20px 80px;
     }
 
-    /* ── Header ── */
     .checkout-header {
       text-align: center;
       margin-bottom: 32px;
@@ -36,7 +35,6 @@
       color: #999;
     }
 
-    /* ── Amount box ── */
     .amount-box {
       background: #fdf5ec;
       border-radius: 12px;
@@ -50,22 +48,16 @@
     .amount-box span { font-size: 0.9rem; color: #777; }
     .amount-box strong { font-size: 1.4rem; color: #5D4037; font-weight: 700; }
 
-    /* ── Two-column card ── */
     .pay-card {
       background: #fffaf4;
       border-radius: 18px;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
-      display: grid;
-      grid-template-columns: 1fr 1px 1fr;
       overflow: hidden;
-    }
-    .pay-divider {
-      background: var(--border);
-      width: 1px;
     }
     .pay-col {
       padding: 32px 28px;
+      text-align: center;
     }
     .pay-col-title {
       font-family: 'Playfair Display', serif;
@@ -79,29 +71,6 @@
       color: #aaa;
       margin-bottom: 20px;
     }
-
-    /* UPI col */
-    .pay-label {
-      font-size: 0.78rem;
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 6px;
-      display: block;
-    }
-    .pay-input {
-      width: 100%;
-      padding: 13px 14px;
-      border: 1.5px solid var(--border);
-      border-radius: 10px;
-      font-size: 0.95rem;
-      color: var(--text);
-      outline: none;
-      box-sizing: border-box;
-      background: #fff;
-      transition: border-color 0.2s;
-      margin-bottom: 14px;
-    }
-    .pay-input:focus { border-color: var(--primary); }
     .pay-btn {
       width: 100%;
       padding: 13px;
@@ -117,7 +86,6 @@
     .pay-btn:hover { background: var(--primary); }
     .pay-btn:disabled { background: #bbb; cursor: not-allowed; }
 
-    /* QR col */
     .qr-area {
       display: flex;
       flex-direction: column;
@@ -126,8 +94,8 @@
       min-height: 200px;
     }
     .qr-area img {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       border-radius: 12px;
       border: 2px solid var(--border);
       display: block;
@@ -156,7 +124,6 @@
     }
     .powered-by strong { color: #888; }
 
-    /* Success */
     .success-msg {
       display: none;
       text-align: center;
@@ -174,10 +141,7 @@
       margin-bottom: 8px;
     }
 
-    /* Mobile: stack columns */
     @media (max-width: 600px) {
-      .pay-card { grid-template-columns: 1fr; }
-      .pay-divider { width: 100%; height: 1px; }
       .pay-col { padding: 24px 20px; }
     }
   </style>
@@ -189,7 +153,7 @@
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
-    <a href="customize.html">Customize ✦</a>
+    <a href="customize.html">Customize</a>
     <a href="contact.html">Contact</a>
     <a href="cart.html" class="cart-icon">🛒 Cart <span id="cart-count">0</span></a>
     <a href="login.html" id="auth-link">Login</a>
@@ -210,20 +174,6 @@
   </div>
 
   <div class="pay-card" id="pay-card">
-
-    <!-- Left: UPI ID -->
-    <div class="pay-col">
-      <p class="pay-col-title">Pay via UPI ID</p>
-      <p class="pay-col-sub">Enter your UPI ID and approve in your app</p>
-      <label class="pay-label">UPI ID</label>
-      <input class="pay-input" type="text" id="upi-id" placeholder="e.g. 9876543210@upi"/>
-      <button class="pay-btn" id="pay-btn" onclick="initiatePayment()">Verify and Pay →</button>
-      <p class="powered-by">Powered by <strong>Razorpay</strong></p>
-    </div>
-
-    <div class="pay-divider"></div>
-
-    <!-- Right: QR Code -->
     <div class="pay-col">
       <p class="pay-col-title">Scan to Pay</p>
       <p class="pay-col-sub">Scan with GPay, PhonePe, or any UPI app</p>
@@ -233,7 +183,6 @@
       </div>
       <p class="powered-by">Powered by <strong>Razorpay</strong></p>
     </div>
-
   </div>
 
   <div class="success-msg" id="success-msg">
@@ -251,11 +200,9 @@
 <script src="js/cookies.js"></script>
 <script>
   let RZP_KEY = '';
-  let total = '0';
   let orderData = null;
 
   async function init() {
-    // 1. Fetch cart total from API
     const cartRes = await fetch('/api/cart', { credentials: 'include' });
     const cartData = await cartRes.json();
     if (!cartData.success || !cartData.cart.length) {
@@ -267,11 +214,10 @@
     const address = JSON.parse(localStorage.getItem('delivery_address') || '{}');
     const shipping = address.country && address.country !== 'India' ? 499 : 0;
     const subtotal = cartData.cart.reduce((s, i) => s + parseFloat(i.price) * i.quantity, 0);
-    total = (subtotal + shipping).toFixed(2);
+    const total = (subtotal + shipping).toFixed(2);
     localStorage.setItem('cart_total', total);
     document.getElementById('total-amount').textContent = total;
 
-    // 2. Create order + get QR from backend
     const res = await fetch('/api/razorpay/create-order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -287,20 +233,18 @@
     }
 
     RZP_KEY = orderData.key;
-
-    // 3. Show QR image
     const qrArea = document.getElementById('qr-area');
     document.getElementById('qr-spinner').remove();
+
     if (orderData.qr_url) {
       qrArea.innerHTML = `
         <img src="${orderData.qr_url}" alt="UPI QR Code"/>
-        <p class="qr-status">Scan with any UPI app</p>
+        <p class="qr-status">Scan with any UPI app to pay</p>
       `;
     } else {
-      // Fallback: open Razorpay modal with QR flow
       qrArea.innerHTML = `
-        <button class="pay-btn" onclick="openQRModal()" style="margin-top:8px">Open QR Code →</button>
-        <p class="qr-status" style="margin-top:10px">Tap to show scannable QR</p>
+        <button class="pay-btn" onclick="openQRModal()">Generate QR Code →</button>
+        <p class="qr-status" style="margin-top:10px">Tap to generate scannable QR</p>
       `;
     }
   }
@@ -313,7 +257,7 @@
     setTimeout(() => window.location.href = 'index.html', 4000);
   }
 
-  async function verifyAndShow(response, onFail) {
+  async function verifyAndShow(response) {
     const res = await fetch('/api/razorpay/verify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -325,43 +269,9 @@
     });
     const v = await res.json();
     if (v.success) showSuccess();
-    else { alert('Payment verification failed. Contact support.'); onFail(); }
+    else alert('Payment verification failed. Contact support.');
   }
 
-  // ── UPI ID flow ──
-  async function initiatePayment() {
-    if (!orderData || !orderData.success) { alert('Page still loading. Please wait.'); return; }
-    const upiId = document.getElementById('upi-id').value.trim();
-    if (!upiId) { alert('Please enter your UPI ID.'); return; }
-    if (!upiId.includes('@')) { alert('Please enter a valid UPI ID (e.g. 9876543210@upi).'); return; }
-
-    const btn = document.getElementById('pay-btn');
-    btn.disabled = true; btn.textContent = 'Processing...';
-
-    const rzp = new Razorpay({
-      key: RZP_KEY,
-      amount: orderData.order.amount,
-      currency: 'INR',
-      name: 'StyleVault',
-      description: 'Phone Case Order',
-      order_id: orderData.order.id,
-      prefill: { vpa: upiId },
-      method: { upi: true, card: false, netbanking: false, wallet: false, emi: false },
-      config: {
-        display: {
-          blocks: { upi: { name: 'Pay via UPI', instruments: [{ method: 'upi', flow: 'collect' }] } },
-          sequence: ['block.upi'],
-          preferences: { show_default_blocks: false }
-        }
-      },
-      theme: { color: '#5D4037' },
-      handler: (r) => verifyAndShow(r, () => { btn.disabled = false; btn.textContent = 'Verify and Pay →'; }),
-      modal: { ondismiss: () => { btn.disabled = false; btn.textContent = 'Verify and Pay →'; } }
-    });
-    rzp.open();
-  }
-
-  // ── QR modal fallback ──
   function openQRModal() {
     if (!orderData || !orderData.success) return;
     new Razorpay({
@@ -379,7 +289,7 @@
         }
       },
       theme: { color: '#5D4037' },
-      handler: (r) => verifyAndShow(r, () => {}),
+      handler: (r) => verifyAndShow(r),
       modal: { ondismiss: () => {} }
     }).open();
   }

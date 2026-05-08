@@ -1,9 +1,15 @@
+import crypto from 'crypto';
 import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const FROM = process.env.FROM_EMAIL;
 const OWNER = process.env.OWNER_EMAIL;
 const SITE = 'https://stylevault.live';
+
+function actionToken(order_id, action) {
+  return crypto.createHmac('sha256', process.env.ADMIN_SECRET)
+    .update(`${order_id}:${action}`).digest('hex');
+}
 
 async function sendEmail(to, subject, html) {
   if (!to || !FROM) {
@@ -149,7 +155,8 @@ async function notifyOwnerLogin(name, email) {
 async function notifyOwnerOrder(order_id, user, items, address, subtotal, shipping) {
   const itemsHTML = items.map(i => `<li style="color:#555;font-size:0.9rem;margin-bottom:6px">${i.product_name} x${i.quantity} — ₹${(i.price * i.quantity).toFixed(2)}</li>`).join('');
   const total = parseFloat(subtotal) + parseFloat(shipping || 0);
-  const BASE = `https://stylevault.live/api/order-action?token=${process.env.ADMIN_SECRET}&order_id=${order_id}`;
+  const BASE = `https://stylevault.live/api/order-action?order_id=${order_id}`;
+  const shipToken = actionToken(order_id, 'ship');
   await sendEmail(OWNER, `🛒 New Order #${order_id} — ₹${total.toFixed(2)}`, `
     <div style="font-family:Segoe UI,sans-serif;max-width:520px;margin:auto;padding:30px;background:#fff;border-radius:12px;border:1px solid #e8e0f0">
       <h2 style="color:#9575cd">New Order Received 🛒</h2>
@@ -167,8 +174,8 @@ async function notifyOwnerOrder(order_id, user, items, address, subtotal, shippi
           ${address.city}, ${address.state} — ${address.pincode}<br>${address.country}
         </p>
       </div>
-      <div style="margin-top:24px;display:flex;gap:12px">
-        <a href="${BASE}&action=ship" style="flex:1;display:inline-block;text-align:center;background:#1565c0;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem">🚚 Mark as Shipped</a>
+      <div style="margin-top:24px">
+        <a href="${BASE}&action=ship&token=${shipToken}" style="display:inline-block;text-align:center;background:#1565c0;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem">🚚 Mark as Shipped</a>
       </div>
       ${footer}
     </div>
@@ -176,7 +183,9 @@ async function notifyOwnerOrder(order_id, user, items, address, subtotal, shippi
 }
 
 async function notifyOwnerPaymentConfirmed(order_id, name, email, total) {
-  const BASE = `https://stylevault.live/api/order-action?token=${process.env.ADMIN_SECRET}&order_id=${order_id}`;
+  const BASE = `https://stylevault.live/api/order-action?order_id=${order_id}`;
+  const shipToken = actionToken(order_id, 'ship');
+  const deliverToken = actionToken(order_id, 'deliver');
   await sendEmail(OWNER, `💰 Payment Confirmed — Order #${order_id}`, `
     <div style="font-family:Segoe UI,sans-serif;max-width:520px;margin:auto;padding:30px;background:#fff;border-radius:12px;border:1px solid #e8e0f0">
       <h2 style="color:#4caf50">Payment Confirmed 💰</h2>
@@ -184,8 +193,8 @@ async function notifyOwnerPaymentConfirmed(order_id, name, email, total) {
       <p style="color:#555"><strong>Customer:</strong> ${name} (${email})</p>
       <p style="color:#9575cd;font-weight:700;font-size:1.1rem">Amount: ₹${total}</p>
       <div style="margin-top:24px;display:flex;gap:12px">
-        <a href="${BASE}&action=ship" style="flex:1;display:inline-block;text-align:center;background:#1565c0;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem">🚚 Mark as Shipped</a>
-        <a href="${BASE}&action=deliver" style="flex:1;display:inline-block;text-align:center;background:#6a1b9a;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem">📦 Mark as Delivered</a>
+        <a href="${BASE}&action=ship&token=${shipToken}" style="flex:1;display:inline-block;text-align:center;background:#1565c0;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem">🚚 Mark as Shipped</a>
+        <a href="${BASE}&action=deliver&token=${deliverToken}" style="flex:1;display:inline-block;text-align:center;background:#6a1b9a;color:#fff;padding:12px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem">📦 Mark as Delivered</a>
       </div>
       ${footer}
     </div>
