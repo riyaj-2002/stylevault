@@ -18,11 +18,9 @@
     { "source": "/api/razorpay/create-order", "destination": "/api/payment/create-order.js" },
     { "source": "/api/razorpay/verify",       "destination": "/api/payment/verify.js" },
     { "source": "/api/webhook",               "destination": "/api/webhook.js" },
-    { "source": "/api/payment/:path*",        "destination": "/api/payment/update-status.js" },
     { "source": "/api/orders/:path*",         "destination": "/api/orders/index.js" },
     { "source": "/api/orders",                "destination": "/api/orders/index.js" },
     { "source": "/api/user/profile",           "destination": "/api/user/profile.js" },
-    { "source": "/api/payment/update-status",   "destination": "/api/payment/update-status.js" },
     { "source": "/api/order-action",             "destination": "/api/order-action.js" }
   ]
 }
