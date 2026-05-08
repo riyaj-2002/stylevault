@@ -280,13 +280,13 @@
     });
     orderData = await res.json();
 
-    RZP_KEY = orderData.key;
-
     if (!orderData.success) {
       document.getElementById('qr-spinner').style.display = 'none';
       document.getElementById('qr-status').textContent = orderData.message || 'Failed to load. Refresh.';
       return;
     }
+
+    RZP_KEY = orderData.key;
 
     // 3. Show QR image
     const qrArea = document.getElementById('qr-area');
@@ -330,7 +330,7 @@
 
   // ── UPI ID flow ──
   async function initiatePayment() {
-    if (!orderData) { alert('Page still loading. Please wait.'); return; }
+    if (!orderData || !orderData.success) { alert('Page still loading. Please wait.'); return; }
     const upiId = document.getElementById('upi-id').value.trim();
     if (!upiId) { alert('Please enter your UPI ID.'); return; }
     if (!upiId.includes('@')) { alert('Please enter a valid UPI ID (e.g. 9876543210@upi).'); return; }
@@ -338,45 +338,30 @@
     const btn = document.getElementById('pay-btn');
     btn.disabled = true; btn.textContent = 'Processing...';
 
-    new Razorpay({
+    const rzp = new Razorpay({
       key: RZP_KEY,
       amount: orderData.order.amount,
       currency: 'INR',
       name: 'StyleVault',
       description: 'Phone Case Order',
       order_id: orderData.order.id,
-      prefill: { vpa: upiId, method: 'upi' },
-      method: { upi: true, card: false, netbanking: false, wallet: false },
-      config: {
-        display: {
-          blocks: { upi: { name: 'Pay via UPI', instruments: [{ method: 'upi', flow: 'collect' }] } },
-          sequence: ['block.upi'],
-          preferences: { show_default_blocks: false }
-        }
-      },
+      prefill: { contact: '', email: '', method: 'upi', vpa: upiId },
       theme: { color: '#5D4037' },
       handler: (r) => verifyAndShow(r, () => { btn.disabled = false; btn.textContent = 'Verify and Pay →'; }),
       modal: { ondismiss: () => { btn.disabled = false; btn.textContent = 'Verify and Pay →'; } }
-    }).open();
+    });
+    rzp.open();
   }
 
   // ── QR modal fallback ──
   function openQRModal() {
-    if (!orderData) return;
+    if (!orderData || !orderData.success) return;
     new Razorpay({
       key: RZP_KEY,
       amount: orderData.order.amount,
       currency: 'INR',
       name: 'StyleVault',
       order_id: orderData.order.id,
-      method: { upi: true, card: false, netbanking: false, wallet: false },
-      config: {
-        display: {
-          blocks: { upi: { name: 'Scan QR', instruments: [{ method: 'upi', flow: 'qr' }] } },
-          sequence: ['block.upi'],
-          preferences: { show_default_blocks: false }
-        }
-      },
       theme: { color: '#5D4037' },
       handler: (r) => verifyAndShow(r, () => {}),
       modal: { ondismiss: () => {} }

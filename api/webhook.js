@@ -76,6 +76,9 @@ export default async function handler(req, res) {
     WHERE id = ${order.id} AND status = 'pending'
   `;
 
+  // ── 5a. Clear cart now that payment is confirmed ──────────────────────────
+  await sql`DELETE FROM cart WHERE user_id = ${order.user_id}`;
+
   // ── 6. Send confirmation emails (non-blocking — won't crash payment flow) ─
   try {
     await Promise.all([

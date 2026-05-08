@@ -57,8 +57,7 @@ export default async function handler(req, res) {
       `;
     }
 
-    // ── 5. Clear cart ────────────────────────────────────────────────────────
-    await sql`DELETE FROM cart WHERE user_id = ${user.id}`;
+    // ── 5. Cart is cleared ONLY after payment confirmed via webhook ──────────
 
     // ── 6. Send order placed emails (non-blocking) ───────────────────────────
     try {
@@ -70,21 +69,23 @@ export default async function handler(req, res) {
       console.error('Order email failed (non-fatal):', emailErr.message);
     }
 
-    // ── 7. Generate QR code ──────────────────────────────────────────────────
+    // ── 7. Generate QR code (only available on fully activated live accounts) ─
     let qr_url = null;
-    try {
-      const qr = await razorpay.qrCode.create({
-        type: 'upi_qr',
-        name: 'StyleVault',
-        usage: 'single_use',
-        fixed_amount: true,
-        payment_amount: Math.round(parseFloat(amount) * 100),
-        description: `Order #${order_id}`,
-        close_by: Math.floor(Date.now() / 1000) + 900 // 15 min expiry
-      });
-      qr_url = qr.image_url;
-    } catch (qrErr) {
-      console.error('QR generation failed (non-fatal):', qrErr.message);
+    if (razorpay.qrCode) {
+      try {
+        const qr = await razorpay.qrCode.create({
+          type: 'upi_qr',
+          name: 'StyleVault',
+          usage: 'single_use',
+          fixed_amount: true,
+          payment_amount: Math.round(parseFloat(amount) * 100),
+          description: `Order #${order_id}`,
+          close_by: Math.floor(Date.now() / 1000) + 900
+        });
+        qr_url = qr.image_url;
+      } catch (qrErr) {
+        console.error('QR generation failed (non-fatal):', qrErr.message);
+      }
     }
 
     res.json({ success: true, order: rzpOrder, order_id, qr_url, key: process.env.RAZORPAY_KEY_ID });
