@@ -64,7 +64,7 @@ function renderProducts() {
     </div>
   `).join('');
   if (isHome) {
-    grid.insertAdjacentHTML('afterend', '<div style="text-align:center;padding:30px 0 70px"><a href="collections.html" style="background:#b06633;color:#fff;padding:14px 38px;border-radius:30px;text-decoration:none;font-size:1rem;font-weight:700;letter-spacing:0.3px;box-shadow:0 4px 16px rgba(100,50,10,0.2);">See All Covers &#8594;</a></div>');
+    grid.insertAdjacentHTML('afterend', '<div style="text-align:center;padding:30px 0 70px"><a href="collections.html" style="background:#E2725B;color:#fff;padding:14px 38px;border-radius:30px;text-decoration:none;font-size:1rem;font-weight:700;letter-spacing:0.3px;box-shadow:0 4px 16px rgba(100,50,10,0.2);">See All Covers &#8594;</a></div>');
   }
 }
 
