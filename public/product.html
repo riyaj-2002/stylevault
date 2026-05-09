@@ -284,7 +284,7 @@
     const customizeIds = [128, 132, 135, 136];
     if (customizeIds.includes(product.id)) {
       try {
-        await fetch('/api/customize', {
+        await fetch('/api/orders/customize', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'include',

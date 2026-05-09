@@ -393,7 +393,7 @@
 
     const finalBrand = brand === 'Others' ? customBrand : brand;
 
-    const res = await fetch('/api/customize', {
+    const res = await fetch('/api/orders/customize', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
