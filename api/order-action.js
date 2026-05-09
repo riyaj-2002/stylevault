@@ -12,18 +12,33 @@ function makeToken(order_id, action) {
 export { makeToken };
 
 export default async function handler(req, res) {
-  const url = new URL(req.url, `https://${req.headers.host}`);
-  const token = url.searchParams.get('token');
-  const action = url.searchParams.get('action');
-  const order_id = url.searchParams.get('order_id');
+  let action, order_id, authorized = false;
 
-  if (!token || !order_id || !['ship', 'deliver'].includes(action)) {
-    return res.status(400).send(page('❌ Invalid', 'Missing parameters.', '#e53935'));
+  if (req.method === 'POST') {
+    // Admin panel: verify x-admin-secret header
+    const adminSecret = req.headers['x-admin-secret'];
+    if (adminSecret && adminSecret === process.env.ADMIN_SECRET) authorized = true;
+    action = req.body?.action;
+    order_id = req.body?.order_id;
+  } else {
+    // Email links: verify HMAC token in query string
+    const url = new URL(req.url, `https://${req.headers.host}`);
+    const token = url.searchParams.get('token');
+    action = url.searchParams.get('action');
+    order_id = url.searchParams.get('order_id');
+    if (token && order_id && action && token === makeToken(order_id, action)) authorized = true;
   }
 
-  const expected = makeToken(order_id, action);
-  if (token !== expected) {
-    return res.status(403).send(page('❌ Forbidden', 'Invalid or missing token.', '#e53935'));
+  if (!authorized) {
+    const html = req.method === 'GET';
+    return res.status(403)[html ? 'send' : 'json'](
+      html ? page('❌ Forbidden', 'Invalid or missing token.', '#e53935')
+           : { success: false, message: 'Forbidden' }
+    );
+  }
+
+  if (!order_id || !['ship', 'deliver'].includes(action)) {
+    return res.status(400).json({ success: false, message: 'Missing order_id or action' });
   }
 
   const statusMap = { ship: 'shipped', deliver: 'delivered' };
@@ -35,14 +50,24 @@ export default async function handler(req, res) {
     JOIN users u ON o.user_id = u.id WHERE o.id = ${order_id}
   `;
 
-  if (!order) return res.status(404).send(page('❌ Not Found', `Order #${order_id} not found.`, '#e53935'));
+  if (!order) {
+    const isPost = req.method === 'POST';
+    return res.status(404)[isPost ? 'json' : 'send'](
+      isPost ? { success: false, message: 'Order not found' } : page('❌ Not Found', `Order #${order_id} not found.`, '#e53935')
+    );
+  }
 
-  // Guard: don't allow going backwards
+  const isPost = req.method === 'POST';
+
   if (action === 'ship' && order.status !== 'paid') {
-    return res.send(page('⚠️ Already Updated', `Order #${order_id} is already <strong>${order.status}</strong>.`, '#f57c00'));
+    return res[isPost ? 'json' : 'send'](
+      isPost ? { success: false, message: `Order is already ${order.status}` } : page('⚠️ Already Updated', `Order #${order_id} is already <strong>${order.status}</strong>.`, '#f57c00')
+    );
   }
   if (action === 'deliver' && order.status !== 'shipped') {
-    return res.send(page('⚠️ Already Updated', `Order #${order_id} is already <strong>${order.status}</strong>.`, '#f57c00'));
+    return res[isPost ? 'json' : 'send'](
+      isPost ? { success: false, message: `Order is already ${order.status}` } : page('⚠️ Already Updated', `Order #${order_id} is already <strong>${order.status}</strong>.`, '#f57c00')
+    );
   }
 
   await sql`UPDATE orders SET status = ${newStatus} WHERE id = ${order_id}`;
@@ -55,7 +80,9 @@ export default async function handler(req, res) {
   }
 
   const label = action === 'ship' ? '🚚 Marked as Shipped' : '📦 Marked as Delivered';
-  return res.send(page(label, `Order <strong>#${order_id}</strong> for <strong>${order.name}</strong> is now <strong>${newStatus}</strong>.<br><br>Customer email sent successfully.`, '#4caf50'));
+  return res[isPost ? 'json' : 'send'](
+    isPost ? { success: true, status: newStatus } : page(label, `Order <strong>#${order_id}</strong> for <strong>${order.name}</strong> is now <strong>${newStatus}</strong>.<br><br>Customer email sent successfully.`, '#4caf50')
+  );
 }
 
 function page(title, msg, color) {

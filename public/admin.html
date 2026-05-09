@@ -242,13 +242,22 @@
   async function updateStatus(order_id, action) {
     const label = action === 'ship' ? 'shipped' : 'delivered';
     if (!confirm(`Mark order #${order_id} as ${label}? This will send an email to the customer.`)) return;
-    const url = `/api/order-action?token=${encodeURIComponent(secret)}&order_id=${order_id}&action=${action}`;
-    const win = window.open(url, '_blank');
-    // Update local state optimistically
-    const o = allOrders.find(x => x.id === order_id);
-    if (o) o.status = label;
-    renderStats();
-    renderTable();
+
+    const res = await fetch('/api/order-action', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-admin-secret': secret },
+      body: JSON.stringify({ order_id, action })
+    });
+    const data = await res.json();
+    if (data.success) {
+      const o = allOrders.find(x => x.id === order_id);
+      if (o) o.status = label;
+      renderStats();
+      renderTable();
+      alert(`✅ Order #${order_id} marked as ${label}. Customer email sent.`);
+    } else {
+      alert('Failed: ' + (data.message || 'Unknown error'));
+    }
   }
 
   async function viewItems(order_id) {
