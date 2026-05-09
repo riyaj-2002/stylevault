@@ -11,7 +11,7 @@
 
     .customize-subtitle {
       text-align: center;
-      color: #708090;
+      color: #9CAF88;
       font-size: 1.05rem;
       margin-bottom: 52px;
       max-width: 600px;
@@ -33,32 +33,32 @@
     }
 
     .type-card {
-      background: #ffffff;
+      background: var(--card-bg);
       border-radius: 18px;
-      border: 1px solid #C0C0C0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
       overflow: hidden;
       display: flex;
       flex-direction: column;
     }
 
     .type-card-header {
-      background: #708090;
+      background: #3D2B1F;
       padding: 24px 28px 20px;
-      color: #ffffff;
+      color: #FFF5E1;
     }
     .type-label {
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255,245,225,0.65);
       margin-bottom: 6px;
     }
     .type-card-header h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.35rem;
-      color: #ffffff;
+      color: #FFF5E1;
       margin-bottom: 14px;
     }
 
@@ -77,11 +77,11 @@
     .type-card-body { padding: 26px 28px 28px; flex: 1; }
     .type-card-body .desc {
       font-size: 0.92rem;
-      color: #555;
+      color: #6b4f3a;
       line-height: 1.7;
       margin-bottom: 24px;
       padding-bottom: 20px;
-      border-bottom: 1px solid #eeeeee;
+      border-bottom: 1px solid var(--border);
     }
 
     /* ── Steps ── */
@@ -89,42 +89,41 @@
     .step { display: flex; align-items: flex-start; gap: 14px; }
     .step-num {
       width: 30px; height: 30px; min-width: 30px;
-      background: #708090; color: #ffffff;
+      background: #E2725B; color: #ffffff;
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-size: 0.8rem; font-weight: 700; margin-top: 1px;
     }
-    .step-content { flex: 1; }
-    .step-content strong { display: block; font-size: 0.88rem; color: #333333; font-weight: 700; margin-bottom: 6px; }
-    .step-content p { font-size: 0.84rem; color: #777; line-height: 1.6; margin: 0; }
+    .step-content strong { display: block; font-size: 0.88rem; color: #3D2B1F; font-weight: 700; margin-bottom: 6px; }
+    .step-content p { font-size: 0.84rem; color: #7a5c48; line-height: 1.6; margin: 0; }
 
     /* ── Dropdowns & inputs (Type 1) ── */
     .field-group { margin-bottom: 10px; }
-    .field-group label { display: block; font-size: 0.8rem; font-weight: 600; color: #555; margin-bottom: 4px; }
+    .field-group label { display: block; font-size: 0.8rem; font-weight: 600; color: #6b4f3a; margin-bottom: 4px; }
     .field-group select,
     .field-group input[type="text"] {
       width: 100%;
       padding: 10px 12px;
-      border: 1.5px solid #C0C0C0;
+      border: 1.5px solid var(--border);
       border-radius: 8px;
       font-size: 0.88rem;
-      color: #333333;
-      background: #F5F5DC;
+      color: #3D2B1F;
+      background: var(--bg);
       outline: none;
       box-sizing: border-box;
       transition: border-color 0.2s;
     }
     .field-group select:focus,
-    .field-group input[type="text"]:focus { border-color: #708090; }
+    .field-group input[type="text"]:focus { border-color: #E2725B; }
 
     /* ── Material buttons (Type 1) ── */
     .material-options { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
     .material-btn {
       padding: 10px 16px;
-      border: 2px solid #C0C0C0;
+      border: 2px solid var(--border);
       border-radius: 10px;
-      background: #F5F5DC;
-      color: #555;
+      background: var(--bg);
+      color: #6b4f3a;
       font-size: 0.82rem;
       font-weight: 600;
       cursor: pointer;
@@ -132,33 +131,33 @@
       text-align: center;
       min-width: 90px;
     }
-    .material-btn .mat-name { display: block; font-size: 0.85rem; font-weight: 700; color: #333333; margin-bottom: 3px; }
-    .material-btn .mat-price { display: block; font-size: 0.9rem; font-weight: 700; color: #708090; }
-    .material-btn:hover { border-color: #708090; background: #ebebd0; }
-    .material-btn.selected { background: #708090; border-color: #708090; }
+    .material-btn .mat-name { display: block; font-size: 0.85rem; font-weight: 700; color: #3D2B1F; margin-bottom: 3px; }
+    .material-btn .mat-price { display: block; font-size: 0.9rem; font-weight: 700; color: #E2725B; }
+    .material-btn:hover { border-color: #E2725B; background: #fdebd0; }
+    .material-btn.selected { background: #E2725B; border-color: #E2725B; }
     .material-btn.selected .mat-name { color: #ffffff; }
-    .material-btn.selected .mat-price { color: #F5F5DC; }
+    .material-btn.selected .mat-price { color: #FFF5E1; }
 
     /* ── Email box ── */
     .email-box {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #F5F5DC;
-      border: 1.5px solid #C0C0C0;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
       border-radius: 8px;
       padding: 8px 14px;
       margin-top: 6px;
     }
-    .email-box a { color: #708090; font-weight: 700; font-size: 0.88rem; text-decoration: none; }
-    .email-box a:hover { color: #4a5a6a; text-decoration: underline; }
+    .email-box a { color: #E2725B; font-weight: 700; font-size: 0.88rem; text-decoration: none; }
+    .email-box a:hover { color: #c45a44; text-decoration: underline; }
 
     /* ── Type 2 feature tags ── */
     .feature-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
     .feature-tag {
-      background: #F5F5DC;
-      border: 1px solid #C0C0C0;
-      color: #708090;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: #9CAF88;
       font-size: 0.82rem;
       font-weight: 600;
       padding: 6px 14px;
@@ -170,7 +169,7 @@
       display: inline-block;
       margin-top: 10px;
       padding: 12px 28px;
-      background: #708090;
+      background: #E2725B;
       color: #ffffff;
       border: none;
       border-radius: 30px;
@@ -180,9 +179,9 @@
       text-decoration: none;
       letter-spacing: 0.3px;
       transition: background 0.2s, transform 0.2s;
-      box-shadow: 0 4px 14px rgba(112,128,144,0.3);
+      box-shadow: 0 4px 14px rgba(226,114,91,0.35);
     }
-    .browse-btn:hover { background: #4a5a6a; transform: translateY(-2px); }
+    .browse-btn:hover { background: #c45a44; transform: translateY(-2px); }
   </style>
 </head>
 <body>
