@@ -21,6 +21,7 @@
     { "source": "/api/orders/:path*",         "destination": "/api/orders/index.js" },
     { "source": "/api/orders",                "destination": "/api/orders/index.js" },
     { "source": "/api/user/profile",           "destination": "/api/user/profile.js" },
-    { "source": "/api/order-action",             "destination": "/api/order-action.js" }
+    { "source": "/api/order-action",             "destination": "/api/order-action.js" },
+    { "source": "/api/customize",                "destination": "/api/customize.js" }
   ]
 }

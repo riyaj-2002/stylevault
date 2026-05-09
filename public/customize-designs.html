@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customized Designs - StyleVault</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    .designs-page { max-width: 1100px; margin: 0 auto; padding: 20px 40px 60px; }
+    .designs-subtitle {
+      text-align: center;
+      color: #708090;
+      font-size: 1rem;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    .back-link {
+      display: inline-block;
+      margin: 24px 0 0 40px;
+      color: #708090;
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: #4a5a6a; }
+    @media (max-width: 600px) {
+      .designs-page { padding: 20px 16px 60px; }
+      .back-link { margin-left: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="StyleVault"/><span>StyleVault</span></a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="collections.html">Collections</a>
+    <a href="customize.html" class="nav-active">Customize</a>
+    <a href="contact.html">Contact</a>
+    <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+    <a href="login.html" id="auth-link">Login</a>
+  </div>
+</nav>
+
+<a href="customize.html" class="back-link">← Back to Customize</a>
+
+<div class="designs-page">
+  <h2 class="section-title">Customized Designs</h2>
+  <p class="designs-subtitle">Choose a design you love — we'll personalise it with your name, quotes, pictures or any special touch.</p>
+  <div class="products-grid" id="customize-grid"></div>
+</div>
+
+<footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const customizeIds = [128, 132, 135, 136];
+  const grid = document.getElementById('customize-grid');
+
+  customizeIds.forEach(id => {
+    const p = products.find(p => p.id === id);
+    if (!p) return;
+    grid.insertAdjacentHTML('beforeend', `
+      <div class="product-card" onclick="window.location.href='product.html?id=${p.id}'" style="cursor:pointer">
+        <img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
+        <div class="info">
+          <h3>${p.name}</h3>
+          <small style="color:#888">${p.model}</small>
+          <p class="price">&#8377;299</p>
+          <button onclick="event.stopPropagation(); window.location.href='product.html?id=${p.id}'">View Details</button>
+        </div>
+      </div>
+    `);
+  });
+</script>
+<script src="js/cookies.js"></script>
+<script src="js/footer.js"></script>
+</body>
+</html>

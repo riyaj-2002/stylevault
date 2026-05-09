@@ -20,7 +20,7 @@
       line-height: 1.7;
     }
 
-    /* ── Type Cards Wrapper ── */
+    /* ── Type Cards ── */
     .type-cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -32,7 +32,6 @@
       .customize-page { padding: 20px 20px 60px; }
     }
 
-    /* ── Type Card ── */
     .type-card {
       background: #ffffff;
       border-radius: 18px;
@@ -48,7 +47,7 @@
       padding: 24px 28px 20px;
       color: #ffffff;
     }
-    .type-card-header .type-label {
+    .type-label {
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 1.5px;
@@ -60,19 +59,20 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.35rem;
       color: #ffffff;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
-    .type-card-header .price-tag {
-      display: inline-flex;
-      align-items: baseline;
-      gap: 3px;
-      background: rgba(255,255,255,0.15);
+
+    /* ── Pricing badges ── */
+    .price-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+    .price-badge {
+      background: rgba(255,255,255,0.12);
       border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 30px;
-      padding: 6px 18px;
+      border-radius: 10px;
+      padding: 8px 14px;
+      text-align: center;
     }
-    .type-card-header .price-tag .currency { font-size: 1rem; font-weight: 600; color: #F5F5DC; }
-    .type-card-header .price-tag .amount { font-size: 1.8rem; font-weight: 700; color: #ffffff; line-height: 1; }
+    .price-badge .mat { font-size: 0.72rem; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 2px; }
+    .price-badge .amt { font-size: 1.1rem; font-weight: 700; color: #ffffff; }
 
     .type-card-body { padding: 26px 28px 28px; flex: 1; }
     .type-card-body .desc {
@@ -85,40 +85,61 @@
     }
 
     /* ── Steps ── */
-    .steps { display: flex; flex-direction: column; gap: 16px; }
-    .step {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
+    .steps { display: flex; flex-direction: column; gap: 20px; }
+    .step { display: flex; align-items: flex-start; gap: 14px; }
     .step-num {
-      width: 30px;
-      height: 30px;
-      min-width: 30px;
-      background: #708090;
-      color: #ffffff;
+      width: 30px; height: 30px; min-width: 30px;
+      background: #708090; color: #ffffff;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      font-weight: 700;
-      margin-top: 1px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: 700; margin-top: 1px;
     }
     .step-content { flex: 1; }
-    .step-content strong {
-      display: block;
+    .step-content strong { display: block; font-size: 0.88rem; color: #333333; font-weight: 700; margin-bottom: 6px; }
+    .step-content p { font-size: 0.84rem; color: #777; line-height: 1.6; margin: 0; }
+
+    /* ── Dropdowns & inputs (Type 1) ── */
+    .field-group { margin-bottom: 10px; }
+    .field-group label { display: block; font-size: 0.8rem; font-weight: 600; color: #555; margin-bottom: 4px; }
+    .field-group select,
+    .field-group input[type="text"] {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid #C0C0C0;
+      border-radius: 8px;
       font-size: 0.88rem;
       color: #333333;
-      font-weight: 700;
-      margin-bottom: 3px;
+      background: #F5F5DC;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
     }
-    .step-content p {
-      font-size: 0.84rem;
-      color: #777;
-      line-height: 1.6;
-      margin: 0;
+    .field-group select:focus,
+    .field-group input[type="text"]:focus { border-color: #708090; }
+
+    /* ── Material buttons (Type 1) ── */
+    .material-options { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+    .material-btn {
+      padding: 10px 16px;
+      border: 2px solid #C0C0C0;
+      border-radius: 10px;
+      background: #F5F5DC;
+      color: #555;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+      min-width: 90px;
     }
+    .material-btn .mat-name { display: block; font-size: 0.85rem; font-weight: 700; color: #333333; margin-bottom: 3px; }
+    .material-btn .mat-price { display: block; font-size: 0.9rem; font-weight: 700; color: #708090; }
+    .material-btn:hover { border-color: #708090; background: #ebebd0; }
+    .material-btn.selected { background: #708090; border-color: #708090; }
+    .material-btn.selected .mat-name { color: #ffffff; }
+    .material-btn.selected .mat-price { color: #F5F5DC; }
+
+    /* ── Email box ── */
     .email-box {
       display: inline-flex;
       align-items: center;
@@ -129,21 +150,11 @@
       padding: 8px 14px;
       margin-top: 6px;
     }
-    .email-box a {
-      color: #708090;
-      font-weight: 700;
-      font-size: 0.88rem;
-      text-decoration: none;
-    }
+    .email-box a { color: #708090; font-weight: 700; font-size: 0.88rem; text-decoration: none; }
     .email-box a:hover { color: #4a5a6a; text-decoration: underline; }
 
-    /* ── Type 2 features ── */
-    .feature-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 4px;
-    }
+    /* ── Type 2 feature tags ── */
+    .feature-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
     .feature-tag {
       background: #F5F5DC;
       border: 1px solid #C0C0C0;
@@ -154,26 +165,24 @@
       border-radius: 20px;
     }
 
-    /* ── Divider ── */
-    .section-divider {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin: 0 0 36px;
+    /* ── Browse button ── */
+    .browse-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 28px;
+      background: #708090;
+      color: #ffffff;
+      border: none;
+      border-radius: 30px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 14px rgba(112,128,144,0.3);
     }
-    .section-divider::before,
-    .section-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #C0C0C0;
-    }
-    .section-divider span {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: #708090;
-      white-space: nowrap;
-    }
+    .browse-btn:hover { background: #4a5a6a; transform: translateY(-2px); }
   </style>
 </head>
 <body>
@@ -195,7 +204,6 @@
   <h2 class="section-title">Customize Your Case</h2>
   <p class="customize-subtitle">Turn your favorite memories into masterpieces, or put your own spin on our signature collections.</p>
 
-  <!-- Two Type Cards -->
   <div class="type-cards">
 
     <!-- TYPE 1 -->
@@ -203,21 +211,57 @@
       <div class="type-card-header">
         <p class="type-label">Type 1</p>
         <h3>Full Print Custom Case</h3>
-        <div class="price-tag">
-          <span class="currency">₹</span>
-          <span class="amount">349</span>
+        <div class="price-badges">
+          <div class="price-badge"><span class="mat">Soft Case</span><span class="amt">₹299</span></div>
+          <div class="price-badge"><span class="mat">Hard Case</span><span class="amt">₹299</span></div>
+          <div class="price-badge"><span class="mat">Glass Case</span><span class="amt">₹349</span></div>
         </div>
       </div>
       <div class="type-card-body">
         <p class="desc">Send us your own full print or design and we will print it directly on the phone case — exactly as you want it.</p>
         <div class="steps">
+
           <div class="step">
             <div class="step-num">1</div>
             <div class="step-content">
-              <strong>Select Your Phone Brand</strong>
-              <p>Choose your phone brand and model so we can prepare the right case size.</p>
+              <strong>Select Your Phone Brand, Model & Material</strong>
+              <div class="field-group" style="margin-top:8px">
+                <label>Phone Brand</label>
+                <select id="t1-brand" onchange="onT1BrandChange()">
+                  <option value="">-- Select Brand --</option>
+                  <option>Apple</option><option>Samsung</option><option>Xiaomi</option>
+                  <option>Redmi</option><option>POCO</option><option>OnePlus</option>
+                  <option>Realme</option><option>Oppo</option><option>Google</option>
+                  <option>Motorola</option><option>Nothing</option><option>Nokia</option>
+                  <option>Sony</option><option>LG</option><option>Infinix</option>
+                  <option>Lenovo</option><option>Others</option>
+                </select>
+              </div>
+              <div class="field-group" id="t1-others-box" style="display:none">
+                <label>Enter Your Brand</label>
+                <input type="text" id="t1-custom-brand" placeholder="e.g. Vivo, Tecno..."/>
+              </div>
+              <div class="field-group">
+                <label>Phone Model</label>
+                <input type="text" id="t1-model" placeholder="e.g. iPhone 15, Galaxy S24..."/>
+              </div>
+              <div class="field-group">
+                <label>Case Material</label>
+                <div class="material-options">
+                  <button type="button" class="material-btn" onclick="selectT1Material(this,'Soft Case',299)">
+                    <span class="mat-name">Soft Case</span><span class="mat-price">₹299</span>
+                  </button>
+                  <button type="button" class="material-btn" onclick="selectT1Material(this,'Hard Case',299)">
+                    <span class="mat-name">Hard Case</span><span class="mat-price">₹299</span>
+                  </button>
+                  <button type="button" class="material-btn" onclick="selectT1Material(this,'Glass Case',349)">
+                    <span class="mat-name">Glass Case</span><span class="mat-price">₹349</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
+
           <div class="step">
             <div class="step-num">2</div>
             <div class="step-content">
@@ -227,8 +271,10 @@
                 <span>✉</span>
                 <a href="mailto:stylevault.0426@gmail.com">stylevault.0426@gmail.com</a>
               </div>
+              <p style="margin-top:10px;font-size:0.82rem;color:#aaa">Mention your Order ID in the email subject.</p>
             </div>
           </div>
+
           <div class="step">
             <div class="step-num">3</div>
             <div class="step-content">
@@ -236,6 +282,7 @@
               <p>We will create a mockup preview of your case to show how it will look before printing.</p>
             </div>
           </div>
+
           <div class="step">
             <div class="step-num">4</div>
             <div class="step-content">
@@ -243,6 +290,10 @@
               <p>Once approved, we will print and deliver your customized case straight to your door.</p>
             </div>
           </div>
+
+          <button class="browse-btn" style="margin-top:8px;width:100%;text-align:center" onclick="submitType1()">Submit My Details →</button>
+          <p id="t1-msg" style="margin-top:10px;font-size:0.84rem;text-align:center;display:none"></p>
+
         </div>
       </div>
     </div>
@@ -252,27 +303,30 @@
       <div class="type-card-header">
         <p class="type-label">Type 2</p>
         <h3>Modify Our Existing Cases</h3>
-        <div class="price-tag">
-          <span class="currency">₹</span>
-          <span class="amount">249</span>
+        <div class="price-badges">
+          <div class="price-badge"><span class="mat">Soft Case</span><span class="amt">₹299</span></div>
+          <div class="price-badge"><span class="mat">Hard Case</span><span class="amt">₹299</span></div>
+          <div class="price-badge"><span class="mat">Glass Case</span><span class="amt">₹349</span></div>
         </div>
       </div>
       <div class="type-card-body">
         <p class="desc">Love one of our existing designs but want to make it yours? We can add personal touches to any case from our collection.</p>
         <div class="steps">
+
           <div class="step">
             <div class="step-num">1</div>
             <div class="step-content">
               <strong>Pick a Design</strong>
-              <p>Browse our collection below and choose a case design you love.</p>
+              <a href="customize-designs.html" class="browse-btn">Browse Customized Designs →</a>
             </div>
           </div>
+
           <div class="step">
             <div class="step-num">2</div>
             <div class="step-content">
               <strong>Tell Us What to Add</strong>
               <p>We can personalise it with any of the following:</p>
-              <div class="feature-tags" style="margin-top:10px">
+              <div class="feature-tags">
                 <span class="feature-tag">Your Name</span>
                 <span class="feature-tag">Quotes</span>
                 <span class="feature-tag">Pictures</span>
@@ -280,6 +334,7 @@
               </div>
             </div>
           </div>
+
           <div class="step">
             <div class="step-num">3</div>
             <div class="step-content">
@@ -291,6 +346,7 @@
               </div>
             </div>
           </div>
+
           <div class="step">
             <div class="step-num">4</div>
             <div class="step-content">
@@ -298,41 +354,64 @@
               <p>We'll send a preview for your approval, then print and deliver your personalised case.</p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
 
   </div>
-
-  <!-- Existing Products Grid -->
-  <div class="section-divider"><span>✦ Browse Customizable Designs ✦</span></div>
-  <div class="products-grid" id="customize-grid"></div>
-
 </div>
 
 <footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
 
-<script src="js/products.js"></script>
 <script src="js/main.js"></script>
 <script>
-  const customizeIds = [128, 132, 135, 136];
-  const grid = document.getElementById('customize-grid');
+  let t1Material = ''; let t1Price = 0;
 
-  customizeIds.forEach(id => {
-    const p = products.find(p => p.id === id);
-    if (!p) return;
-    grid.insertAdjacentHTML('beforeend', `
-      <div class="product-card" onclick="window.location.href='product.html?id=${p.id}'" style="cursor:pointer">
-        <img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
-        <div class="info">
-          <h3>${p.name}</h3>
-          <small style="color:#888">${p.model}</small>
-          <p class="price">&#8377;${p.price}</p>
-          <button onclick="event.stopPropagation(); window.location.href='product.html?id=${p.id}'">View Details</button>
-        </div>
-      </div>
-    `);
-  });
+  function onT1BrandChange() {
+    const val = document.getElementById('t1-brand').value;
+    document.getElementById('t1-others-box').style.display = val === 'Others' ? 'block' : 'none';
+  }
+
+  function selectT1Material(btn, material, price) {
+    document.querySelectorAll('.material-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    t1Material = material;
+    t1Price = price;
+  }
+
+  async function submitType1() {
+    const brand = document.getElementById('t1-brand').value;
+    const customBrand = document.getElementById('t1-custom-brand') ? document.getElementById('t1-custom-brand').value.trim() : '';
+    const model = document.getElementById('t1-model').value.trim();
+    const msg = document.getElementById('t1-msg');
+
+    if (!brand) { alert('Please select your phone brand.'); return; }
+    if (brand === 'Others' && !customBrand) { alert('Please enter your phone brand.'); return; }
+    if (!model) { alert('Please enter your phone model.'); return; }
+    if (!t1Material) { alert('Please select a case material.'); return; }
+
+    const finalBrand = brand === 'Others' ? customBrand : brand;
+
+    const res = await fetch('/api/customize', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify({ type: '1', phone_brand: finalBrand, phone_model: model, case_material: t1Material, price: t1Price })
+    });
+    const data = await res.json();
+    msg.style.display = 'block';
+    if (data.success) {
+      msg.style.color = '#4caf50';
+      msg.textContent = `✅ Details saved! Your reference ID is #${data.id}. Now send your design to our email with this ID.`;
+    } else if (res.status === 401) {
+      msg.style.color = '#e53935';
+      msg.textContent = 'Please login first to submit your details.';
+    } else {
+      msg.style.color = '#e53935';
+      msg.textContent = data.message || 'Something went wrong. Please try again.';
+    }
+  }
 </script>
 <script src="js/cookies.js"></script>
 <script src="js/footer.js"></script>

@@ -280,6 +280,26 @@
         case_material: selectedMaterial
       });
     }
+    // ── Save to customize_type2 if this is a customize product ───────────────
+    const customizeIds = [128, 132, 135, 136];
+    if (customizeIds.includes(product.id)) {
+      try {
+        await fetch('/api/customize', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify({
+            type: '2',
+            design_id: product.id,
+            design_name: product.name,
+            phone_brand: finalBrand,
+            phone_model: model,
+            case_material: selectedMaterial,
+            price: selectedPrice
+          })
+        });
+      } catch (e) { console.error('customize_type2 save failed:', e.message); }
+    }
   }
 </script>
 <script src="js/cookies.js"></script>
