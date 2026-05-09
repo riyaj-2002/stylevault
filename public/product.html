@@ -176,7 +176,7 @@
       <div class="details">
         <div class="model">${product.model}</div>
         <h1>${product.name}</h1>
-        <div class="price-display" id="price-display">₹${product.price}</div>
+        <div class="price-display" id="price-display">₹${defaultPrice}</div>
         <p class="desc">${product.description}</p>
 
         ${product.variants && product.variants.length > 1 ? `
@@ -210,17 +210,17 @@
         <div class="material-selector">
           <label>Choose Case Material</label>
           <div class="material-options">
-            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Soft Case', 249)">
+            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Soft Case', ${softPrice})">
               <span class="mat-name">Soft Case</span>
-              <span class="mat-price">₹249</span>
+              <span class="mat-price">₹${softPrice}</span>
             </button>
-            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Hard Case', 249)">
+            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Hard Case', ${hardPrice})">
               <span class="mat-name">Hard Case</span>
-              <span class="mat-price">₹249</span>
+              <span class="mat-price">₹${hardPrice}</span>
             </button>
-            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Glass Case', 349)">
+            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Glass Case', ${glassPrice})">
               <span class="mat-name">Glass Case</span>
-              <span class="mat-price">₹349</span>
+              <span class="mat-price">₹${glassPrice}</span>
             </button>
           </div>
         </div>
@@ -242,8 +242,15 @@
     document.getElementById('others-brand-box').style.display = brand === 'Others' ? 'block' : 'none';
   }
 
+    const customizeProductIds = [128, 132, 135, 136];
+    const isCustomize = customizeProductIds.includes(product.id);
+    const softPrice = isCustomize ? 299 : 249;
+    const hardPrice = isCustomize ? 299 : 249;
+    const glassPrice = 349;
+    const defaultPrice = isCustomize ? 299 : product.price;
+
   let selectedMaterial = '';
-  let selectedPrice = product ? product.price : 249;
+  let selectedPrice = defaultPrice;
 
   function selectMaterial(btn, material, price) {
     document.querySelectorAll('.material-btn').forEach(b => b.classList.remove('selected'));
