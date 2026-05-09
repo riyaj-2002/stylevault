@@ -69,26 +69,7 @@ export default async function handler(req, res) {
       console.error('Order email failed (non-fatal):', emailErr.message);
     }
 
-    // ── 7. Generate QR code (only available on fully activated live accounts) ─
-    let qr_url = null;
-    if (razorpay.qrCode) {
-      try {
-        const qr = await razorpay.qrCode.create({
-          type: 'upi_qr',
-          name: 'StyleVault',
-          usage: 'single_use',
-          fixed_amount: true,
-          payment_amount: Math.round(parseFloat(amount) * 100),
-          description: `Order #${order_id}`,
-          close_by: Math.floor(Date.now() / 1000) + 900
-        });
-        qr_url = qr.image_url;
-      } catch (qrErr) {
-        console.error('QR generation failed (non-fatal):', qrErr.message);
-      }
-    }
-
-    res.json({ success: true, order: rzpOrder, order_id, qr_url, key: process.env.RAZORPAY_KEY_ID });
+    res.json({ success: true, order: rzpOrder, order_id, key: process.env.RAZORPAY_KEY_ID });
   } catch (err) {
     res.status(500).json({ success: false, message: err.message });
   }

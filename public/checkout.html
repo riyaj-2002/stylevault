@@ -8,19 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
   <style>
     .checkout-wrap {
-      max-width: 520px;
-      margin: 50px auto;
+      max-width: 480px;
+      margin: 60px auto;
       padding: 0 20px 80px;
-    }
-
-    .checkout-header {
       text-align: center;
-      margin-bottom: 32px;
     }
     .checkout-header h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
-      color: #5D4037;
+      color: var(--text);
       margin-bottom: 6px;
     }
     .checkout-header .underline {
@@ -33,117 +29,57 @@
     .checkout-header p {
       font-size: 0.88rem;
       color: #999;
+      margin-bottom: 32px;
     }
-
     .amount-box {
-      background: #fdf5ec;
-      border-radius: 12px;
-      padding: 14px 22px;
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 20px 28px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 24px;
-      border: 1px solid var(--border);
-    }
-    .amount-box span { font-size: 0.9rem; color: #777; }
-    .amount-box strong { font-size: 1.4rem; color: #5D4037; font-weight: 700; }
-
-    .pay-card {
-      background: #fffaf4;
-      border-radius: 18px;
+      margin-bottom: 28px;
       border: 1px solid var(--border);
       box-shadow: var(--shadow-sm);
-      overflow: hidden;
     }
-    .pay-col {
-      padding: 32px 28px;
-      text-align: center;
-    }
-    .pay-col-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      color: #5D4037;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .pay-col-sub {
-      font-size: 0.78rem;
-      color: #aaa;
-      margin-bottom: 20px;
-    }
-    .pay-btn {
+    .amount-box span { font-size: 0.9rem; color: #777; }
+    .amount-box strong { font-size: 1.6rem; color: var(--primary); font-weight: 700; }
+    .pay-now-btn {
       width: 100%;
-      padding: 13px;
-      background: #5D4037;
+      padding: 16px;
+      background: var(--primary);
       color: #fff;
       border: none;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .pay-btn:hover { background: var(--primary); }
-    .pay-btn:disabled { background: #bbb; cursor: not-allowed; }
-
-    .qr-area {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 200px;
-    }
-    .qr-area img {
-      width: 200px;
-      height: 200px;
       border-radius: 12px;
-      border: 2px solid var(--border);
-      display: block;
-      margin-bottom: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: var(--shadow-md);
     }
-    .qr-area .qr-status {
+    .pay-now-btn:hover { background: var(--primary-dk); transform: translateY(-1px); }
+    .pay-now-btn:disabled { background: #bbb; cursor: not-allowed; transform: none; }
+    .secure-note {
+      margin-top: 14px;
       font-size: 0.8rem;
       color: #aaa;
-      text-align: center;
     }
-    .qr-spinner {
-      width: 36px; height: 36px;
-      border: 3px solid var(--border);
-      border-top-color: var(--primary);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin: 20px auto;
-    }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    .powered-by {
-      font-size: 0.72rem;
-      color: #bbb;
-      margin-top: 14px;
-      text-align: center;
-    }
-    .powered-by strong { color: #888; }
-
     .success-msg {
       display: none;
-      text-align: center;
-      background: #fdf5ec;
+      background: var(--card-bg);
       border-radius: 14px;
-      padding: 32px 24px;
-      color: #5D4037;
-      font-size: 1rem;
-      margin-top: 24px;
+      padding: 36px 24px;
       border: 1px solid var(--border);
+      margin-top: 24px;
     }
     .success-msg h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.4rem;
+      color: var(--text);
       margin-bottom: 8px;
     }
-
-    @media (max-width: 600px) {
-      .pay-col { padding: 24px 20px; }
-    }
+    .success-msg p { color: #777; font-size: 0.9rem; line-height: 1.6; }
   </style>
 </head>
 <body>
@@ -168,27 +104,19 @@
     <p>Secure checkout powered by Razorpay</p>
   </div>
 
-  <div class="amount-box">
+  <div class="amount-box" id="amount-box">
     <span>Amount to Pay</span>
     <strong>₹<span id="total-amount">—</span></strong>
   </div>
 
-  <div class="pay-card" id="pay-card">
-    <div class="pay-col">
-      <p class="pay-col-title">Scan to Pay</p>
-      <p class="pay-col-sub">Scan with GPay, PhonePe, or any UPI app</p>
-      <div class="qr-area" id="qr-area">
-        <div class="qr-spinner" id="qr-spinner"></div>
-        <p class="qr-status" id="qr-status">Generating QR...</p>
-      </div>
-      <p class="powered-by">Powered by <strong>Razorpay</strong></p>
-    </div>
-  </div>
+  <button class="pay-now-btn" id="pay-btn" onclick="startPayment()" disabled>
+    Loading...
+  </button>
+  <p class="secure-note">🔒 100% secure · UPI · Cards · Wallets · Net Banking</p>
 
   <div class="success-msg" id="success-msg">
     <h3>🎉 Order Placed!</h3>
-    <p>Thank you for shopping with StyleVault.</p>
-    <p style="color:#aaa;font-size:0.85rem;margin-top:8px">A confirmation email is on its way. Redirecting...</p>
+    <p>Thank you for shopping with StyleVault.<br>A confirmation email is on its way. Redirecting...</p>
   </div>
 
 </div>
@@ -205,12 +133,13 @@
   async function init() {
     const cartRes = await fetch('/api/cart', { credentials: 'include' });
     const cartData = await cartRes.json();
+
     if (!cartData.success || !cartData.cart.length) {
       document.getElementById('total-amount').textContent = '0';
-      document.getElementById('qr-status').textContent = 'Cart is empty.';
-      document.getElementById('qr-spinner').style.display = 'none';
+      document.getElementById('pay-btn').textContent = 'Cart is empty';
       return;
     }
+
     const address = JSON.parse(localStorage.getItem('delivery_address') || '{}');
     const shipping = address.country && address.country !== 'India' ? 499 : 0;
     const subtotal = cartData.cart.reduce((s, i) => s + parseFloat(i.price) * i.quantity, 0);
@@ -227,71 +156,64 @@
     orderData = await res.json();
 
     if (!orderData.success) {
-      document.getElementById('qr-spinner').style.display = 'none';
-      document.getElementById('qr-status').textContent = orderData.message || 'Failed to load. Refresh.';
+      document.getElementById('pay-btn').textContent = orderData.message || 'Failed to load. Refresh.';
       return;
     }
 
     RZP_KEY = orderData.key;
-    const qrArea = document.getElementById('qr-area');
-    document.getElementById('qr-spinner').remove();
-
-    if (orderData.qr_url) {
-      qrArea.innerHTML = `
-        <img src="${orderData.qr_url}" alt="UPI QR Code"/>
-        <p class="qr-status">Scan with any UPI app to pay</p>
-      `;
-    } else {
-      qrArea.innerHTML = `
-        <button class="pay-btn" onclick="openQRModal()">Generate QR Code →</button>
-        <p class="qr-status" style="margin-top:10px">Tap to generate scannable QR</p>
-      `;
-    }
+    const btn = document.getElementById('pay-btn');
+    btn.disabled = false;
+    btn.textContent = `Pay ₹${total} →`;
   }
 
   function showSuccess() {
-    document.getElementById('pay-card').style.display = 'none';
+    document.getElementById('amount-box').style.display = 'none';
+    document.getElementById('pay-btn').style.display = 'none';
+    document.querySelector('.secure-note').style.display = 'none';
     document.getElementById('success-msg').style.display = 'block';
     localStorage.removeItem('cart_total');
     localStorage.removeItem('delivery_address');
     setTimeout(() => window.location.href = 'index.html', 4000);
   }
 
-  async function verifyAndShow(response) {
-    const res = await fetch('/api/razorpay/verify', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        razorpay_order_id: response.razorpay_order_id,
-        razorpay_payment_id: response.razorpay_payment_id,
-        razorpay_signature: response.razorpay_signature
-      })
-    });
-    const v = await res.json();
-    if (v.success) showSuccess();
-    else alert('Payment verification failed. Contact support.');
-  }
-
-  function openQRModal() {
+  function startPayment() {
     if (!orderData || !orderData.success) return;
-    new Razorpay({
+
+    const btn = document.getElementById('pay-btn');
+    btn.disabled = true;
+    btn.textContent = 'Opening payment...';
+
+    const rzp = new Razorpay({
       key: RZP_KEY,
       amount: orderData.order.amount,
       currency: 'INR',
       name: 'StyleVault',
+      description: 'Phone Case Order',
       order_id: orderData.order.id,
-      method: { upi: true, card: false, netbanking: false, wallet: false, emi: false },
-      config: {
-        display: {
-          blocks: { upi: { name: 'Scan QR', instruments: [{ method: 'upi', flow: 'qr' }] } },
-          sequence: ['block.upi'],
-          preferences: { show_default_blocks: false }
-        }
+      theme: { color: '#708090' },
+      handler: async function(response) {
+        const res = await fetch('/api/razorpay/verify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            razorpay_order_id: response.razorpay_order_id,
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_signature: response.razorpay_signature
+          })
+        });
+        const v = await res.json();
+        if (v.success) showSuccess();
+        else alert('Payment verification failed. Please contact support.');
       },
-      theme: { color: '#5D4037' },
-      handler: (r) => verifyAndShow(r),
-      modal: { ondismiss: () => {} }
-    }).open();
+      modal: {
+        ondismiss: () => {
+          btn.disabled = false;
+          btn.textContent = `Pay ₹${document.getElementById('total-amount').textContent} →`;
+        }
+      }
+    });
+
+    rzp.open();
   }
 
   init();
