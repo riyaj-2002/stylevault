@@ -16,20 +16,20 @@
       padding: 20px 40px 60px;
     }
     .collection-card {
-      background: #fffaf4;
+      background: var(--card-bg);
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 2px 12px rgba(100,50,10,0.10);
-      border: 1px solid #e8d5b8;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
       cursor: pointer;
       transition: transform 0.25s, box-shadow 0.25s;
       text-decoration: none;
     }
-    .collection-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(100,50,10,0.20); }
+    .collection-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
     .preview-grid {
       position: relative;
       height: 200px;
-      background: #b06633;
+      background: var(--primary);
       display: flex;
       align-items: flex-end;
       justify-content: center;
@@ -77,8 +77,8 @@
       justify-content: space-between;
       align-items: center;
     }
-    .collection-card .label h3 { color: #282828; font-size: 1rem; font-weight: 700; }
-    .collection-card .label span { color: #b06633; font-size: 0.9rem; font-weight: 600; }
+    .collection-card .label h3 { color: var(--text); font-size: 1rem; font-weight: 700; }
+    .collection-card .label span { color: var(--primary); font-size: 0.9rem; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -116,14 +116,14 @@
   ];
 
   const collectionBg = {
-    "Aesthetic": "#b06633",
-    "Vibes and Mood": "#b06633",
-    "Pastels":    "#b06633",
-    "Noir Gallery":     "#b06633",
-    "The Wizarding Archive": "#b06633",
-    "BTS Magic Shop":       "#b06633",
-    "Anime and Gamers Zone":      "#b06633",
-    "Modern Abstract":    "#b06633",
+    "Aesthetic": "#708090",
+    "Vibes and Mood": "#708090",
+    "Pastels":    "#708090",
+    "Noir Gallery":     "#708090",
+    "The Wizarding Archive": "#708090",
+    "BTS Magic Shop":       "#708090",
+    "Anime and Gamers Zone":      "#708090",
+    "Modern Abstract":    "#708090",
   };
 
   const grid = document.getElementById('collections-grid');
