@@ -72,6 +72,22 @@ renderProducts();
 updateCartCount();
 updateAuthLink();
 
+// ── Hamburger nav toggle ──
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('nav');
+  if (!nav) return;
+  const links = nav.querySelector('.nav-links');
+  if (!links) return;
+  const toggle = document.createElement('button');
+  toggle.className = 'nav-toggle';
+  toggle.setAttribute('aria-label', 'Menu');
+  toggle.innerHTML = '<span></span><span></span><span></span>';
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  nav.insertBefore(toggle, links);
+  // close on link click
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+});
+
 function showLogoutModal() {
   const overlay = document.createElement('div');
   overlay.id = 'logout-modal';

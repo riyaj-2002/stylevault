@@ -112,7 +112,7 @@
   <button class="pay-now-btn" id="pay-btn" onclick="startPayment()" disabled>
     Loading...
   </button>
-  <p class="secure-note">🔒 100% secure · UPI · Cards · Wallets · Net Banking</p>
+  <p class="secure-note">🔒 100% secure · UPI · Debit/Credit Cards</p>
 
   <div class="success-msg" id="success-msg">
     <h3>🎉 Order Placed!</h3>
@@ -190,6 +190,7 @@
       name: 'StyleVault',
       description: 'Phone Case Order',
       order_id: orderData.order.id,
+      method: { upi: true, card: true, netbanking: false, wallet: false, emi: false },
       theme: { color: '#708090' },
       handler: async function(response) {
         const res = await fetch('/api/razorpay/verify', {

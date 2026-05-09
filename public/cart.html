@@ -18,11 +18,11 @@
       align-items: center;
       justify-content: space-between;
       font-size: 0.88rem;
-      color: #3a2a4a;
+      color: var(--text);
       font-weight: 600;
       margin-bottom: 18px;
       padding-bottom: 14px;
-      border-bottom: 1px solid #e8e0f0;
+      border-bottom: 1px solid var(--border);
     }
     .cart-added-bar span { display: flex; align-items: center; gap: 6px; }
     .cart-added-bar .close-x {
@@ -36,7 +36,7 @@
       display: flex;
       gap: 14px;
       padding: 16px 0;
-      border-bottom: 1px solid #e8e0f0;
+      border-bottom: 1px solid var(--border);
     }
     .order-item img {
       width: 72px;
@@ -47,9 +47,9 @@
       flex-shrink: 0;
     }
     .order-item-info { flex: 1; }
-    .order-item-info h4 { font-size: 0.95rem; color: #3a2a4a; margin-bottom: 6px; font-weight: 600; }
+    .order-item-info h4 { font-size: 0.95rem; color: var(--text); margin-bottom: 6px; font-weight: 600; }
     .order-item-info .meta { font-size: 0.82rem; color: #888; margin-bottom: 3px; }
-    .order-item-info .item-price { font-size: 0.92rem; color: #9575cd; font-weight: 700; margin-top: 6px; }
+    .order-item-info .item-price { font-size: 0.92rem; color: var(--primary); font-weight: 700; margin-top: 6px; }
     .order-item .remove-btn {
       background: none;
       border: none;
@@ -58,14 +58,15 @@
       cursor: pointer;
       align-self: flex-start;
     }
-    .order-item .remove-btn:hover { color: #9575cd; }
+    .order-item .remove-btn:hover { color: var(--primary); }
 
     .order-summary-box {
-      background: #fff;
+      background: var(--card-bg);
       border-radius: 14px;
       padding: 20px;
       margin-top: 20px;
-      box-shadow: 0 2px 12px rgba(80,40,120,0.08);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
     }
     .summary-row {
       display: flex;
@@ -77,8 +78,8 @@
     .summary-row.total {
       font-size: 1rem;
       font-weight: 700;
-      color: #3a2a4a;
-      border-top: 1px solid #e8e0f0;
+      color: var(--text);
+      border-top: 1px solid var(--border);
       padding-top: 12px;
       margin-top: 4px;
     }
@@ -92,7 +93,7 @@
     .checkout-btn {
       width: 100%;
       padding: 14px;
-      background: #3a2a4a;
+      background: var(--primary);
       color: #fff;
       border: none;
       border-radius: 10px;
@@ -102,14 +103,14 @@
       margin-top: 16px;
       transition: background 0.2s;
     }
-    .checkout-btn:hover { background: #9575cd; }
+    .checkout-btn:hover { background: var(--primary-dk); }
 
     .view-cart-btn {
       width: 100%;
       padding: 13px;
-      background: #fff;
-      color: #3a2a4a;
-      border: 1.5px solid #d1c4e9;
+      background: var(--card-bg);
+      color: var(--text);
+      border: 1.5px solid var(--border);
       border-radius: 10px;
       font-size: 0.95rem;
       font-weight: 600;
@@ -117,18 +118,31 @@
       margin-top: 10px;
       transition: border-color 0.2s;
     }
-    .view-cart-btn:hover { border-color: #9575cd; color: #9575cd; }
+    .view-cart-btn:hover { border-color: var(--primary); color: var(--primary); }
 
     .continue-link {
       display: block;
       text-align: center;
       margin-top: 14px;
       font-size: 0.82rem;
-      color: #9575cd;
+      color: var(--primary);
       text-decoration: underline;
     }
 
-    .empty-cart { text-align: center; padding: 60px; color: #aaa; font-size: 1.1rem; }
+    .empty-cart { text-align: center; padding: 60px 20px; color: #aaa; font-size: 1.1rem; }
+    .empty-cart a {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 28px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -175,8 +189,8 @@
     if (res.status === 401) {
       container.innerHTML = `
         <div class="empty-cart">
-          <p style="font-size:1.1rem;margin-bottom:12px">🔒 Please log in to view your cart</p>
-          <a href="login.html?redirect=cart.html" style="background:var(--primary);color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem">Login to see your items →</a>
+          <p style="font-size:1.1rem;margin-bottom:16px;color:var(--text)">🔒 Please log in to view your cart</p>
+          <a href="login.html?redirect=cart.html">Login to see your items →</a>
         </div>`;
       return;
     }

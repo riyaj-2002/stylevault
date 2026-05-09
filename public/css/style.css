@@ -67,6 +67,58 @@ nav .cart-icon span {
   top: -8px; right: -10px;
 }
 
+/* ── HAMBURGER ── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  background: none;
+  border: none;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 12px 20px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  nav .logo img { height: 40px; width: 40px; }
+  nav .logo span { font-size: 1.6rem; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 12px 0 8px;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 10px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a {
+    margin-left: 0;
+    padding: 12px 4px;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-links a:last-child { border-bottom: none; }
+  .nav-links a::after { display: none; }
+  .cart-icon span { top: -6px; right: -12px; }
+}
+
 /* ── HERO ── */
 .hero {
   background: linear-gradient(135deg, #708090 0%, #8a9aaa 50%, #708090 100%);
@@ -126,6 +178,12 @@ nav .cart-icon span {
   border-color: #ffffff;
   transform: translateY(-2px);
 }
+@media (max-width: 768px) {
+  .hero { padding: 60px 20px; }
+  .hero h1 { font-size: 1.9rem; }
+  .hero p { font-size: 0.95rem; }
+  .hero a, .hero .btn-primary, .hero .btn-ghost { padding: 11px 24px; font-size: 0.88rem; margin: 4px 6px; }
+}
 
 /* ── TRUST BAR ── */
 .trust-bar {
@@ -153,6 +211,9 @@ nav .cart-icon span {
   display: block;
   margin-left: 0;
   margin-right: 0;
+}
+@media (max-width: 768px) {
+  .section-title { font-size: 1.5rem; padding: 32px 16px 16px; }
 }
 
 /* ── CAROUSEL ── */
@@ -265,6 +326,10 @@ nav .cart-icon span {
   box-shadow: var(--shadow-md);
   border: 1px solid #C0C0C0;
 }
+@media (max-width: 480px) {
+  .auth-container { margin: 24px 16px; padding: 28px 20px; }
+  .auth-container h2 { font-size: 1.3rem; }
+}
 .auth-container h2 { text-align: center; margin-bottom: 28px; color: #708090; font-family: 'Playfair Display', serif; font-size: 1.6rem; }
 .auth-tabs { display: flex; margin-bottom: 28px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid #C0C0C0; }
 .auth-tabs button {
@@ -307,10 +372,10 @@ nav .cart-icon span {
   border: 1px solid #C0C0C0;
 }
 .cart-item img { width: 72px; height: 72px; object-fit: cover; border-radius: var(--radius-sm); background: #F5F5DC; }
-.cart-item .item-info { flex: 1; }
-.cart-item .item-info h4 { margin-bottom: 5px; color: #333333; font-weight: 600; }
+.cart-item .item-info { flex: 1; min-width: 0; }
+.cart-item .item-info h4 { margin-bottom: 5px; color: #333333; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .cart-item .item-info p { color: #708090; font-weight: 700; }
-.cart-item .remove-btn { background: none; border: none; color: #ccc; font-size: 1.2rem; cursor: pointer; transition: color 0.2s; }
+.cart-item .remove-btn { background: none; border: none; color: #ccc; font-size: 1.2rem; cursor: pointer; transition: color 0.2s; flex-shrink: 0; }
 .cart-item .remove-btn:hover { color: #708090; }
 .cart-summary {
   background: #ffffff;
@@ -329,7 +394,22 @@ nav .cart-icon span {
   transition: background 0.2s;
 }
 .cart-summary button:hover { background: #4a5a6a; }
-.empty-cart { text-align: center; padding: 70px; color: #aaa; font-size: 1.1rem; }
+.empty-cart { text-align: center; padding: 70px 20px; color: #aaa; font-size: 1.1rem; }
+.empty-cart a {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 28px;
+  background: #708090;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+@media (max-width: 480px) {
+  .cart-item { padding: 12px 14px; gap: 12px; }
+  .cart-item img { width: 58px; height: 58px; }
+}
 
 /* ── CHECKOUT ── */
 .checkout-container {
