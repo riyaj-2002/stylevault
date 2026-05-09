@@ -8,9 +8,172 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
   <style>
     .customize-page { max-width: 1100px; margin: 0 auto; padding: 20px 40px 60px; }
-    h2.section-title { text-align: center; margin-bottom: 10px; }
-    .customize-subtitle { text-align: center; color: #888; font-size: 1rem; margin-bottom: 36px; }
-    #customize-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
+
+    .customize-subtitle {
+      text-align: center;
+      color: #708090;
+      font-size: 1.05rem;
+      margin-bottom: 52px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    /* ── Type Cards Wrapper ── */
+    .type-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+    @media (max-width: 768px) {
+      .type-cards { grid-template-columns: 1fr; }
+      .customize-page { padding: 20px 20px 60px; }
+    }
+
+    /* ── Type Card ── */
+    .type-card {
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid #C0C0C0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .type-card-header {
+      background: #708090;
+      padding: 24px 28px 20px;
+      color: #ffffff;
+    }
+    .type-card-header .type-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 6px;
+    }
+    .type-card-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    .type-card-header .price-tag {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 3px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 30px;
+      padding: 6px 18px;
+    }
+    .type-card-header .price-tag .currency { font-size: 1rem; font-weight: 600; color: #F5F5DC; }
+    .type-card-header .price-tag .amount { font-size: 1.8rem; font-weight: 700; color: #ffffff; line-height: 1; }
+
+    .type-card-body { padding: 26px 28px 28px; flex: 1; }
+    .type-card-body .desc {
+      font-size: 0.92rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    /* ── Steps ── */
+    .steps { display: flex; flex-direction: column; gap: 16px; }
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .step-num {
+      width: 30px;
+      height: 30px;
+      min-width: 30px;
+      background: #708090;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-top: 1px;
+    }
+    .step-content { flex: 1; }
+    .step-content strong {
+      display: block;
+      font-size: 0.88rem;
+      color: #333333;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    .step-content p {
+      font-size: 0.84rem;
+      color: #777;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .email-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #F5F5DC;
+      border: 1.5px solid #C0C0C0;
+      border-radius: 8px;
+      padding: 8px 14px;
+      margin-top: 6px;
+    }
+    .email-box a {
+      color: #708090;
+      font-weight: 700;
+      font-size: 0.88rem;
+      text-decoration: none;
+    }
+    .email-box a:hover { color: #4a5a6a; text-decoration: underline; }
+
+    /* ── Type 2 features ── */
+    .feature-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .feature-tag {
+      background: #F5F5DC;
+      border: 1px solid #C0C0C0;
+      color: #708090;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    /* ── Divider ── */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 0 0 36px;
+    }
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #C0C0C0;
+    }
+    .section-divider span {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: #708090;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
@@ -20,7 +183,7 @@
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="collections.html">Collections</a>
-    <a href="customize.html" class="nav-active">Customize ✦</a>
+    <a href="customize.html" class="nav-active">Customize</a>
     <a href="contact.html">Contact</a>
     <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
     <a href="login.html" id="auth-link">Login</a>
@@ -28,9 +191,123 @@
 </nav>
 
 <div class="customize-page">
+
   <h2 class="section-title">Customize Your Case</h2>
-  <p class="customize-subtitle">Pick a design and personalize it with your name, initials, or a special word — made just for you.</p>
+  <p class="customize-subtitle">Turn your favorite memories into masterpieces, or put your own spin on our signature collections.</p>
+
+  <!-- Two Type Cards -->
+  <div class="type-cards">
+
+    <!-- TYPE 1 -->
+    <div class="type-card">
+      <div class="type-card-header">
+        <p class="type-label">Type 1</p>
+        <h3>Full Print Custom Case</h3>
+        <div class="price-tag">
+          <span class="currency">₹</span>
+          <span class="amount">349</span>
+        </div>
+      </div>
+      <div class="type-card-body">
+        <p class="desc">Send us your own full print or design and we will print it directly on the phone case — exactly as you want it.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <strong>Select Your Phone Brand</strong>
+              <p>Choose your phone brand and model so we can prepare the right case size.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <strong>Send Your Design</strong>
+              <p>Send your print or design to our email:</p>
+              <div class="email-box">
+                <span>✉</span>
+                <a href="mailto:stylevault.0426@gmail.com">stylevault.0426@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <strong>Mockup Preview</strong>
+              <p>We will create a mockup preview of your case to show how it will look before printing.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <strong>Print & Deliver</strong>
+              <p>Once approved, we will print and deliver your customized case straight to your door.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TYPE 2 -->
+    <div class="type-card">
+      <div class="type-card-header">
+        <p class="type-label">Type 2</p>
+        <h3>Modify Our Existing Cases</h3>
+        <div class="price-tag">
+          <span class="currency">₹</span>
+          <span class="amount">249</span>
+        </div>
+      </div>
+      <div class="type-card-body">
+        <p class="desc">Love one of our existing designs but want to make it yours? We can add personal touches to any case from our collection.</p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <strong>Pick a Design</strong>
+              <p>Browse our collection below and choose a case design you love.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <strong>Tell Us What to Add</strong>
+              <p>We can personalise it with any of the following:</p>
+              <div class="feature-tags" style="margin-top:10px">
+                <span class="feature-tag">Your Name</span>
+                <span class="feature-tag">Quotes</span>
+                <span class="feature-tag">Pictures</span>
+                <span class="feature-tag">Personal Modifications</span>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <strong>Send Details</strong>
+              <p>Email us your chosen design and personalisation details at:</p>
+              <div class="email-box">
+                <span>✉</span>
+                <a href="mailto:stylevault.0426@gmail.com">stylevault.0426@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <strong>Approve & Receive</strong>
+              <p>We'll send a preview for your approval, then print and deliver your personalised case.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Existing Products Grid -->
+  <div class="section-divider"><span>✦ Browse Customizable Designs ✦</span></div>
   <div class="products-grid" id="customize-grid"></div>
+
 </div>
 
 <footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
