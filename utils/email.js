@@ -82,6 +82,9 @@ async function emailOrderPlaced(to, name, order_id, items, address, subtotal, sh
           ${address.city}, ${address.state} — ${address.pincode}<br>${address.country}
         </p>
       </div>
+      <div style="background:#e8f5e9;border-radius:10px;padding:14px;margin-top:12px;border-left:4px solid #4caf50">
+        <p style="color:#2e7d32;margin:0;font-size:0.92rem;">🚚 <strong>Your product will be delivered within 7 days.</strong></p>
+      </div>
       ${btn('Continue Shopping →', `${SITE}/collections.html`)}
       ${footer}
     </div>
