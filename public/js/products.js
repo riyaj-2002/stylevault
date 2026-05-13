@@ -1,142 +1,1048 @@
+// AUTO-GENERATED — do not edit manually.
+// To regenerate: node scripts/generate-products.js
+
 const products = [
-  { id: 1, name: "Abstract Butterfly Case", variants: [37,1], price: 249, image: "images/Abstract Butterfly Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A bold abstract butterfly bursting with vivid colors and artistic flair. Perfect for those who love statement pieces that turn heads everywhere they go." },
-  { id: 2, name: "Agust D", price: 249, image: "images/Agust D.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A tribute to Suga's iconic Agust D alter ego, designed exclusively for BTS ARMY. Raw, powerful energy captured in every detail of this collector's case." },
-  { id: 3, name: "Amber Bloom Case", variants: [3,38,39,48,63,56], price: 249, image: "images/Amber Bloom Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Warm amber tones bloom into a gorgeous floral pattern that feels both cozy and elegant. A beautiful pick for anyone who loves earthy, nature-inspired aesthetics." },
-  { id: 4, name: "Amethyst Butterfly Case", variants: [4,40], price: 249, image: "images/Amethyst Butterfly Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soft purple amethyst hues wrap around a delicate butterfly silhouette for a dreamy, feminine look. Graceful and eye-catching — a case that feels as good as it looks." },
-  { id: 5, name: "Anime Muse Case", price: 249, image: "images/Anime Muse Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Inspired by the world of anime, this case features a striking muse character with expressive artistry. A must-have for anime lovers who want their phone to reflect their passion." },
-  { id: 6, name: "ApoBangpo", price: 249, image: "images/ApoBangpo.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Celebrating the iconic BTS phrase 'A.R.M.Y. Protection of Bangtan', this case is a love letter to the fandom. Wear your ARMY pride loud and proud every single day." },
-  { id: 7, name: "Arcane Script Case", price: 249, image: "images/Arcane Script Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Dark, mysterious arcane script wraps across the case like a spell waiting to be cast. Ideal for fans of fantasy, magic, and all things mystical." },
-  { id: 8, name: "Audio Mosaic Case", price: 249, image: "images/Audio Mosaic Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A vibrant mosaic of audio and music elements woven into a creative, eye-catching pattern. Made for music lovers who want their phone to sing their story." },
-  { id: 9, name: "Aurora Marble", price: 249, image: "images/Aurora Marble.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Swirling aurora-inspired marble tones blend soft pinks, purples, and blues into a mesmerizing design. Elegant and unique — no two looks are ever quite the same." },
-  { id: 10, name: "Azure Flower Case", price: 249, image: "images/Azure Flower Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Crisp azure blue florals bloom across a clean background for a fresh, minimal aesthetic. Light and breezy — perfect for everyday carry with a touch of nature." },
-  { id: 11, name: "Bangtan Vibes Case", price: 249, image: "images/Bangtan Vibes Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Packed with BTS energy and Bangtan vibes, this case is a celebration of the group's iconic style. Every ARMY deserves a case that matches their love for the boys." },
-  { id: 12, name: "Berry Mix", price: 249, image: "images/Berry Mix.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A playful mix of colorful berries scattered across the case in a fun, fruity pattern. Sweet, cheerful and perfect for those who love a pop of color in their everyday life." },
-  { id: 13, name: "Blossom Girl", price: 249, image: "images/Blossom Girl.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A soft illustrated girl surrounded by delicate blossoms, capturing a poetic and feminine charm. Beautifully detailed artwork that makes your phone feel like a piece of wearable art." },
-  { id: 14, name: "Blue Sky Daisy", price: 249, image: "images/Blue Sky Daisy.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Cheerful daisies set against a bright blue sky bring an instant mood lift to your day. Light, happy and effortlessly stylish — like a sunny afternoon in a field." },
-  { id: 15, name: "Botanic Glow Case", price: 249, image: "images/Botanic Glow Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Lush botanical leaves and florals glow with rich, vibrant greens and warm accents. A nature lover's dream case that brings the outdoors to your fingertips." },
-  { id: 16, name: "Chai Gossip", price: 249, image: "images/Chai Gossip.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A fun desi-inspired design that captures the spirit of chai time and good gossip. Bold, relatable and full of personality — because every chai lover needs this case." },
-  { id: 17, name: "Champagne Starfall Case", variants: [42,17], price: 249, image: "images/Champagne Starfall Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Shimmering champagne tones rain down like falling stars in this luxurious, elegant design. Sophisticated and glamorous — the perfect case for those who love a little sparkle." },
-  { id: 18, name: "Citrus Burst", price: 249, image: "images/Citrus Burst.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Zesty citrus slices explode with bright oranges, yellows and greens in a refreshing pattern. Fun, energetic and full of summer vibes that brighten up any day." },
-  { id: 19, name: "Classic Melody Case", variants: [19,32,33,46,47,31], price: 249, image: "images/Classic Melody Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A timeless melody-inspired design with clean lines and musical elegance woven throughout. For music lovers who appreciate classic style with a modern, refined touch." },
-  { id: 20, name: "Cosmic Duo Case", price: 249, image: "images/Cosmic Duo Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Two cosmic forces collide in a deep space design filled with stars, planets and galactic energy. Bold and mysterious — for dreamers who feel most at home among the stars." },
-  { id: 21, name: "Cosmic Orbit", price: 249, image: "images/Cosmic Orbit.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Planets and orbits swirl in a stunning cosmic pattern that captures the vastness of the universe. A mesmerizing design for space enthusiasts and dreamers alike." },
-  { id: 22, name: "Cream Bear Case", price: 249, image: "images/Cream Bear Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A soft, creamy bear illustration that radiates warmth, cuteness and cozy good vibes. Irresistibly adorable — the kind of case that makes everyone smile when they see it." },
-  { id: 23, name: "Crimson Splash Case", price: 249, image: "images/Crimson Splash Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Deep crimson paint splashes across the case in a bold, artistic explosion of color. Fierce and expressive — for those who aren't afraid to make a statement." },
-  { id: 24, name: "Deep Red Pour", price: 249, image: "images/Deep Red Pour.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Rich, deep red pours across the surface in a dramatic and luxurious fluid art design. Intense and sophisticated — a case that commands attention without saying a word." },
-  { id: 25, name: "Face Line Art", price: 249, image: "images/Face Line Art.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A minimalist single-line face illustration that turns simplicity into stunning modern art. Clean, elegant and effortlessly cool — for those who appreciate understated beauty." },
-  { id: 26, name: "Goal Strike", price: 249, image: "images/Goal Strike.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A dynamic football-inspired design capturing the thrill of the perfect goal strike. Made for football fans who want to carry their passion for the beautiful game everywhere." },
-  { id: 27, name: "Gojo Sorcerer", price: 249, image: "images/Gojo Sorcerer.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Featuring the legendary Gojo Satoru from Jujutsu Kaisen in all his sorcerer glory. A powerful, detailed design that every JJK fan will instantly recognize and love." },
-  { id: 28, name: "Golden Memory Case", price: 249, image: "images/Golden Memory Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Warm golden tones weave together in a design that feels like a cherished, timeless memory. Nostalgic and elegant — a case that carries a sense of warmth wherever you go." },
-  { id: 29, name: "Hugging Cats", price: 249, image: "images/Hugging Cats.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Two adorable cats wrapped in a warm hug, illustrated in a heartwarming and charming style. The perfect case for cat lovers who want a daily dose of cuteness on their phone." },
-  { id: 30, name: "Ink Butterfly Case", price: 249, image: "images/Ink Butterfly Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A delicate butterfly rendered in flowing ink strokes, blending minimalism with artistic depth. Subtle yet striking — a case that speaks volumes without being loud." },
-  { id: 31, name: "Ivory Melody Case", variants: [19,32,33,46,47,31], price: 249, image: "images/Ivory Melody Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soft ivory tones carry a gentle melody design that feels clean, calm and timelessly elegant. A refined choice for those who love minimal beauty with a musical soul." },
-  { id: 32, name: "Lavender Melody Case", variants: [19,32,33,46,47,31], price: 249, image: "images/Lavender Melody Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soothing lavender hues flow through a graceful melody design that feels peaceful and stylish. Calm, feminine and uniquely beautiful — like a quiet song on a lazy afternoon." },
-  { id: 33, name: "Lilac Melody Case", variants: [19,32,33,46,47,31], price: 249, image: "images/Lilac Melody Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soft lilac tones bring a delicate, dreamy quality to this beautifully crafted melody design. Feminine, gentle and full of quiet charm — a case as lovely as the color itself." },
-  { id: 34, name: "Love Song Army", price: 249, image: "images/Love Song Army.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A heartfelt BTS-inspired design that captures the love between the members and their ARMY. For every fan who carries that bond close to their heart — and now, their phone." },
-  { id: 35, name: "Lucky 67", price: 249, image: "images/Lucky 67.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Bold and playful, the Lucky 67 design brings good energy and fun vibes to your everyday carry. A confident, eye-catching case for those who believe in a little bit of luck." },
-  { id: 36, name: "Midnight Battery Case", variants: [36,49], price: 249, image: "images/Midnight Battery Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A sleek midnight-dark design featuring a battery motif that's minimal, cool and effortlessly edgy. Perfect for those who love dark aesthetics with a clean, modern twist." },
-  { id: 37, name: "Minimal Butterfly Case", variants: [37,1], price: 249, image: "images/Minimal Butterfly Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A clean, minimal butterfly design that proves less is always more when done right. Simple, elegant and timeless — a case that pairs beautifully with any outfit or mood." },
-  { id: 38, name: "Mist Bloom Case", variants: [3,38,39,48,63,56], price: 249, image: "images/Mist Bloom Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soft blooms emerge through a dreamy mist in this ethereal, watercolor-inspired floral design. Delicate and artistic — like holding a painting in the palm of your hand." },
-  { id: 39, name: "Mocha Bloom Case", variants: [3,38,39,48,63,56], price: 249, image: "images/Mocha Bloom Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Warm mocha tones bloom into a cozy, earthy floral design that feels like a hug in case form. Rich, elegant and perfect for those who love warm, coffee-toned aesthetics." },
-  { id: 40, name: "Noir Butterfly Case", variants: [4,40], price: 249, image: "images/Noir Butterfly Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A dramatic noir butterfly design drenched in dark tones and bold, mysterious energy. Striking and powerful — for those who love beauty with an edge of darkness." },
-  { id: 41, name: "Noir Wizard Case", price: 249, image: "images/Noir Wizard Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A dark, brooding wizard design wrapped in noir shadows and mystical, otherworldly details. Perfect for fans of dark fantasy who want their phone to carry a little magic." },
-  { id: 42, name: "Olive Starfall Case", variants: [42,17], price: 249, image: "images/Olive Starfall Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Earthy olive tones catch falling stars in a subtle, stylish design that feels grounded yet cosmic. Understated and cool — for those who like their style effortless and unique." },
-  { id: 43, name: "Panda Drip", price: 249, image: "images/Panda Drip.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A trendy panda drip design where cute meets street style in the most unexpected way. Fun, bold and totally one-of-a-kind — because pandas deserve to be dripped out too." },
-  { id: 44, name: "Pink Heart Waves", price: 249, image: "images/Pink Heart Waves.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soft pink waves carry little hearts across the case in a romantic, playful flowing pattern. Sweet and feminine — a case that radiates love and good energy all day long." },
-  { id: 45, name: "Polar Bliss", price: 249, image: "images/Polar Bliss.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Cool icy tones and serene polar-inspired visuals create a calm, refreshing and beautiful design. Peaceful and elegant — like a quiet winter morning captured on your phone." },
-  { id: 46, name: "Pure Melody Case", variants: [19,32,33,46,47,31], price: 249, image: "images/Pure Melody Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A pure, clean melody design with minimal lines and a timeless elegance that never goes out of style. For those who believe true beauty lies in simplicity and quiet sophistication." },
-  { id: 47, name: "Pure Melody Case Special", variants: [19,32,33,46,47,31], price: 249, image: "images/Pure Melody Case (2).png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A special edition take on the Pure Melody design with refined details and an elevated finish. A collector's favourite for those who appreciate the finer, more polished things in life." },
-  { id: 48, name: "Rose Bloom Case", variants: [3,38,39,48,63,56], price: 249, image: "images/Rose Bloom Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Classic roses bloom in full glory across this romantic, feminine and timelessly beautiful case. Soft, elegant and always in style — because roses never go out of fashion." },
-  { id: 49, name: "Sand Battery Case", variants: [36,49], price: 249, image: "images/Sand Battery Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Warm sandy tones meet a clean battery design for a minimal, earthy and effortlessly stylish look. Subtle and cool — the kind of case that quietly elevates your whole aesthetic." },
-  { id: 50, name: "Scarlet Cat Case", variants: [50,58], price: 249, image: "images/Scarlet Cat Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A fierce scarlet cat design that blends bold color with playful feline attitude in one striking case. Fun, confident and totally unique — for cat lovers who like their style loud." },
-  { id: 51, name: "Side Eye Mood", price: 249, image: "images/Side Eye Mood.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "That iconic side eye expression we all know too well, captured perfectly in a hilarious design. Relatable, expressive and full of personality — because sometimes the look says it all." },
-  { id: 52, name: "Soft Bear Case", price: 249, image: "images/Soft Bear Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A soft, plush bear illustration that brings warmth, comfort and undeniable cuteness to your phone. Cozy and charming — the kind of case that makes you smile every time you pick it up." },
-  { id: 53, name: "Soft Pastel Cloud", price: 249, image: "images/Soft Pastel Cloud.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Dreamy pastel clouds drift across a soft, airy background in the most calming design imaginable. Light, gentle and wonderfully soothing — like carrying a little piece of the sky." },
-  { id: 54, name: "Strawberry Patch", price: 249, image: "images/Strawberry Patch.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Bright, juicy strawberries scattered across the case in a sweet and colorful cottage-core pattern. Fresh, fun and absolutely adorable — a case that's as sweet as the fruit itself." },
-  { id: 55, name: "Sunset Strokes", price: 249, image: "images/Sunset Strokes.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Warm sunset hues painted in bold, expressive brushstrokes create a deeply artistic and vibrant design. For those who see beauty in every golden hour and want to carry that feeling always." },
-  { id: 56, name: "Teal Bloom Case", variants: [3,38,39,48,63,56], price: 249, image: "images/Teal Bloom Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Cool teal tones bloom into a fresh, elegant floral design that feels both modern and timeless. Crisp, stylish and uniquely beautiful — a case that stands out in the best way." },
-  { id: 57, name: "Tiny Cat Duo", price: 249, image: "images/Tiny Cat Duo.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Two tiny cats illustrated in an adorable, minimalist style that's impossible not to love. Playful and sweet — a perfect case for cat lovers who appreciate cute done right." },
-  { id: 58, name: "Trio Cat Case", variants: [50,58], price: 249, image: "images/Trio Cat Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Three charming cats come together in one delightful design packed with personality and feline fun. Cute, expressive and full of character — because one cat is never enough." },
-  { id: 59, name: "Violet Hearts Case", price: 249, image: "images/Violet Hearts Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soft violet hearts float across the case in a romantic, dreamy pattern full of love and elegance. Sweet and feminine — a case that wears its heart on its sleeve, literally." },
-  { id: 60, name: "Vmin Banter Case", price: 249, image: "images/Vmin Banter Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Celebrating the iconic friendship and playful banter between BTS members V and Jimin. A fun, expressive case that every ARMY who ships Vmin will absolutely adore." },
-  { id: 61, name: "Watermelon Splash", price: 249, image: "images/Watermelon Splash.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Juicy watermelon slices splash across the case in a bright, summery and irresistibly fun design. Fresh, bold and full of good vibes — the ultimate summer phone companion." },
-  { id: 62, name: "Wavy Muse Case", price: 249, image: "images/Wavy Muse Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Flowing waves of color and form come together in a dynamic, artistic design inspired by creative expression. Fluid, bold and beautifully expressive — for those who live and breathe art." },
-  { id: 63, name: "Wine Bloom Case", variants: [3,38,39,48,63,56], price: 249, image: "images/Wine Bloom Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Deep wine-red blooms unfold in a rich, sophisticated floral design that exudes quiet luxury. Elegant and intense — a case for those with refined taste and a love for deep, moody tones." },
-  { id: 64, name: "Wine Glass Hearts", price: 249, image: "images/Wine Glass Hearts.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Elegant wine glasses adorned with hearts create a chic, romantic design perfect for date nights. Sophisticated and playful at once — for those who love love, and love a good glass of wine." },
-  { id: 65, name: "Wizard Platform Case", price: 249, image: "images/Wizard Platform Case.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A magical wizard standing on an enchanted platform, surrounded by fantasy details and mystical energy. For Harry Potter fans and fantasy lovers who want a little magic in their everyday life." },
-  { id: 66, name: "Wizard Trio Case", price: 249, image: "images/Wizard Trio.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Three iconic wizard characters united in one stunning, detail-rich design full of magical charm. A collector's case for fans of the wizarding world who want all three heroes on their phone." },
-  { id: 67, name: "Battlegrounds Warrior", price: 249, image: "images/Battlegrounds Warrior.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "An intense battlegrounds warrior design built for gamers who play to win. Bold, action-packed and full of competitive energy." },
-  { id: 68, name: "Black & White Hearts", price: 249, image: "images/Black & White Hearts.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Classic black and white hearts in a clean, striking pattern that never goes out of style. Minimal yet romantic — a timeless case for everyday elegance." },
-  { id: 69, name: "Black & White Puzzle", price: 249, image: "images/Black & White Puzzle.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A bold black and white puzzle pattern that's graphic, modern and effortlessly cool. For those who love clean contrast and a design that makes people look twice." },
-  { id: 70, name: "Blurry Focus Black", price: 249, image: "images/Blurry Focus Black.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A moody blurry focus design in deep black tones that feels cinematic and artistic. Dark, minimal and quietly dramatic — for those who appreciate understated cool." },
-  { id: 71, name: "Brown Aesthetic Girl", price: 249, image: "images/Brown Aesthetic Girl.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A warm brown-toned aesthetic girl illustration with a soft, editorial feel. Stylish, feminine and perfectly on-trend for anyone who loves a curated aesthetic." },
-  { id: 72, name: "Colorful Retro Flowers", price: 249, image: "images/Colorful Retro Flowers.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Vibrant retro flowers burst across the case in a fun, nostalgic 70s-inspired pattern. Bold, cheerful and full of vintage charm that stands out in any crowd." },
-  { id: 73, name: "Gojo & Sukuna Split", price: 249, image: "images/Gojo & Sukuna Split.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "The ultimate JJK rivalry captured in one epic split design featuring Gojo and Sukuna face to face. A must-have for every Jujutsu Kaisen fan who can't pick a side." },
-  { id: 74, name: "Gojo Satoru Panels", price: 249, image: "images/Gojo Satoru Panels.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Iconic manga-style panels of Gojo Satoru laid out in a dynamic, comic-inspired design. Detailed, expressive and absolutely perfect for die-hard JJK fans." },
-  { id: 75, name: "Golden Hour Silhouette", price: 249, image: "images/Golden Hour Silhouette.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A breathtaking golden hour silhouette that captures the magic of that perfect end-of-day light. Warm, dreamy and deeply beautiful — like a sunset you never want to end." },
-  { id: 76, name: "Japanese Pagoda Art", price: 249, image: "images/Japanese Pagoda Art.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A stunning Japanese pagoda illustration rendered in traditional artistic style with elegant detail. Serene, cultural and beautifully crafted for lovers of Japanese aesthetics." },
-  { id: 77, name: "Kakashi Sharingan Eye", price: 249, image: "images/Kakashi Sharingan Eye.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Kakashi's legendary Sharingan eye stares back in this powerful Naruto-inspired design. Iconic, intense and instantly recognizable — a true collector's piece for anime fans." },
-  { id: 78, name: "Korean Heart", price: 249, image: "images/Korean Heart.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "The beloved Korean heart gesture captured in a cute, minimal and expressive design. Sweet, trendy and full of K-culture charm — send love everywhere you go." },
-  { id: 79, name: "Modern Heritage", price: 249, image: "images/Modern Heritage.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A sophisticated modern heritage design that blends classic patterns with a contemporary edge. Refined, timeless and quietly luxurious — for those with an eye for detail." },
-  { id: 80, name: "Neon Controller Gamer", price: 249, image: "images/Neon Controller Gamer.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A glowing neon game controller design that screams gamer energy in the best way possible. Vibrant, bold and built for those who live and breathe gaming culture." },
-  { id: 81, name: "Nocturnal Soul", price: 249, image: "images/Nocturnal Soul.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A deep, moody nocturnal soul design that captures the quiet beauty of the night. Dark, poetic and hauntingly beautiful — for those who come alive after dark." },
-  { id: 82, name: "Petals & Rain", price: 249, image: "images/Petals & Rain.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Delicate petals falling through soft rain in a dreamy, watercolor-inspired design. Gentle, romantic and beautifully melancholic — like a rainy day you actually enjoy." },
-  { id: 83, name: "Pink Marble Swirl", price: 249, image: "images/Pink Marble Swirl.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soft pink marble swirls across the case in a luxurious, elegant and feminine pattern. Chic and sophisticated — the kind of case that looks expensive without trying." },
-  { id: 84, name: "POV-You", price: 249, image: "images/POV-You.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A fun POV-style design that's playful, relatable and full of personality. Trendy, expressive and perfect for those who love a case that starts a conversation." },
-  { id: 85, name: "Purple Mini Hearts", price: 249, image: "images/Purple Mini Hearts.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Tiny purple hearts scattered across the case in a sweet, minimal and charming pattern. Soft, feminine and full of quiet love — a case as gentle as it is pretty." },
-  { id: 86, name: "Red Torii Gate Forest", price: 249, image: "images/Red Torii Gate Forest.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "The iconic red torii gates of Japan set deep in a misty forest in a stunning artistic design. Spiritual, atmospheric and deeply beautiful — a case that transports you to another world." },
-  { id: 87, name: "Romantic Face Line Art", price: 249, image: "images/Romantic Face Line Art.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A romantic single-line face illustration with soft, flowing strokes and an intimate, artistic feel. Elegant, minimal and deeply expressive — wearable art at its finest." },
-  { id: 88, name: "Slow Living", price: 249, image: "images/Slow Living.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A calming slow living design that celebrates the beauty of taking it easy and enjoying the moment. Peaceful, cozy and perfectly minimal — for those who choose calm over chaos." },
-  { id: 89, name: "Soft Pastel Clouds", price: 249, image: "images/Soft Pastel Clouds.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Fluffy pastel clouds float across a dreamy sky in this soft, airy and wonderfully calming design. Light as air and endlessly soothing — like carrying a little piece of heaven." },
-  { id: 90, name: "Sunday Brunch", price: 249, image: "images/Sunday Brunch.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A charming Sunday brunch design full of cozy vibes, good food and lazy morning energy. Warm, fun and relatable — for everyone who lives for a slow, delicious Sunday." },
-  { id: 91, name: "Uchiha Itachi Anime", price: 249, image: "images/Uchiha Itachi Anime.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "The legendary Uchiha Itachi rendered in stunning anime detail in this powerful Naruto tribute case. Iconic, emotional and deeply meaningful — for fans who know the real story." },
-  { id: 92, name: "Vintage Clockwork Gear", price: 249, image: "images/Vintage Clockwork Gear.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Intricate vintage clockwork gears arranged in a detailed, steampunk-inspired mechanical design. Sophisticated, unique and full of old-world craftsmanship that never goes out of style." },
-  { id: 93, name: "World Map Travel", price: 249, image: "images/World Map Travel.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A beautifully illustrated world map design for the travellers, dreamers and adventure seekers. Bold, inspiring and full of wanderlust — for those who carry the whole world with them." },
-  { id: 94, name: "Lilac Layers", price: 249, image: "images/Lilac Layers.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soft lilac layers stacked in a dreamy, gradient-like pattern that feels calm and effortlessly beautiful. A gentle, feminine case for those who love soft tones and quiet elegance." },
-  { id: 95, name: "Manifest Grid", price: 249, image: "images/Manifest Grid.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A bold grid-based design with a motivational manifest energy that keeps you focused and inspired. Clean, modern and full of intention — for those who move with purpose." },
-  { id: 96, name: "Retro Ripple", price: 249, image: "images/Retro Ripple.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Wavy retro ripple lines flow across the case in a nostalgic, groovy 70s-inspired pattern. Fun, bold and full of vintage energy that makes your phone impossible to ignore." },
-  { id: 97, name: "Shadow Silhouette", price: 249, image: "images/Shadow Silhouette.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A striking shadow silhouette design that plays with light, dark and dramatic contrast. Moody, artistic and deeply expressive — for those who see beauty in the shadows." },
-  { id: 98, name: "The Rebel Logic", price: 249, image: "images/The Rebel Logic.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A bold rebel logic design packed with attitude, edge and unapologetic confidence. For those who think differently, live boldly and never follow the crowd." },
-  { id: 99, name: "Arctic Wave Crest", price: 249, image: "images/Arctic Wave Crest.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Cool arctic waves crest across the case in a crisp, refreshing design full of icy elegance. Minimal and striking — for those who carry a calm, cool energy everywhere they go." },
-  { id: 100, name: "Autumn Stripe Blocks", price: 249, image: "images/Autumn Stripe Blocks.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Warm autumn tones arranged in bold stripe blocks create a cozy, seasonal aesthetic. Rich, earthy and effortlessly stylish — like a perfect fall afternoon captured on your phone." },
-  { id: 101, name: "Blue Daisy Gingham", price: 249, image: "images/Blue Daisy Gingham.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Cheerful blue daisies scattered across a classic gingham pattern for a fresh, cottage-core vibe. Sweet, playful and full of charm — the perfect case for a sunny day out." },
-  { id: 102, name: "Blush Heart Sketch", price: 249, image: "images/Blush Heart Sketch.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Delicate blush-toned heart sketches drawn in a soft, artistic style full of quiet romance. Feminine, gentle and beautifully understated — a case that speaks the language of love." },
-  { id: 103, name: "Clean 'Etc.' Bold", price: 249, image: "images/Clean 'Etc.' Bold.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A clean, bold typographic design that says everything with just one word. Minimal, confident and effortlessly cool — for those who let their style do the talking." },
-  { id: 104, name: "Dark Flora & Butterfly", price: 249, image: "images/Dark Flora & Butterfly.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Dark florals and a delicate butterfly come together in a moody, artistic design full of depth. Mysterious and beautiful — for those who find elegance in the darker side of nature." },
-  { id: 105, name: "Deep Plum Petals", price: 249, image: "images/Deep Plum Petals.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Rich deep plum petals bloom across the case in a luxurious, velvety floral design. Intense, feminine and deeply beautiful — a case that commands quiet attention." },
-  { id: 106, name: "Golden Space Explorer", price: 249, image: "images/Golden Space Explorer.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A bold golden space explorer design built for dreamers who reach for the stars. Adventurous, striking and full of cosmic energy — for those who were born to explore." },
-  { id: 107, name: "Golden Vine Outline", price: 249, image: "images/Golden Vine Outline.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Elegant golden vine outlines trace across the case in a refined, luxurious botanical design. Sophisticated and timeless — the kind of case that elevates any look effortlessly." },
-  { id: 108, name: "Lazy Day Script", price: 249, image: "images/Lazy Day Script.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A relaxed, handwritten script design that perfectly captures the mood of a slow, lazy day. Casual, charming and full of laid-back personality — for those who live at their own pace." },
-  { id: 109, name: "Manifest Grid Layout", price: 249, image: "images/Manifest Grid Layout.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A structured grid layout with a powerful manifest energy that keeps your goals front and center. Bold, intentional and perfectly minimal — for those who plan, focus and achieve." },
-  { id: 110, name: "Matte Black 'Offline'", price: 249, image: "images/Matte Black 'Offline'.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A sleek matte black case with a bold 'Offline' statement for those who know when to disconnect. Minimal, edgy and unapologetically cool — wear your boundaries with style." },
-  { id: 111, name: "Midnight Smoke Drift", price: 249, image: "images/Midnight Smoke Drift.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soft smoke drifts across a midnight backdrop in a hauntingly beautiful, atmospheric design. Dark, poetic and deeply aesthetic — for those who find beauty in the quiet of the night." },
-  { id: 112, name: "Navy Garden Bloom", price: 249, image: "images/Navy Garden Bloom.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Rich navy tones bloom into a lush garden design full of depth and botanical elegance. Bold yet refined — a case that brings the beauty of a midnight garden to your fingertips." },
-  { id: 113, name: "Neon Melt Skull", price: 249, image: "images/Neon Melt Skull.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A neon-drenched melting skull design that's bold, edgy and impossible to ignore. For those who live on the wild side and want their phone to match their fearless energy." },
-  { id: 114, name: "Night Window View", price: 249, image: "images/Night Window View.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A cinematic night window view captured in a moody, atmospheric design full of quiet drama. Dark, artistic and deeply evocative — for those who love the beauty of city nights." },
-  { id: 115, name: "Pastel Coffee Bear", price: 249, image: "images/Pastel Coffee Bear.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "An adorable pastel bear holding a coffee cup in the cutest, coziest design imaginable. Sweet, warm and irresistibly charming — for coffee lovers who also happen to love cute things." },
-  { id: 116, name: "Retro Ghost Vibes", price: 249, image: "images/Retro Ghost Vibes.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A fun retro ghost design dripping with nostalgic vibes and playful spooky energy. Bold, quirky and full of character — for those who keep it fun and a little bit haunted." },
-  { id: 117, name: "Retro Ripple Check", price: 249, image: "images/Retro Ripple Check.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Classic ripple check patterns rendered in a retro style that feels both nostalgic and fresh. Graphic, cool and effortlessly stylish — a case that never goes out of fashion." },
-  { id: 118, name: "Rose Gold Shimmer", price: 249, image: "images/Rose Gold Shimmer.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soft rose gold shimmer flows across the case in a luxurious, glamorous design. Elegant, feminine and beautifully radiant — for those who love a touch of gold in everything." },
-  { id: 119, name: "Skeleton Rock Symbol", price: 249, image: "images/Skeleton Rock Symbol.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A bold skeleton throwing up the rock symbol in a design that's raw, rebellious and full of attitude. For the music lovers and rule-breakers who live life loud and unapologetically." },
-  { id: 120, name: "Sketchbook Cat Pattern", price: 249, image: "images/Sketchbook Cat Pattern.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Adorable cats sketched in a loose, playful sketchbook style scattered across the case. Charming, artistic and full of feline personality — a must-have for every cat lover." },
-  { id: 121, name: "Tan Urban Plaid", price: 249, image: "images/Tan Urban Plaid.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A warm tan urban plaid design that blends classic pattern with a modern, street-ready edge. Understated, cool and effortlessly stylish — for those who keep it clean and sharp." },
-  { id: 122, name: "The Chosen One", price: 249, image: "images/The Chosen One.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A powerful tribute to the chosen one — bold, iconic and full of wizarding world magic. For every Harry Potter fan who knows they were always meant for something extraordinary." },
-  { id: 123, name: "Twilight Peak View", price: 249, image: "images/Twilight Peak View.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A breathtaking twilight mountain peak view captured in a stunning, atmospheric design. Dramatic, beautiful and deeply inspiring — for those who chase horizons and love the wild." },
-  { id: 124, name: "White Blossom Print", price: 249, image: "images/White Blossom Print.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Delicate white blossoms printed across the case in a clean, elegant and timeless floral design. Pure, minimal and beautifully refined — like carrying a breath of fresh spring air." },
-  { id: 125, name: "Wizarding World Motto", price: 249, image: "images/Wizarding World Motto.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "The iconic wizarding world motto captured in a beautifully designed typographic case. A collector's piece for every Potterhead who lives by the magic of those legendary words." },
-  { id: 126, name: "Blush Whale Journey", variants: [126,133,134,137,140], price: 249, image: "images/Blush Whale Journey.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A soft blush-toned whale drifting through a dreamy, pastel ocean in a whimsical and heartwarming design. Gentle, playful and utterly charming — for those who love cute with a touch of wanderlust." },
-  { id: 127, name: "Chibi Squad Pile", price: 249, image: "images/Chibi Squad Pile.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "An adorable pile of chibi characters stacked together in the cutest squad goals design ever. Fun, expressive and full of personality — a must-have for every anime and chibi art lover." },
-  { id: 128, name: "Lavender Bouquet Muse", price: 249, image: "images/Lavender Bouquet Muse.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A beautiful lavender bouquet rendered in soft, artistic strokes that feel fresh and elegantly feminine. Delicate and inspiring — and fully customizable with your name or initials to make it truly yours." },
-  { id: 129, name: "Locked Boo Humor", price: 249, image: "images/Locked Boo Humor.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A fun and humorous locked boo design that's playful, witty and full of lighthearted charm. Bold, relatable and guaranteed to get a laugh — because your phone deserves a sense of humor too." },
-  { id: 130, name: "Midnight Koi Pond", price: 249, image: "images/Midnight Koi Pond.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Graceful koi fish glide through a midnight pond in a stunning, atmospheric and deeply artistic design. Serene, beautiful and full of quiet elegance — inspired by the timeless art of the East." },
-  { id: 131, name: "Minimalist Army Silhouette", price: 249, image: "images/Minimalist Army Silhouette.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A clean minimalist silhouette design paying tribute to the BTS ARMY in the most elegant way. Simple, meaningful and deeply personal — for fans who carry their love quietly but proudly." },
-  { id: 132, name: "Mirror Selfie Sketch", price: 249, image: "images/Mirror Selfie Sketch.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A fun illustrated mirror selfie sketch that captures the iconic pose we all know and love. Trendy and expressive — customize it with your name to make your selfie case truly one of a kind." },
-  { id: 133, name: "Olive Whale Journey", variants: [126,133,134,137,140], price: 249, image: "images/Olive Whale Journey.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "An earthy olive-toned whale on a peaceful journey through calm, dreamy waters. Grounded, whimsical and beautifully unique — for free spirits who love nature and adventure." },
-  { id: 134, name: "Purple Whale Dream", variants: [126,133,134,137,140], price: 249, image: "images/Purple Whale Dream.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A dreamy purple whale floating through a soft, magical underwater world full of wonder. Whimsical, calming and deeply imaginative — for dreamers who love the ocean and the stars." },
-  { id: 135, name: "Sage Green Serenity", price: 249, image: "images/Sage Green Serenity.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Soft sage green tones create a calming, nature-inspired design that feels grounded and serene. Minimal and effortlessly beautiful — personalize it with your name or a word that brings you peace." },
-  { id: 136, name: "Satin Ribbon Chic", price: 249, image: "images/Satin Ribbon Chic.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "Elegant satin ribbon details woven into a chic, luxurious design that feels polished and refined. Feminine and timelessly stylish — add your name or initials to make this beauty completely yours." },
-  { id: 137, name: "Sky Blue Whale Journey", variants: [126,133,134,137,140], price: 249, image: "images/Sky Blue Whale Journey.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A cheerful sky blue whale gliding through open waters in a fresh, uplifting and joyful design. Light, breezy and full of good energy — like a perfect day by the sea." },
-  { id: 138, name: "The Stage Seven Bond", price: 249, image: "images/The Stage Seven Bond.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A powerful tribute to the unbreakable bond of seven, celebrating the iconic stage presence of BTS. Emotional, meaningful and beautifully crafted — for every ARMY who felt that bond deeply." },
-  { id: 139, name: "TinyTan Friends", price: 249, image: "images/TinyTan Friends.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "The adorable TinyTan characters together in one charming, colorful and heartwarming design. Cute, fun and full of BTS magic — a must-have for every ARMY who loves the TinyTan universe." },
-  { id: 140, name: "Vanilla Whale Journey", variants: [126,133,134,137,140], price: 249, image: "images/Vanilla Whale Journey.png", model: "Universal", brand: "StyleVault", type: "Printed Case", description: "A soft vanilla-toned whale drifting peacefully through calm, creamy waters in a cozy and dreamy design. Warm, gentle and wonderfully soothing — like a quiet afternoon with nowhere to be." },
+  {
+    "id": 1,
+    "name": "Aurora Marble",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Aurora Marble.png",
+    "slug": "aurora-marble"
+  },
+  {
+    "id": 2,
+    "name": "Azure Flower Case",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Azure Flower Case.png",
+    "slug": "azure-flower-case"
+  },
+  {
+    "id": 3,
+    "name": "Blossom Girl",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Blossom Girl.png",
+    "slug": "blossom-girl"
+  },
+  {
+    "id": 4,
+    "name": "Blue Daisy Gingham",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Blue Daisy Gingham.png",
+    "slug": "blue-daisy-gingham"
+  },
+  {
+    "id": 5,
+    "name": "Blue Ribbon Sketch",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Blue Ribbon Sketch.png",
+    "slug": "blue-ribbon-sketch"
+  },
+  {
+    "id": 6,
+    "name": "Blue Sky Daisy",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Blue Sky Daisy.png",
+    "slug": "blue-sky-daisy"
+  },
+  {
+    "id": 7,
+    "name": "Blush Heart Sketch",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Blush Heart Sketch.png",
+    "slug": "blush-heart-sketch"
+  },
+  {
+    "id": 8,
+    "name": "Bold Black Silk Bow",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Bold Black Silk Bow.png",
+    "slug": "bold-black-silk-bow"
+  },
+  {
+    "id": 9,
+    "name": "Bold Navy Silk Bow",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Bold Navy Silk Bow.png",
+    "slug": "bold-navy-silk-bow"
+  },
+  {
+    "id": 10,
+    "name": "Brown Aesthetic Girl",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Brown Aesthetic Girl.png",
+    "slug": "brown-aesthetic-girl"
+  },
+  {
+    "id": 11,
+    "name": "Champagne Starfall Case",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Champagne Starfall Case.png",
+    "slug": "champagne-starfall-case"
+  },
+  {
+    "id": 12,
+    "name": "Cream Bear Case",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Cream Bear Case.png",
+    "slug": "cream-bear-case"
+  },
+  {
+    "id": 13,
+    "name": "Face Line Art",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Face Line Art.png",
+    "slug": "face-line-art"
+  },
+  {
+    "id": 14,
+    "name": "Golden Cherry",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Golden Cherry.png",
+    "slug": "golden-cherry"
+  },
+  {
+    "id": 15,
+    "name": "Golden Memory Case",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Golden Memory Case.png",
+    "slug": "golden-memory-case"
+  },
+  {
+    "id": 16,
+    "name": "Japanese Pagoda Art",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Japanese Pagoda Art.png",
+    "slug": "japanese-pagoda-art"
+  },
+  {
+    "id": 17,
+    "name": "Korean Heart",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Korean Heart.png",
+    "slug": "korean-heart"
+  },
+  {
+    "id": 18,
+    "name": "Lilac Layers",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Lilac Layers.png",
+    "slug": "lilac-layers"
+  },
+  {
+    "id": 19,
+    "name": "Mini Lilac Bows",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Mini Lilac Bows.png",
+    "slug": "mini-lilac-bows"
+  },
+  {
+    "id": 20,
+    "name": "Mini Teal Bows",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Mini Teal Bows.png",
+    "slug": "mini-teal-bows"
+  },
+  {
+    "id": 21,
+    "name": "Mini Wine Bows",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Mini Wine Bows.png",
+    "slug": "mini-wine-bows"
+  },
+  {
+    "id": 22,
+    "name": "Modern Heritage",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Modern Heritage.png",
+    "slug": "modern-heritage"
+  },
+  {
+    "id": 23,
+    "name": "Nocturnal Soul",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Nocturnal Soul.png",
+    "slug": "nocturnal-soul"
+  },
+  {
+    "id": 24,
+    "name": "Noir Butterfly Case",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Noir Butterfly Case.png",
+    "slug": "noir-butterfly-case"
+  },
+  {
+    "id": 25,
+    "name": "Olive Starfall Case",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Olive Starfall Case.png",
+    "slug": "olive-starfall-case"
+  },
+  {
+    "id": 26,
+    "name": "Petals & Rain",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Petals & Rain.png",
+    "slug": "petals-rain"
+  },
+  {
+    "id": 27,
+    "name": "Pink Heart Waves",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Pink Heart Waves.png",
+    "slug": "pink-heart-waves"
+  },
+  {
+    "id": 28,
+    "name": "Pink Marble Swirl",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Pink Marble Swirl.png",
+    "slug": "pink-marble-swirl"
+  },
+  {
+    "id": 29,
+    "name": "Pink Silk Bow",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Pink Silk Bow.png",
+    "slug": "pink-silk-bow"
+  },
+  {
+    "id": 30,
+    "name": "POV-You",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/POV-You.png",
+    "slug": "pov-you"
+  },
+  {
+    "id": 31,
+    "name": "Purple Mini Hearts",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Purple Mini Hearts.png",
+    "slug": "purple-mini-hearts"
+  },
+  {
+    "id": 32,
+    "name": "Romantic Face Line Art",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Romantic Face Line Art.png",
+    "slug": "romantic-face-line-art"
+  },
+  {
+    "id": 33,
+    "name": "Sketchbook Cat Pattern",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Sketchbook Cat Pattern.png",
+    "slug": "sketchbook-cat-pattern"
+  },
+  {
+    "id": 34,
+    "name": "Slow Living",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Slow Living.png",
+    "slug": "slow-living"
+  },
+  {
+    "id": 35,
+    "name": "Soft Bear Case",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Soft Bear Case.png",
+    "slug": "soft-bear-case"
+  },
+  {
+    "id": 36,
+    "name": "Soft Pastel Cloud",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Soft Pastel Cloud.png",
+    "slug": "soft-pastel-cloud"
+  },
+  {
+    "id": 37,
+    "name": "Sunday Brunch",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Sunday Brunch.png",
+    "slug": "sunday-brunch"
+  },
+  {
+    "id": 38,
+    "name": "Vintage Clockwork Gear",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Vintage Clockwork Gear.png",
+    "slug": "vintage-clockwork-gear"
+  },
+  {
+    "id": 39,
+    "name": "Voilet Hearts Case",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Voilet Hearts Case.png",
+    "slug": "voilet-hearts-case"
+  },
+  {
+    "id": 40,
+    "name": "Anime Muse Case",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Anime Muse Case.png",
+    "slug": "anime-muse-case"
+  },
+  {
+    "id": 41,
+    "name": "Battlegrounds Warrior",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Battlegrounds Warrior.png",
+    "slug": "battlegrounds-warrior"
+  },
+  {
+    "id": 42,
+    "name": "Crimson Splash Case",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Crimson Splash Case.png",
+    "slug": "crimson-splash-case"
+  },
+  {
+    "id": 43,
+    "name": "Goal Strike",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Goal Strike.png",
+    "slug": "goal-strike"
+  },
+  {
+    "id": 44,
+    "name": "Gojo & Sukuna Split",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Gojo & Sukuna Split.png",
+    "slug": "gojo-sukuna-split"
+  },
+  {
+    "id": 45,
+    "name": "Gojo Satoru Panels",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Gojo Satoru Panels.png",
+    "slug": "gojo-satoru-panels"
+  },
+  {
+    "id": 46,
+    "name": "Gojo Sorcerer",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Gojo Sorcerer.png",
+    "slug": "gojo-sorcerer"
+  },
+  {
+    "id": 47,
+    "name": "Golden Hour Silhouette",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Golden Hour Silhouette.png",
+    "slug": "golden-hour-silhouette"
+  },
+  {
+    "id": 48,
+    "name": "Kakashi Sharingan Eye",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Kakashi Sharingan Eye.png",
+    "slug": "kakashi-sharingan-eye"
+  },
+  {
+    "id": 49,
+    "name": "Neon Controller Gamer",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Neon Controller Gamer.png",
+    "slug": "neon-controller-gamer"
+  },
+  {
+    "id": 50,
+    "name": "Red Torii Gate Forest",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Red Torii Gate Forest.png",
+    "slug": "red-torii-gate-forest"
+  },
+  {
+    "id": 51,
+    "name": "Uchiha Itachi Anime",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Uchiha Itachi Anime.png",
+    "slug": "uchiha-itachi-anime"
+  },
+  {
+    "id": 52,
+    "name": "ApoBangpo",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/ApoBangpo.png",
+    "slug": "apobangpo"
+  },
+  {
+    "id": 53,
+    "name": "Bangtan Vibes Case",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Bangtan Vibes Case.png",
+    "slug": "bangtan-vibes-case"
+  },
+  {
+    "id": 54,
+    "name": "Blush whale journey",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Blush whale journey.png",
+    "slug": "blush-whale-journey"
+  },
+  {
+    "id": 55,
+    "name": "Chibi squad pile",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Chibi squad pile.png",
+    "slug": "chibi-squad-pile"
+  },
+  {
+    "id": 56,
+    "name": "Locked boo humor",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Locked boo humor.png",
+    "slug": "locked-boo-humor"
+  },
+  {
+    "id": 57,
+    "name": "Love Song Army",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Love Song Army.png",
+    "slug": "love-song-army"
+  },
+  {
+    "id": 58,
+    "name": "Minimalist army silhouette",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Minimalist army silhouette.png",
+    "slug": "minimalist-army-silhouette"
+  },
+  {
+    "id": 59,
+    "name": "Olive whale jouney",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Olive whale jouney.png",
+    "slug": "olive-whale-jouney"
+  },
+  {
+    "id": 60,
+    "name": "Pupple whale journey",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Pupple whale journey.png",
+    "slug": "pupple-whale-journey"
+  },
+  {
+    "id": 61,
+    "name": "Sky blue whale journey",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Sky blue whale journey.png",
+    "slug": "sky-blue-whale-journey"
+  },
+  {
+    "id": 62,
+    "name": "The stage 7 bond",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/The stage 7 bond.png",
+    "slug": "the-stage-7-bond"
+  },
+  {
+    "id": 63,
+    "name": "Tiny tan friends",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Tiny tan friends.png",
+    "slug": "tiny-tan-friends"
+  },
+  {
+    "id": 64,
+    "name": "Vanilla whale journey",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Vanilla whale journey.png",
+    "slug": "vanilla-whale-journey"
+  },
+  {
+    "id": 65,
+    "name": "Vmin Banter Case",
+    "category": "Bts magic shop",
+    "image": "images/Bts magic shop/Vmin Banter Case.png",
+    "slug": "vmin-banter-case"
+  },
+  {
+    "id": 66,
+    "name": "Abstract Butterfly Case",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Abstract Butterfly Case.png",
+    "slug": "abstract-butterfly-case"
+  },
+  {
+    "id": 67,
+    "name": "Autumn Stripe Blocks",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Autumn Stripe Blocks.png",
+    "slug": "autumn-stripe-blocks"
+  },
+  {
+    "id": 68,
+    "name": "Berry Mix",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Berry Mix.png",
+    "slug": "berry-mix"
+  },
+  {
+    "id": 69,
+    "name": "Botanic Glow Case",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Botanic Glow Case.png",
+    "slug": "botanic-glow-case"
+  },
+  {
+    "id": 70,
+    "name": "Citrus Burst",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Citrus Burst.png",
+    "slug": "citrus-burst"
+  },
+  {
+    "id": 71,
+    "name": "Deep Red Pour",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Deep Red Pour.png",
+    "slug": "deep-red-pour"
+  },
+  {
+    "id": 72,
+    "name": "Japanese Pagoda Art",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Japanese Pagoda Art.png",
+    "slug": "japanese-pagoda-art"
+  },
+  {
+    "id": 73,
+    "name": "Midnight Koi Pond",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Midnight Koi Pond.png",
+    "slug": "midnight-koi-pond"
+  },
+  {
+    "id": 74,
+    "name": "Minimal Butterfly Case",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Minimal Butterfly Case.png",
+    "slug": "minimal-butterfly-case"
+  },
+  {
+    "id": 75,
+    "name": "Mist Bloom Case",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Mist Bloom Case.png",
+    "slug": "mist-bloom-case"
+  },
+  {
+    "id": 76,
+    "name": "Mocha Bloom Case",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Mocha Bloom Case.png",
+    "slug": "mocha-bloom-case"
+  },
+  {
+    "id": 77,
+    "name": "Rose Bloom Case",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Rose Bloom Case.png",
+    "slug": "rose-bloom-case"
+  },
+  {
+    "id": 78,
+    "name": "Scarlet Cat Case",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Scarlet Cat Case.png",
+    "slug": "scarlet-cat-case"
+  },
+  {
+    "id": 79,
+    "name": "Shadow Silhouette",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Shadow Silhouette.png",
+    "slug": "shadow-silhouette"
+  },
+  {
+    "id": 80,
+    "name": "Strawberry Patch",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Strawberry Patch.png",
+    "slug": "strawberry-patch"
+  },
+  {
+    "id": 81,
+    "name": "Sunset Strokes",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Sunset Strokes.png",
+    "slug": "sunset-strokes"
+  },
+  {
+    "id": 82,
+    "name": "Teal Bloom Case",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Teal Bloom Case.png",
+    "slug": "teal-bloom-case"
+  },
+  {
+    "id": 83,
+    "name": "Watermelon Splash",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Watermelon Splash.png",
+    "slug": "watermelon-splash"
+  },
+  {
+    "id": 84,
+    "name": "Wavy Muse Case",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Wavy Muse Case.png",
+    "slug": "wavy-muse-case"
+  },
+  {
+    "id": 85,
+    "name": "Wine Bloom Case",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Wine Bloom Case.png",
+    "slug": "wine-bloom-case"
+  },
+  {
+    "id": 86,
+    "name": "Wine Glass Hearts",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Wine Glass Hearts.png",
+    "slug": "wine-glass-hearts"
+  },
+  {
+    "id": 87,
+    "name": "Audio Mosaic Case",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Audio Mosaic Case.png",
+    "slug": "audio-mosaic-case"
+  },
+  {
+    "id": 88,
+    "name": "Black & White Hearts",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Black & White Hearts.png",
+    "slug": "black-white-hearts"
+  },
+  {
+    "id": 89,
+    "name": "Black & White Puzzle",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Black & White Puzzle.png",
+    "slug": "black-white-puzzle"
+  },
+  {
+    "id": 90,
+    "name": "Blurry Focus Black",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Blurry Focus Black.png",
+    "slug": "blurry-focus-black"
+  },
+  {
+    "id": 91,
+    "name": "Cosmic Duo Case",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Cosmic Duo Case.png",
+    "slug": "cosmic-duo-case"
+  },
+  {
+    "id": 92,
+    "name": "Cosmic Orbit",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Cosmic Orbit.png",
+    "slug": "cosmic-orbit"
+  },
+  {
+    "id": 93,
+    "name": "Dark Flora & Butterfly",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Dark Flora & Butterfly.png",
+    "slug": "dark-flora-butterfly"
+  },
+  {
+    "id": 94,
+    "name": "Golden Space Explorer",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Golden Space Explorer.png",
+    "slug": "golden-space-explorer"
+  },
+  {
+    "id": 95,
+    "name": "Hugging Cats",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Hugging Cats.png",
+    "slug": "hugging-cats"
+  },
+  {
+    "id": 96,
+    "name": "Ink Butterfly Case",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Ink Butterfly Case.png",
+    "slug": "ink-butterfly-case"
+  },
+  {
+    "id": 97,
+    "name": "Lucky 67",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Lucky 67.png",
+    "slug": "lucky-67"
+  },
+  {
+    "id": 98,
+    "name": "Midnight Battery Case",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Midnight Battery Case.png",
+    "slug": "midnight-battery-case"
+  },
+  {
+    "id": 99,
+    "name": "Midnight Smoke Drift",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Midnight Smoke Drift.png",
+    "slug": "midnight-smoke-drift"
+  },
+  {
+    "id": 100,
+    "name": "Night Window View",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Night Window View.png",
+    "slug": "night-window-view"
+  },
+  {
+    "id": 101,
+    "name": "Panda Drip",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Panda Drip.png",
+    "slug": "panda-drip"
+  },
+  {
+    "id": 102,
+    "name": "Retro Ripple",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Retro Ripple.png",
+    "slug": "retro-ripple"
+  },
+  {
+    "id": 103,
+    "name": "Skeleton Rock Symbol",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Skeleton Rock Symbol.png",
+    "slug": "skeleton-rock-symbol"
+  },
+  {
+    "id": 104,
+    "name": "The Rebel Logic",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/The Rebel Logic.png",
+    "slug": "the-rebel-logic"
+  },
+  {
+    "id": 105,
+    "name": "Trio Cat Case",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Trio Cat Case.png",
+    "slug": "trio-cat-case"
+  },
+  {
+    "id": 106,
+    "name": "World Map Travel",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/World Map Travel.png",
+    "slug": "world-map-travel"
+  },
+  {
+    "id": 107,
+    "name": "Amber Bloom Case",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Amber Bloom Case.png",
+    "slug": "amber-bloom-case"
+  },
+  {
+    "id": 108,
+    "name": "Amethyst Butterfly Case",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Amethyst Butterfly Case.png",
+    "slug": "amethyst-butterfly-case"
+  },
+  {
+    "id": 109,
+    "name": "Arctic Wave Crest",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Arctic Wave Crest.png",
+    "slug": "arctic-wave-crest"
+  },
+  {
+    "id": 110,
+    "name": "Classic Melody Case",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Classic Melody Case.png",
+    "slug": "classic-melody-case"
+  },
+  {
+    "id": 111,
+    "name": "Colorful Retro Flowers",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Colorful Retro Flowers.png",
+    "slug": "colorful-retro-flowers"
+  },
+  {
+    "id": 112,
+    "name": "Copy of Soft Pastel Cloud",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Copy of Soft Pastel Cloud.png",
+    "slug": "copy-of-soft-pastel-cloud"
+  },
+  {
+    "id": 113,
+    "name": "Deep Plum Petals",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Deep Plum Petals.png",
+    "slug": "deep-plum-petals"
+  },
+  {
+    "id": 114,
+    "name": "Golden Vine Outline",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Golden Vine Outline.png",
+    "slug": "golden-vine-outline"
+  },
+  {
+    "id": 115,
+    "name": "Ivory Melody Case",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Ivory Melody Case.png",
+    "slug": "ivory-melody-case"
+  },
+  {
+    "id": 116,
+    "name": "Lavender Melody Case",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Lavender Melody Case.png",
+    "slug": "lavender-melody-case"
+  },
+  {
+    "id": 117,
+    "name": "Midnight Smoke Drift",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Midnight Smoke Drift.png",
+    "slug": "midnight-smoke-drift"
+  },
+  {
+    "id": 118,
+    "name": "Navy Garden Bloom",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Navy Garden Bloom.png",
+    "slug": "navy-garden-bloom"
+  },
+  {
+    "id": 119,
+    "name": "Rose Gold Shimmer",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Rose Gold Shimmer.png",
+    "slug": "rose-gold-shimmer"
+  },
+  {
+    "id": 120,
+    "name": "Tan Urban Plaid",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Tan Urban Plaid.png",
+    "slug": "tan-urban-plaid"
+  },
+  {
+    "id": 121,
+    "name": "Twilight Peak View",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Twilight Peak View.png",
+    "slug": "twilight-peak-view"
+  },
+  {
+    "id": 122,
+    "name": "Agust D",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Agust D.png",
+    "slug": "agust-d"
+  },
+  {
+    "id": 123,
+    "name": "Audio Mosaic Case",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Audio Mosaic Case.png",
+    "slug": "audio-mosaic-case"
+  },
+  {
+    "id": 124,
+    "name": "Chai Gossip",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Chai Gossip.png",
+    "slug": "chai-gossip"
+  },
+  {
+    "id": 125,
+    "name": "Clean Etc. Bold",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Clean _Etc._ Bold.png",
+    "slug": "clean-etc-bold"
+  },
+  {
+    "id": 126,
+    "name": "Lazy Day Script",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Lazy Day Script.png",
+    "slug": "lazy-day-script"
+  },
+  {
+    "id": 127,
+    "name": "Lucky 67",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Lucky 67.png",
+    "slug": "lucky-67"
+  },
+  {
+    "id": 128,
+    "name": "Manifest Grid",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Manifest Grid.png",
+    "slug": "manifest-grid"
+  },
+  {
+    "id": 129,
+    "name": "Matte Black Offline",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Matte Black _Offline_.png",
+    "slug": "matte-black-offline"
+  },
+  {
+    "id": 130,
+    "name": "Midnight Battery Case",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Midnight Battery Case.png",
+    "slug": "midnight-battery-case"
+  },
+  {
+    "id": 131,
+    "name": "Neon Melt Skull",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Neon Melt Skull.png",
+    "slug": "neon-melt-skull"
+  },
+  {
+    "id": 132,
+    "name": "Night Window View",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Night Window View.png",
+    "slug": "night-window-view"
+  },
+  {
+    "id": 133,
+    "name": "Pastel Coffee Bear",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Pastel Coffee Bear.png",
+    "slug": "pastel-coffee-bear"
+  },
+  {
+    "id": 134,
+    "name": "Polar Bliss",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Polar Bliss.png",
+    "slug": "polar-bliss"
+  },
+  {
+    "id": 135,
+    "name": "Retro Ghost Vibes",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Retro Ghost Vibes.png",
+    "slug": "retro-ghost-vibes"
+  },
+  {
+    "id": 136,
+    "name": "Sand Battery Case",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Sand Battery Case.png",
+    "slug": "sand-battery-case"
+  },
+  {
+    "id": 137,
+    "name": "Side Eye Mood",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Side Eye Mood.png",
+    "slug": "side-eye-mood"
+  },
+  {
+    "id": 138,
+    "name": "Skeleton Rock Symbol",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Skeleton Rock Symbol.png",
+    "slug": "skeleton-rock-symbol"
+  },
+  {
+    "id": 139,
+    "name": "The Rebel Logic",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/The Rebel Logic.png",
+    "slug": "the-rebel-logic"
+  },
+  {
+    "id": 140,
+    "name": "Tiny Cat Duo",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Tiny Cat Duo.png",
+    "slug": "tiny-cat-duo"
+  },
+  {
+    "id": 141,
+    "name": "Arcane Script Case",
+    "category": "Wizarding world",
+    "image": "images/Wizarding world/Arcane Script Case.png",
+    "slug": "arcane-script-case"
+  },
+  {
+    "id": 142,
+    "name": "Marauder’s Map",
+    "category": "Wizarding world",
+    "image": "images/Wizarding world/Marauder’s Map.png",
+    "slug": "marauder-s-map"
+  },
+  {
+    "id": 143,
+    "name": "Noir Wizard Case",
+    "category": "Wizarding world",
+    "image": "images/Wizarding world/Noir Wizard Case.png",
+    "slug": "noir-wizard-case"
+  },
+  {
+    "id": 144,
+    "name": "Snape’s Legacy Quote",
+    "category": "Wizarding world",
+    "image": "images/Wizarding world/Snape’s Legacy Quote.png",
+    "slug": "snape-s-legacy-quote"
+  },
+  {
+    "id": 145,
+    "name": "Sorting Hat",
+    "category": "Wizarding world",
+    "image": "images/Wizarding world/Sorting Hat.png",
+    "slug": "sorting-hat"
+  },
+  {
+    "id": 146,
+    "name": "The Chosen One",
+    "category": "Wizarding world",
+    "image": "images/Wizarding world/The Chosen One.png",
+    "slug": "the-chosen-one"
+  },
+  {
+    "id": 147,
+    "name": "Wizard Platform Case",
+    "category": "Wizarding world",
+    "image": "images/Wizarding world/Wizard Platform Case.png",
+    "slug": "wizard-platform-case"
+  },
+  {
+    "id": 148,
+    "name": "Wizard Trio",
+    "category": "Wizarding world",
+    "image": "images/Wizarding world/Wizard Trio.png",
+    "slug": "wizard-trio"
+  },
+  {
+    "id": 149,
+    "name": "Wizarding World Motto",
+    "category": "Wizarding world",
+    "image": "images/Wizarding world/Wizarding World Motto.png",
+    "slug": "wizarding-world-motto"
+  }
 ];

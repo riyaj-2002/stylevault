@@ -17,7 +17,11 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     // Admin panel: verify x-admin-secret header
     const adminSecret = req.headers['x-admin-secret'];
-    if (adminSecret && adminSecret === process.env.ADMIN_SECRET) authorized = true;
+    if (adminSecret && process.env.ADMIN_SECRET) {
+      const a = Buffer.from(adminSecret);
+      const b = Buffer.from(process.env.ADMIN_SECRET);
+      if (a.length === b.length && crypto.timingSafeEqual(a, b)) authorized = true;
+    }
     action = req.body?.action;
     order_id = req.body?.order_id;
   } else {
@@ -26,7 +30,12 @@ export default async function handler(req, res) {
     const token = url.searchParams.get('token');
     action = url.searchParams.get('action');
     order_id = url.searchParams.get('order_id');
-    if (token && order_id && action && token === makeToken(order_id, action)) authorized = true;
+    if (token && order_id && action) {
+      const expected = makeToken(order_id, action);
+      const a = Buffer.from(token);
+      const b = Buffer.from(expected);
+      if (a.length === b.length && crypto.timingSafeEqual(a, b)) authorized = true;
+    }
   }
 
   if (!authorized) {
