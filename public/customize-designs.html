@@ -58,19 +58,20 @@
 <script src="js/products.js"></script>
 <script src="js/main.js"></script>
 <script>
-  const customizeIds = [128, 132, 135, 136];
   const grid = document.getElementById('customize-grid');
+  const customizeProducts = products.filter(p => p.category === 'Customized');
 
-  customizeIds.forEach(id => {
-    const p = products.find(p => p.id === id);
-    if (!p) return;
+  if (customizeProducts.length === 0) {
+    grid.innerHTML = '<p style="text-align:center;color:#aaa;padding:40px">No customize designs available yet. Check back soon!</p>';
+  }
+
+  customizeProducts.forEach(p => {
     grid.insertAdjacentHTML('beforeend', `
-      <div class="product-card" onclick="window.location.href='product.html?id=${p.id}'" style="cursor:pointer">
+      <div class="product-card" onclick="window.location.href='product.html?id=${p.id}&back=collection&name=Customize&ids=${customizeProducts.map(x=>x.id).join(',')}' " style="cursor:pointer">
         <img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
         <div class="info">
           <h3>${p.name}</h3>
-          <small style="color:#888">${p.model}</small>
-          <p class="price"></p>
+          <p class="price">₹299</p>
           <button onclick="event.stopPropagation(); window.location.href='product.html?id=${p.id}'">View Details</button>
         </div>
       </div>
