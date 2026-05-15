@@ -49,15 +49,24 @@ function renderProducts() {
   const grid = document.getElementById('products-grid');
   if (!grid) return;
   const path = window.location.pathname;
+  const SKIP_CATEGORIES = ['Customized', 'Logo'];
   const isHome = path.endsWith('index.html') || path === '/' || path.endsWith('/');
-  const homeIds = [21, 22, 23, 24, 25, 26, 66, 11];
-  const list = isHome ? products.filter(p => homeIds.includes(p.id)) : products;
+  let list;
+  if (isHome) {
+    const seen = new Set();
+    list = products.filter(p => {
+      if (SKIP_CATEGORIES.includes(p.category) || seen.has(p.category)) return false;
+      seen.add(p.category);
+      return true;
+    });
+  } else {
+    list = products;
+  }
   grid.innerHTML = list.map(p => `
     <div class="product-card" onclick="window.location.href='product.html?id=${p.id}'" style="cursor:pointer">
       <img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
       <div class="info">
         <h3>${p.name}</h3>
-        <small style="color:#888">${p.model}</small>
         <p class="price">&#8377;${p.price}</p>
         <button onclick="event.stopPropagation(); window.location.href='product.html?id=${p.id}'">View Details</button>
       </div>
