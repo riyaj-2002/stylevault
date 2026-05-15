@@ -119,8 +119,7 @@
   const product = products.find(p => p.id === id);
 
   // ── Pricing ──
-  const customizeProductIds = [128, 132, 135, 136];
-  const isCustomize = product && customizeProductIds.includes(product.id);
+  const isCustomize = product && product.category === 'Customized';
   const softPrice = isCustomize ? 299 : 249;
   const hardPrice = isCustomize ? 299 : 249;
   const glassPrice = 349;
@@ -263,8 +262,7 @@
       });
     }
     // ── Save to customize_type2 if this is a customize product ───────────────
-    const customizeIds = [128, 132, 135, 136];
-    if (customizeIds.includes(product.id)) {
+    if (product.category === 'Customized') {
       try {
         await fetch('/api/orders/customize', {
           method: 'POST',
