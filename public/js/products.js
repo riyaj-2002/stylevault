@@ -95,1035 +95,1077 @@ const products = [
   },
   {
     "id": 14,
+    "name": "Fine Line Floral",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Fine Line Floral.png",
+    "slug": "fine-line-floral"
+  },
+  {
+    "id": 15,
     "name": "Golden Cherry",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Golden Cherry.png",
     "slug": "golden-cherry"
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Golden Memory Case",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Golden Memory Case.png",
     "slug": "golden-memory-case"
   },
   {
-    "id": 16,
+    "id": 17,
+    "name": "Honey Bear",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Honey Bear.png",
+    "slug": "honey-bear"
+  },
+  {
+    "id": 18,
     "name": "Japanese Pagoda Art",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Japanese Pagoda Art.png",
     "slug": "japanese-pagoda-art"
   },
   {
-    "id": 17,
+    "id": 19,
     "name": "Korean Heart",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Korean Heart.png",
     "slug": "korean-heart"
   },
   {
-    "id": 18,
+    "id": 20,
     "name": "Lilac Layers",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Lilac Layers.png",
     "slug": "lilac-layers"
   },
   {
-    "id": 19,
+    "id": 21,
     "name": "Mini Lilac Bows",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Mini Lilac Bows.png",
     "slug": "mini-lilac-bows"
   },
   {
-    "id": 20,
+    "id": 22,
     "name": "Mini Teal Bows",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Mini Teal Bows.png",
     "slug": "mini-teal-bows"
   },
   {
-    "id": 21,
+    "id": 23,
     "name": "Mini Wine Bows",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Mini Wine Bows.png",
     "slug": "mini-wine-bows"
   },
   {
-    "id": 22,
+    "id": 24,
     "name": "Modern Heritage",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Modern Heritage.png",
     "slug": "modern-heritage"
   },
   {
-    "id": 23,
+    "id": 25,
     "name": "Nocturnal Soul",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Nocturnal Soul.png",
     "slug": "nocturnal-soul"
   },
   {
-    "id": 24,
+    "id": 26,
     "name": "Noir Butterfly Case",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Noir Butterfly Case.png",
     "slug": "noir-butterfly-case"
   },
   {
-    "id": 25,
+    "id": 27,
     "name": "Olive Starfall Case",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Olive Starfall Case.png",
     "slug": "olive-starfall-case"
   },
   {
-    "id": 26,
+    "id": 28,
     "name": "Petals & Rain",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Petals & Rain.png",
     "slug": "petals-rain"
   },
   {
-    "id": 27,
+    "id": 29,
     "name": "Pink Heart Waves",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Pink Heart Waves.png",
     "slug": "pink-heart-waves"
   },
   {
-    "id": 28,
+    "id": 30,
     "name": "Pink Marble Swirl",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Pink Marble Swirl.png",
     "slug": "pink-marble-swirl"
   },
   {
-    "id": 29,
+    "id": 31,
     "name": "Pink Silk Bow",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Pink Silk Bow.png",
     "slug": "pink-silk-bow"
   },
   {
-    "id": 30,
+    "id": 32,
     "name": "POV-You",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/POV-You.png",
     "slug": "pov-you"
   },
   {
-    "id": 31,
+    "id": 33,
     "name": "Purple Mini Hearts",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Purple Mini Hearts.png",
     "slug": "purple-mini-hearts"
   },
   {
-    "id": 32,
+    "id": 34,
     "name": "Romantic Face Line Art",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Romantic Face Line Art.png",
     "slug": "romantic-face-line-art"
   },
   {
-    "id": 33,
+    "id": 35,
+    "name": "Sage Mickey",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Sage Mickey.png",
+    "slug": "sage-mickey"
+  },
+  {
+    "id": 36,
     "name": "Sketchbook Cat Pattern",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Sketchbook Cat Pattern.png",
     "slug": "sketchbook-cat-pattern"
   },
   {
-    "id": 34,
+    "id": 37,
     "name": "Slow Living",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Slow Living.png",
     "slug": "slow-living"
   },
   {
-    "id": 35,
+    "id": 38,
+    "name": "Smile Bear",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Smile Bear.png",
+    "slug": "smile-bear"
+  },
+  {
+    "id": 39,
     "name": "Soft Bear Case",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Soft Bear Case.png",
     "slug": "soft-bear-case"
   },
   {
-    "id": 36,
+    "id": 40,
     "name": "Soft Pastel Cloud",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Soft Pastel Cloud.png",
     "slug": "soft-pastel-cloud"
   },
   {
-    "id": 37,
+    "id": 41,
     "name": "Sunday Brunch",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Sunday Brunch.png",
     "slug": "sunday-brunch"
   },
   {
-    "id": 38,
+    "id": 42,
     "name": "Vintage Clockwork Gear",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Vintage Clockwork Gear.png",
     "slug": "vintage-clockwork-gear"
   },
   {
-    "id": 39,
+    "id": 43,
     "name": "Voilet Hearts Case",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Voilet Hearts Case.png",
     "slug": "voilet-hearts-case"
   },
   {
-    "id": 40,
+    "id": 44,
     "name": "Anime Muse Case",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Anime Muse Case.png",
     "slug": "anime-muse-case"
   },
   {
-    "id": 41,
+    "id": 45,
     "name": "Battlegrounds Warrior",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Battlegrounds Warrior.png",
     "slug": "battlegrounds-warrior"
   },
   {
-    "id": 42,
+    "id": 46,
     "name": "Crimson Splash Case",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Crimson Splash Case.png",
     "slug": "crimson-splash-case"
   },
   {
-    "id": 43,
+    "id": 47,
     "name": "Goal Strike",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Goal Strike.png",
     "slug": "goal-strike"
   },
   {
-    "id": 44,
+    "id": 48,
     "name": "Gojo & Sukuna Split",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Gojo & Sukuna Split.png",
     "slug": "gojo-sukuna-split"
   },
   {
-    "id": 45,
+    "id": 49,
     "name": "Gojo Satoru Panels",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Gojo Satoru Panels.png",
     "slug": "gojo-satoru-panels"
   },
   {
-    "id": 46,
+    "id": 50,
     "name": "Gojo Sorcerer",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Gojo Sorcerer.png",
     "slug": "gojo-sorcerer"
   },
   {
-    "id": 47,
+    "id": 51,
     "name": "Golden Hour Silhouette",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Golden Hour Silhouette.png",
     "slug": "golden-hour-silhouette"
   },
   {
-    "id": 48,
+    "id": 52,
     "name": "Kakashi Sharingan Eye",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Kakashi Sharingan Eye.png",
     "slug": "kakashi-sharingan-eye"
   },
   {
-    "id": 49,
+    "id": 53,
     "name": "Neon Controller Gamer",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Neon Controller Gamer.png",
     "slug": "neon-controller-gamer"
   },
   {
-    "id": 50,
+    "id": 54,
     "name": "Red Torii Gate Forest",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Red Torii Gate Forest.png",
     "slug": "red-torii-gate-forest"
   },
   {
-    "id": 51,
+    "id": 55,
     "name": "Uchiha Itachi Anime",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Uchiha Itachi Anime.png",
     "slug": "uchiha-itachi-anime"
   },
   {
-    "id": 52,
+    "id": 56,
     "name": "ApoBangpo",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/ApoBangpo.png",
     "slug": "apobangpo"
   },
   {
-    "id": 53,
+    "id": 57,
     "name": "Bangtan Vibes Case",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Bangtan Vibes Case.png",
     "slug": "bangtan-vibes-case"
   },
   {
-    "id": 54,
+    "id": 58,
     "name": "Blush whale journey",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Blush whale journey.png",
     "slug": "blush-whale-journey"
   },
   {
-    "id": 55,
+    "id": 59,
     "name": "Chibi squad pile",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Chibi squad pile.png",
     "slug": "chibi-squad-pile"
   },
   {
-    "id": 56,
+    "id": 60,
     "name": "Locked boo humor",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Locked boo humor.png",
     "slug": "locked-boo-humor"
   },
   {
-    "id": 57,
+    "id": 61,
     "name": "Love Song Army",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Love Song Army.png",
     "slug": "love-song-army"
   },
   {
-    "id": 58,
+    "id": 62,
     "name": "Minimalist army silhouette",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Minimalist army silhouette.png",
     "slug": "minimalist-army-silhouette"
   },
   {
-    "id": 59,
+    "id": 63,
     "name": "Olive whale jouney",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Olive whale jouney.png",
     "slug": "olive-whale-jouney"
   },
   {
-    "id": 60,
+    "id": 64,
     "name": "Pupple whale journey",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Pupple whale journey.png",
     "slug": "pupple-whale-journey"
   },
   {
-    "id": 61,
+    "id": 65,
     "name": "Sky blue whale journey",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Sky blue whale journey.png",
     "slug": "sky-blue-whale-journey"
   },
   {
-    "id": 62,
+    "id": 66,
     "name": "The stage 7 bond",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/The stage 7 bond.png",
     "slug": "the-stage-7-bond"
   },
   {
-    "id": 63,
+    "id": 67,
     "name": "Tiny tan friends",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Tiny tan friends.png",
     "slug": "tiny-tan-friends"
   },
   {
-    "id": 64,
+    "id": 68,
     "name": "Vanilla whale journey",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Vanilla whale journey.png",
     "slug": "vanilla-whale-journey"
   },
   {
-    "id": 65,
+    "id": 69,
     "name": "Vmin Banter Case",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Vmin Banter Case.png",
     "slug": "vmin-banter-case"
   },
   {
-    "id": 66,
+    "id": 70,
     "name": "1000125026",
     "category": "Customized",
     "image": "images/Customized/1000125026.png",
     "slug": "1000125026"
   },
   {
-    "id": 67,
+    "id": 71,
     "name": "1000125027",
     "category": "Customized",
     "image": "images/Customized/1000125027.png",
     "slug": "1000125027"
   },
   {
-    "id": 68,
+    "id": 72,
     "name": "1000125028",
     "category": "Customized",
     "image": "images/Customized/1000125028.png",
     "slug": "1000125028"
   },
   {
-    "id": 69,
+    "id": 73,
     "name": "1000125029",
     "category": "Customized",
     "image": "images/Customized/1000125029.png",
     "slug": "1000125029"
   },
   {
-    "id": 70,
+    "id": 74,
     "name": "Cream Melody Case (2)",
     "category": "Customized",
     "image": "images/Customized/Cream Melody Case (2).png",
     "slug": "cream-melody-case-2"
   },
   {
-    "id": 71,
+    "id": 75,
     "name": "Lilac Melody Case",
     "category": "Customized",
     "image": "images/Customized/Lilac Melody Case.png",
     "slug": "lilac-melody-case"
   },
   {
-    "id": 72,
+    "id": 76,
     "name": "Monogram Wine Custom",
     "category": "Customized",
     "image": "images/Customized/Monogram Wine Custom.png",
     "slug": "monogram-wine-custom"
   },
   {
-    "id": 73,
+    "id": 77,
     "name": "Name Custom Case",
     "category": "Customized",
     "image": "images/Customized/Name Custom Case.jpg",
     "slug": "name-custom-case"
   },
   {
-    "id": 74,
+    "id": 78,
     "name": "Pure Melody Case",
     "category": "Customized",
     "image": "images/Customized/Pure Melody Case.png",
     "slug": "pure-melody-case"
   },
   {
-    "id": 75,
+    "id": 79,
     "name": "Script Floral Custom",
     "category": "Customized",
     "image": "images/Customized/Script Floral Custom.png",
     "slug": "script-floral-custom"
   },
   {
-    "id": 76,
+    "id": 80,
     "name": "Signature Peach Custom",
     "category": "Customized",
     "image": "images/Customized/Signature Peach Custom.png",
     "slug": "signature-peach-custom"
   },
   {
-    "id": 77,
+    "id": 81,
     "name": "Your Name Edit",
     "category": "Customized",
     "image": "images/Customized/Your Name Edit.png",
     "slug": "your-name-edit"
   },
   {
-    "id": 78,
+    "id": 82,
     "name": "Abstract Butterfly Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Abstract Butterfly Case.png",
     "slug": "abstract-butterfly-case"
   },
   {
-    "id": 79,
+    "id": 83,
     "name": "Autumn Stripe Blocks",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Autumn Stripe Blocks.png",
     "slug": "autumn-stripe-blocks"
   },
   {
-    "id": 80,
+    "id": 84,
     "name": "Berry Mix",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Berry Mix.png",
     "slug": "berry-mix"
   },
   {
-    "id": 81,
+    "id": 85,
+    "name": "Blue Drift",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Blue Drift.png",
+    "slug": "blue-drift"
+  },
+  {
+    "id": 86,
     "name": "Botanic Glow Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Botanic Glow Case.png",
     "slug": "botanic-glow-case"
   },
   {
-    "id": 82,
+    "id": 87,
     "name": "Citrus Burst",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Citrus Burst.png",
     "slug": "citrus-burst"
   },
   {
-    "id": 83,
+    "id": 88,
     "name": "Deep Red Pour",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Deep Red Pour.png",
     "slug": "deep-red-pour"
   },
   {
-    "id": 84,
+    "id": 89,
     "name": "Japanese Pagoda Art",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Japanese Pagoda Art.png",
     "slug": "japanese-pagoda-art"
   },
   {
-    "id": 85,
+    "id": 90,
     "name": "Midnight Koi Pond",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Midnight Koi Pond.png",
     "slug": "midnight-koi-pond"
   },
   {
-    "id": 86,
+    "id": 91,
     "name": "Minimal Butterfly Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Minimal Butterfly Case.png",
     "slug": "minimal-butterfly-case"
   },
   {
-    "id": 87,
+    "id": 92,
     "name": "Mist Bloom Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Mist Bloom Case.png",
     "slug": "mist-bloom-case"
   },
   {
-    "id": 88,
+    "id": 93,
     "name": "Mocha Bloom Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Mocha Bloom Case.png",
     "slug": "mocha-bloom-case"
   },
   {
-    "id": 89,
+    "id": 94,
     "name": "Rose Bloom Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Rose Bloom Case.png",
     "slug": "rose-bloom-case"
   },
   {
-    "id": 90,
+    "id": 95,
     "name": "Scarlet Cat Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Scarlet Cat Case.png",
     "slug": "scarlet-cat-case"
   },
   {
-    "id": 91,
+    "id": 96,
     "name": "Shadow Silhouette",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Shadow Silhouette.png",
     "slug": "shadow-silhouette"
   },
   {
-    "id": 92,
+    "id": 97,
     "name": "Strawberry Patch",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Strawberry Patch.png",
     "slug": "strawberry-patch"
   },
   {
-    "id": 93,
+    "id": 98,
     "name": "Sunset Strokes",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Sunset Strokes.png",
     "slug": "sunset-strokes"
   },
   {
-    "id": 94,
+    "id": 99,
     "name": "Teal Bloom Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Teal Bloom Case.png",
     "slug": "teal-bloom-case"
   },
   {
-    "id": 95,
+    "id": 100,
     "name": "Watermelon Splash",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Watermelon Splash.png",
     "slug": "watermelon-splash"
   },
   {
-    "id": 96,
+    "id": 101,
     "name": "Wavy Muse Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Wavy Muse Case.png",
     "slug": "wavy-muse-case"
   },
   {
-    "id": 97,
+    "id": 102,
     "name": "Wine Bloom Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Wine Bloom Case.png",
     "slug": "wine-bloom-case"
   },
   {
-    "id": 98,
+    "id": 103,
     "name": "Wine Glass Hearts",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Wine Glass Hearts.png",
     "slug": "wine-glass-hearts"
   },
   {
-    "id": 99,
+    "id": 104,
     "name": "Audio Mosaic Case",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Audio Mosaic Case.png",
     "slug": "audio-mosaic-case"
   },
   {
-    "id": 100,
+    "id": 105,
     "name": "Black & White Hearts",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Black & White Hearts.png",
     "slug": "black-white-hearts"
   },
   {
-    "id": 101,
+    "id": 106,
     "name": "Black & White Puzzle",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Black & White Puzzle.png",
     "slug": "black-white-puzzle"
   },
   {
-    "id": 102,
+    "id": 107,
     "name": "Blurry Focus Black",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Blurry Focus Black.png",
     "slug": "blurry-focus-black"
   },
   {
-    "id": 103,
+    "id": 108,
     "name": "Cosmic Duo Case",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Cosmic Duo Case.png",
     "slug": "cosmic-duo-case"
   },
   {
-    "id": 104,
+    "id": 109,
     "name": "Cosmic Orbit",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Cosmic Orbit.png",
     "slug": "cosmic-orbit"
   },
   {
-    "id": 105,
+    "id": 110,
     "name": "Dark Flora & Butterfly",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Dark Flora & Butterfly.png",
     "slug": "dark-flora-butterfly"
   },
   {
-    "id": 106,
+    "id": 111,
     "name": "Golden Space Explorer",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Golden Space Explorer.png",
     "slug": "golden-space-explorer"
   },
   {
-    "id": 107,
+    "id": 112,
     "name": "Hugging Cats",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Hugging Cats.png",
     "slug": "hugging-cats"
   },
   {
-    "id": 108,
+    "id": 113,
     "name": "Ink Butterfly Case",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Ink Butterfly Case.png",
     "slug": "ink-butterfly-case"
   },
   {
-    "id": 109,
+    "id": 114,
     "name": "Lucky 67",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Lucky 67.png",
     "slug": "lucky-67"
   },
   {
-    "id": 110,
+    "id": 115,
     "name": "Midnight Battery Case",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Midnight Battery Case.png",
     "slug": "midnight-battery-case"
   },
   {
-    "id": 111,
+    "id": 116,
+    "name": "Midnight Hearts",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Midnight Hearts.png",
+    "slug": "midnight-hearts"
+  },
+  {
+    "id": 117,
     "name": "Midnight Smoke Drift",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Midnight Smoke Drift.png",
     "slug": "midnight-smoke-drift"
   },
   {
-    "id": 112,
+    "id": 118,
     "name": "Night Window View",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Night Window View.png",
     "slug": "night-window-view"
   },
   {
-    "id": 113,
+    "id": 119,
     "name": "Panda Drip",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Panda Drip.png",
     "slug": "panda-drip"
   },
   {
-    "id": 114,
+    "id": 120,
     "name": "Retro Ripple",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Retro Ripple.png",
     "slug": "retro-ripple"
   },
   {
-    "id": 115,
+    "id": 121,
     "name": "Skeleton Rock Symbol",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Skeleton Rock Symbol.png",
     "slug": "skeleton-rock-symbol"
   },
   {
-    "id": 116,
+    "id": 122,
     "name": "The Rebel Logic",
     "category": "Noir gallery",
     "image": "images/Noir gallery/The Rebel Logic.png",
     "slug": "the-rebel-logic"
   },
   {
-    "id": 117,
+    "id": 123,
     "name": "Trio Cat Case",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Trio Cat Case.png",
     "slug": "trio-cat-case"
   },
   {
-    "id": 118,
+    "id": 124,
     "name": "World Map Travel",
     "category": "Noir gallery",
     "image": "images/Noir gallery/World Map Travel.png",
     "slug": "world-map-travel"
   },
   {
-    "id": 119,
+    "id": 125,
     "name": "Amber Bloom Case",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Amber Bloom Case.png",
     "slug": "amber-bloom-case"
   },
   {
-    "id": 120,
+    "id": 126,
     "name": "Amethyst Butterfly Case",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Amethyst Butterfly Case.png",
     "slug": "amethyst-butterfly-case"
   },
   {
-    "id": 121,
+    "id": 127,
     "name": "Arctic Wave Crest",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Arctic Wave Crest.png",
     "slug": "arctic-wave-crest"
   },
   {
-    "id": 122,
+    "id": 128,
     "name": "Classic Melody Case",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Classic Melody Case.png",
     "slug": "classic-melody-case"
   },
   {
-    "id": 123,
+    "id": 129,
     "name": "Colorful Retro Flowers",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Colorful Retro Flowers.png",
     "slug": "colorful-retro-flowers"
   },
   {
-    "id": 124,
+    "id": 130,
     "name": "Copy of Soft Pastel Cloud",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Copy of Soft Pastel Cloud.png",
     "slug": "copy-of-soft-pastel-cloud"
   },
   {
-    "id": 125,
+    "id": 131,
     "name": "Deep Plum Petals",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Deep Plum Petals.png",
     "slug": "deep-plum-petals"
   },
   {
-    "id": 126,
+    "id": 132,
     "name": "Golden Vine Outline",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Golden Vine Outline.png",
     "slug": "golden-vine-outline"
   },
   {
-    "id": 127,
+    "id": 133,
     "name": "Ivory Melody Case",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Ivory Melody Case.png",
     "slug": "ivory-melody-case"
   },
   {
-    "id": 128,
+    "id": 134,
     "name": "Lavender Melody Case",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Lavender Melody Case.png",
     "slug": "lavender-melody-case"
   },
   {
-    "id": 129,
+    "id": 135,
     "name": "Midnight Smoke Drift",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Midnight Smoke Drift.png",
     "slug": "midnight-smoke-drift"
   },
   {
-    "id": 130,
+    "id": 136,
     "name": "Navy Garden Bloom",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Navy Garden Bloom.png",
     "slug": "navy-garden-bloom"
   },
   {
-    "id": 131,
+    "id": 137,
     "name": "Rose Gold Shimmer",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Rose Gold Shimmer.png",
     "slug": "rose-gold-shimmer"
   },
   {
-    "id": 132,
+    "id": 138,
     "name": "Tan Urban Plaid",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Tan Urban Plaid.png",
     "slug": "tan-urban-plaid"
   },
   {
-    "id": 133,
+    "id": 139,
     "name": "Twilight Peak View",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Twilight Peak View.png",
     "slug": "twilight-peak-view"
   },
   {
-    "id": 134,
+    "id": 140,
     "name": "Agust D",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Agust D.png",
     "slug": "agust-d"
   },
   {
-    "id": 135,
+    "id": 141,
     "name": "Audio Mosaic Case",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Audio Mosaic Case.png",
     "slug": "audio-mosaic-case"
   },
   {
-    "id": 136,
+    "id": 142,
     "name": "Chai Gossip",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Chai Gossip.png",
     "slug": "chai-gossip"
   },
   {
-    "id": 137,
+    "id": 143,
     "name": "Clean Etc. Bold",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Clean _Etc._ Bold.png",
     "slug": "clean-etc-bold"
   },
   {
-    "id": 138,
+    "id": 144,
     "name": "Lazy Day Script",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Lazy Day Script.png",
     "slug": "lazy-day-script"
   },
   {
-    "id": 139,
+    "id": 145,
     "name": "Lucky 67",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Lucky 67.png",
     "slug": "lucky-67"
   },
   {
-    "id": 140,
+    "id": 146,
     "name": "Manifest Grid",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Manifest Grid.png",
     "slug": "manifest-grid"
   },
   {
-    "id": 141,
+    "id": 147,
     "name": "Matte Black Offline",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Matte Black _Offline_.png",
     "slug": "matte-black-offline"
   },
   {
-    "id": 142,
+    "id": 148,
     "name": "Midnight Battery Case",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Midnight Battery Case.png",
     "slug": "midnight-battery-case"
   },
   {
-    "id": 143,
+    "id": 149,
     "name": "Neon Melt Skull",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Neon Melt Skull.png",
     "slug": "neon-melt-skull"
   },
   {
-    "id": 144,
+    "id": 150,
     "name": "Night Window View",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Night Window View.png",
     "slug": "night-window-view"
   },
   {
-    "id": 145,
+    "id": 151,
     "name": "Pastel Coffee Bear",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Pastel Coffee Bear.png",
     "slug": "pastel-coffee-bear"
   },
   {
-    "id": 146,
+    "id": 152,
     "name": "Polar Bliss",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Polar Bliss.png",
     "slug": "polar-bliss"
   },
   {
-    "id": 147,
+    "id": 153,
     "name": "Retro Ghost Vibes",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Retro Ghost Vibes.png",
     "slug": "retro-ghost-vibes"
   },
   {
-    "id": 148,
+    "id": 154,
     "name": "Sand Battery Case",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Sand Battery Case.png",
     "slug": "sand-battery-case"
   },
   {
-    "id": 149,
+    "id": 155,
     "name": "Side Eye Mood",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Side Eye Mood.png",
     "slug": "side-eye-mood"
   },
   {
-    "id": 150,
+    "id": 156,
     "name": "Skeleton Rock Symbol",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Skeleton Rock Symbol.png",
     "slug": "skeleton-rock-symbol"
   },
   {
-    "id": 151,
+    "id": 157,
     "name": "The Rebel Logic",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/The Rebel Logic.png",
     "slug": "the-rebel-logic"
   },
   {
-    "id": 152,
+    "id": 158,
     "name": "Tiny Cat Duo",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Tiny Cat Duo.png",
     "slug": "tiny-cat-duo"
   },
   {
-    "id": 153,
+    "id": 159,
     "name": "Arcane Script Case",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Arcane Script Case.png",
     "slug": "arcane-script-case"
   },
   {
-    "id": 154,
+    "id": 160,
     "name": "Marauder’s Map",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Marauder’s Map.png",
     "slug": "marauder-s-map"
   },
   {
-    "id": 155,
+    "id": 161,
     "name": "Noir Wizard Case",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Noir Wizard Case.png",
     "slug": "noir-wizard-case"
   },
   {
-    "id": 156,
+    "id": 162,
     "name": "Snape’s Legacy Quote",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Snape’s Legacy Quote.png",
     "slug": "snape-s-legacy-quote"
   },
   {
-    "id": 157,
+    "id": 163,
     "name": "Sorting Hat",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Sorting Hat.png",
     "slug": "sorting-hat"
   },
   {
-    "id": 158,
+    "id": 164,
     "name": "The Chosen One",
     "category": "Wizarding world",
     "image": "images/Wizarding world/The Chosen One.png",
     "slug": "the-chosen-one"
   },
   {
-    "id": 159,
+    "id": 165,
     "name": "Wizard Platform Case",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Wizard Platform Case.png",
     "slug": "wizard-platform-case"
   },
   {
-    "id": 160,
+    "id": 166,
     "name": "Wizard Trio",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Wizard Trio.png",
     "slug": "wizard-trio"
   },
   {
-    "id": 161,
+    "id": 167,
     "name": "Wizarding World Motto",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Wizarding World Motto.png",
