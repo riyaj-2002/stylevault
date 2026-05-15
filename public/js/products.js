@@ -556,38 +556,6 @@ const products = [
   },
   {
     "id": 70,
-    "name": "1000125026",
-    "category": "Customized",
-    "image": "images/Customized/1000125026.png",
-    "slug": "1000125026",
-    "price": 299
-  },
-  {
-    "id": 71,
-    "name": "1000125027",
-    "category": "Customized",
-    "image": "images/Customized/1000125027.png",
-    "slug": "1000125027",
-    "price": 299
-  },
-  {
-    "id": 72,
-    "name": "1000125028",
-    "category": "Customized",
-    "image": "images/Customized/1000125028.png",
-    "slug": "1000125028",
-    "price": 299
-  },
-  {
-    "id": 73,
-    "name": "1000125029",
-    "category": "Customized",
-    "image": "images/Customized/1000125029.png",
-    "slug": "1000125029",
-    "price": 299
-  },
-  {
-    "id": 74,
     "name": "Cream Melody Case (2)",
     "category": "Customized",
     "image": "images/Customized/Cream Melody Case (2).png",
@@ -595,7 +563,15 @@ const products = [
     "price": 299
   },
   {
-    "id": 75,
+    "id": 71,
+    "name": "Lavender Dreams",
+    "category": "Customized",
+    "image": "images/Customized/Lavender Dreams.png",
+    "slug": "lavender-dreams",
+    "price": 299
+  },
+  {
+    "id": 72,
     "name": "Lilac Melody Case",
     "category": "Customized",
     "image": "images/Customized/Lilac Melody Case.png",
@@ -603,7 +579,7 @@ const products = [
     "price": 299
   },
   {
-    "id": 76,
+    "id": 73,
     "name": "Monogram Wine Custom",
     "category": "Customized",
     "image": "images/Customized/Monogram Wine Custom.png",
@@ -611,7 +587,7 @@ const products = [
     "price": 299
   },
   {
-    "id": 77,
+    "id": 74,
     "name": "Name Custom Case",
     "category": "Customized",
     "image": "images/Customized/Name Custom Case.jpg",
@@ -619,7 +595,7 @@ const products = [
     "price": 299
   },
   {
-    "id": 78,
+    "id": 75,
     "name": "Pure Melody Case",
     "category": "Customized",
     "image": "images/Customized/Pure Melody Case.png",
@@ -627,7 +603,15 @@ const products = [
     "price": 299
   },
   {
-    "id": 79,
+    "id": 76,
+    "name": "Sage Serenity",
+    "category": "Customized",
+    "image": "images/Customized/Sage Serenity.png",
+    "slug": "sage-serenity",
+    "price": 299
+  },
+  {
+    "id": 77,
     "name": "Script Floral Custom",
     "category": "Customized",
     "image": "images/Customized/Script Floral Custom.png",
@@ -635,11 +619,27 @@ const products = [
     "price": 299
   },
   {
-    "id": 80,
+    "id": 78,
     "name": "Signature Peach Custom",
     "category": "Customized",
     "image": "images/Customized/Signature Peach Custom.png",
     "slug": "signature-peach-custom",
+    "price": 299
+  },
+  {
+    "id": 79,
+    "name": "Silk & Stripe",
+    "category": "Customized",
+    "image": "images/Customized/Silk & Stripe.png",
+    "slug": "silk-stripe",
+    "price": 299
+  },
+  {
+    "id": 80,
+    "name": "Urban Muse",
+    "category": "Customized",
+    "image": "images/Customized/Urban Muse.png",
+    "slug": "urban-muse",
     "price": 299
   },
   {
