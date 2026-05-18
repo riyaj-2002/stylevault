@@ -1337,5 +1337,117 @@ const products = [
     "image": "images/Wizarding world/Wizarding World Motto.png",
     "slug": "wizarding-world-motto",
     "price": 249
+  },
+  {
+    "id": 168,
+    "name": "Field Notes",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Field Notes.png",
+    "slug": "field-notes",
+    "price": 249
+  },
+  {
+    "id": 169,
+    "name": "Lo-Fi Reverie",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Lo-Fi Reverie.png",
+    "slug": "lo-fi-reverie",
+    "price": 249
+  },
+  {
+    "id": 170,
+    "name": "Vintage Vinyl",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Vintage Vinyl.png",
+    "slug": "vintage-vinyl",
+    "price": 249
+  },
+  {
+    "id": 171,
+    "name": "Lavender Dreams",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Lavender Dreams.png",
+    "slug": "lavender-dreams-aesthetic",
+    "price": 249
+  },
+  {
+    "id": 172,
+    "name": "Wanderlust",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Wanderlust.png",
+    "slug": "wanderlust",
+    "price": 249
+  },
+  {
+    "id": 173,
+    "name": "Paper & Bloom",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Paper & Bloom.png",
+    "slug": "paper-bloom",
+    "price": 249
+  },
+  {
+    "id": 174,
+    "name": "Bookworm Journal",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Bookworm Journal.png",
+    "slug": "bookworm-journal",
+    "price": 249
+  },
+  {
+    "id": 175,
+    "name": "Melody Wings",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Melody Wings.png",
+    "slug": "melody-wings",
+    "price": 249
+  },
+  {
+    "id": 176,
+    "name": "Retro Bone",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Retro Bone.png",
+    "slug": "retro-bone",
+    "price": 249
+  },
+  {
+    "id": 177,
+    "name": "Lunar Eclipse",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Lunar Eclipse.png",
+    "slug": "lunar-eclipse",
+    "price": 249
+  },
+  {
+    "id": 178,
+    "name": "Dusk Horizon",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Dusk Horizon.png",
+    "slug": "dusk-horizon",
+    "price": 249
+  },
+  {
+    "id": 179,
+    "name": "Eternal Flame",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Eternal Flame.png",
+    "slug": "eternal-flame",
+    "price": 249
+  },
+  {
+    "id": 180,
+    "name": "Phoenix Rise",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Phoenix Rise.png",
+    "slug": "phoenix-rise",
+    "price": 249
+  },
+  {
+    "id": 181,
+    "name": "Ashen Phoenix",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Ashen Phoenix.png",
+    "slug": "ashen-phoenix",
+    "price": 249
   }
 ];
