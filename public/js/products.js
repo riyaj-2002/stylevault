@@ -1502,7 +1502,7 @@ const products = [
     "id": 188,
     "name": "Summer Marigold",
     "category": "Aesthetic cases",
-    "image": "images/Aesthetic cases/Summer Marigold.png",
+    "image": "images/Aesthetic cases/Summer Marigold .png",
     "slug": "summer-marigold",
     "price": 249
   },
