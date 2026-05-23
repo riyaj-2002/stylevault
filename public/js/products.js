@@ -1449,5 +1449,69 @@ const products = [
     "image": "images/Modern abstract/Ashen Phoenix.png",
     "slug": "ashen-phoenix",
     "price": 249
+  },
+  {
+    "id": 182,
+    "name": "Midnight Street",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Midnight Street.png",
+    "slug": "midnight-street",
+    "price": 249
+  },
+  {
+    "id": 183,
+    "name": "Fluid-Line Marble",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/fluid-line marble.png",
+    "slug": "fluid-line-marble",
+    "price": 249
+  },
+  {
+    "id": 184,
+    "name": "Coral Blossom",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Coral Blossom.png",
+    "slug": "coral-blossom",
+    "price": 249
+  },
+  {
+    "id": 185,
+    "name": "Lavender Fields",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Lavender Fields.png",
+    "slug": "lavender-fields",
+    "price": 249
+  },
+  {
+    "id": 186,
+    "name": "Lilac Petals",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Lilac Petals.png",
+    "slug": "lilac-petals",
+    "price": 249
+  },
+  {
+    "id": 187,
+    "name": "Ocean Breeze Floral",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Ocean Breeze Floral.png",
+    "slug": "ocean-breeze-floral",
+    "price": 249
+  },
+  {
+    "id": 188,
+    "name": "Summer Marigold",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Summer Marigold.png",
+    "slug": "summer-marigold",
+    "price": 249
+  },
+  {
+    "id": 189,
+    "name": "Wildflower Bouquet",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Wildflower Bouquet.png",
+    "slug": "wildflower-bouquet",
+    "price": 249
   }
 ];
