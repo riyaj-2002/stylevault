@@ -1513,5 +1513,85 @@ const products = [
     "image": "images/Aesthetic cases/Wildflower Bouquet.png",
     "slug": "wildflower-bouquet",
     "price": 249
+  },
+  {
+    "id": 190,
+    "name": "Bookworm Journal",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Bookworm Journal.png",
+    "slug": "scrapbook-bookworm-journal",
+    "price": 249
+  },
+  {
+    "id": 191,
+    "name": "Explore The World",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Explore The World.png",
+    "slug": "explore-the-world",
+    "price": 249
+  },
+  {
+    "id": 192,
+    "name": "Field Notes",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Field Notes.png",
+    "slug": "scrapbook-field-notes",
+    "price": 249
+  },
+  {
+    "id": 193,
+    "name": "Global Wanderer",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Global Wanderer.png",
+    "slug": "global-wanderer",
+    "price": 249
+  },
+  {
+    "id": 194,
+    "name": "Good Day Travels",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Good Day Travels.png",
+    "slug": "good-day-travels",
+    "price": 249
+  },
+  {
+    "id": 195,
+    "name": "Paper & Bloom",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Paper & Bloom.png",
+    "slug": "scrapbook-paper-bloom",
+    "price": 249
+  },
+  {
+    "id": 196,
+    "name": "Picture Perfect",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Picture Perfect.png",
+    "slug": "picture-perfect",
+    "price": 249
+  },
+  {
+    "id": 197,
+    "name": "Vintage Vinyl",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Vintage Vinyl.png",
+    "slug": "scrapbook-vintage-vinyl",
+    "price": 249
+  },
+  {
+    "id": 198,
+    "name": "Wanderlust Diary",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Wanderlust Diary.png",
+    "slug": "wanderlust-diary",
+    "price": 249
+  },
+  {
+    "id": 199,
+    "name": "Wanderlust",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Wanderlust.png",
+    "slug": "scrapbook-wanderlust",
+    "price": 249
   }
 ];
