@@ -1515,6 +1515,54 @@ const products = [
     "price": 249
   },
   {
+    "id": 202,
+    "name": "Lavender Fields",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Lavender Fields (1).png",
+    "slug": "lavender-fields-1",
+    "price": 249
+  },
+  {
+    "id": 203,
+    "name": "Ocean Breeze Floral",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Ocean Breeze Floral (1).png",
+    "slug": "ocean-breeze-floral-1",
+    "price": 249
+  },
+  {
+    "id": 204,
+    "name": "Wildflower Bouquet",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Wildflower Bouquet (1).png",
+    "slug": "wildflower-bouquet-1",
+    "price": 249
+  },
+  {
+    "id": 205,
+    "name": "Summer Marigold",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Summer Marigold (1).png",
+    "slug": "summer-marigold-1",
+    "price": 249
+  },
+  {
+    "id": 206,
+    "name": "Lilac Petals",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Lilac Petals (1).png",
+    "slug": "lilac-petals-1",
+    "price": 249
+  },
+  {
+    "id": 207,
+    "name": "Coral Blossom",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Coral Blossom (1).png",
+    "slug": "coral-blossom-1",
+    "price": 249
+  },
+  {
     "id": 190,
     "name": "Bookworm Journal",
     "category": "Scrapbook",
@@ -1592,6 +1640,22 @@ const products = [
     "category": "Scrapbook",
     "image": "images/Scrapbook/Wanderlust.png",
     "slug": "scrapbook-wanderlust",
+    "price": 249
+  },
+  {
+    "id": 200,
+    "name": "Lavender Dreams",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Lavender Dreams.png",
+    "slug": "scrapbook-lavender-dreams",
+    "price": 249
+  },
+  {
+    "id": 201,
+    "name": "Lo-Fi Reverie",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Lo-Fi Reverie.png",
+    "slug": "scrapbook-lo-fi-reverie",
     "price": 249
   }
 ];
