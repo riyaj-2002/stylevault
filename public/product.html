@@ -120,10 +120,10 @@
 
   // ── Pricing ──
   const isCustomize = product && product.category === 'Customized';
-  const softPrice = isCustomize ? 299 : 249;
-  const hardPrice = isCustomize ? 299 : 249;
+  const softPrice = isCustomize ? 249 : 249;
+  const hardPrice = isCustomize ? 249 : 249;
   const glassPrice = 349;
-  const defaultPrice = isCustomize ? 299 : (product ? product.price : 249);
+  const defaultPrice = isCustomize ? 249 : (product ? product.price : 249);
 
   let selectedMaterial = '';
   let selectedPrice = defaultPrice;

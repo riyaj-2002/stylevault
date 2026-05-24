@@ -31,7 +31,7 @@ for (const folder of folders) {
       category: folder,
       image: `images/${folder}/${file}`,
       slug,
-      price: folder === 'Customized' ? 299 : 249,
+      price: folder === 'Customized' ? 249 : 249,
     });
   }
 }
