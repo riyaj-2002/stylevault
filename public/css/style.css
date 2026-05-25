@@ -218,27 +218,33 @@ nav .cart-icon span {
 .collection-carousel-wrapper {
   overflow: hidden;
   margin: 8px 0 44px;
-  padding: 13px 0;
-  background: #E2725B;
+  padding: 18px 0;
+  background: linear-gradient(90deg, #c45a44 0%, #E2725B 50%, #c45a44 100%);
   border-top: 2px solid rgba(156,175,136,0.5);
   border-bottom: 2px solid rgba(156,175,136,0.5);
+  box-shadow: 0 4px 18px rgba(226,114,91,0.35);
 }
 .collection-carousel {
   display: flex;
   width: max-content;
-  animation: marquee 20s linear infinite;
+  animation: marquee 22s linear infinite;
   white-space: nowrap;
   align-items: center;
 }
 .collection-carousel:hover { animation-play-state: paused; }
 .collection-carousel span {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: #ffffff;
-  padding: 0 14px;
-  letter-spacing: 0.5px;
+  padding: 0 24px;
+  letter-spacing: 0.6px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.15);
 }
-.collection-carousel span::before { content: '✦'; color: #FFF5E1; margin-right: 14px; font-size: 0.7rem; }
+.collection-carousel span::before { content: '🎁'; margin-right: 10px; font-size: 1rem; }
+@media (max-width: 768px) {
+  .collection-carousel-wrapper { padding: 14px 0; margin: 6px 0 32px; }
+  .collection-carousel span { font-size: 0.92rem; padding: 0 16px; }
+}
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
