@@ -100,6 +100,14 @@ const products = [
   },
   {
     "id": 13,
+    "name": "Cheery Cat Pastel",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Cheery Cat Pastel.png",
+    "slug": "cheery-cat-pastel",
+    "price": 249
+  },
+  {
+    "id": 14,
     "name": "Coral Blossom",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Coral Blossom.png",
@@ -107,7 +115,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 14,
+    "id": 15,
     "name": "Cream Bear Case",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Cream Bear Case.png",
@@ -115,7 +123,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 15,
+    "id": 16,
     "name": "Face Line Art",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Face Line Art.png",
@@ -123,7 +131,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 16,
+    "id": 17,
     "name": "Field Notes",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Field Notes.png",
@@ -131,7 +139,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 17,
+    "id": 18,
     "name": "Fine Line Floral",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Fine Line Floral.png",
@@ -139,7 +147,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 18,
+    "id": 19,
     "name": "Golden Cherry",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Golden Cherry.png",
@@ -147,7 +155,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 19,
+    "id": 20,
     "name": "Golden Memory Case",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Golden Memory Case.png",
@@ -155,7 +163,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 20,
+    "id": 21,
     "name": "Honey Bear",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Honey Bear.png",
@@ -163,7 +171,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 21,
+    "id": 22,
     "name": "Japanese Pagoda Art",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Japanese Pagoda Art.png",
@@ -171,7 +179,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 22,
+    "id": 23,
     "name": "Korean Heart",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Korean Heart.png",
@@ -179,7 +187,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 23,
+    "id": 24,
     "name": "Lavender Dreams",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Lavender Dreams.png",
@@ -187,7 +195,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 24,
+    "id": 25,
     "name": "Lavender Fields",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Lavender Fields.png",
@@ -195,7 +203,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 25,
+    "id": 26,
     "name": "Lilac Layers",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Lilac Layers.png",
@@ -203,7 +211,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 26,
+    "id": 27,
     "name": "Lilac Petals",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Lilac Petals.png",
@@ -211,7 +219,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 27,
+    "id": 28,
     "name": "Lo-Fi Reverie",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Lo-Fi Reverie.png",
@@ -219,7 +227,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 28,
+    "id": 29,
     "name": "Mini Lilac Bows",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Mini Lilac Bows.png",
@@ -227,7 +235,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 29,
+    "id": 30,
     "name": "Mini Teal Bows",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Mini Teal Bows.png",
@@ -235,7 +243,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 30,
+    "id": 31,
     "name": "Mini Wine Bows",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Mini Wine Bows.png",
@@ -243,7 +251,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 31,
+    "id": 32,
+    "name": "Minimalist Monoline Heart",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Minimalist Monoline Heart.jpg",
+    "slug": "minimalist-monoline-heart",
+    "price": 249
+  },
+  {
+    "id": 33,
     "name": "Modern Heritage",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Modern Heritage.png",
@@ -251,7 +267,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 32,
+    "id": 34,
     "name": "Nocturnal Soul",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Nocturnal Soul.png",
@@ -259,7 +275,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 33,
+    "id": 35,
     "name": "Noir Butterfly Case",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Noir Butterfly Case.png",
@@ -267,7 +283,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 34,
+    "id": 36,
     "name": "Ocean Breeze Floral",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Ocean Breeze Floral.png",
@@ -275,7 +291,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 35,
+    "id": 37,
     "name": "Olive Starfall Case",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Olive Starfall Case.png",
@@ -283,7 +299,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 36,
+    "id": 38,
     "name": "Paper & Bloom",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Paper & Bloom.png",
@@ -291,7 +307,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 37,
+    "id": 39,
     "name": "Petals & Rain",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Petals & Rain.png",
@@ -299,7 +315,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 38,
+    "id": 40,
     "name": "Pink Heart Waves",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Pink Heart Waves.png",
@@ -307,7 +323,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 39,
+    "id": 41,
     "name": "Pink Marble Swirl",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Pink Marble Swirl.png",
@@ -315,7 +331,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 40,
+    "id": 42,
     "name": "Pink Silk Bow",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Pink Silk Bow.png",
@@ -323,7 +339,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 41,
+    "id": 43,
+    "name": "Playful Pandas",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Playful Pandas.png",
+    "slug": "playful-pandas",
+    "price": 249
+  },
+  {
+    "id": 44,
     "name": "POV-You",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/POV-You.png",
@@ -331,7 +355,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 42,
+    "id": 45,
     "name": "Purple Mini Hearts",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Purple Mini Hearts.png",
@@ -339,7 +363,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 43,
+    "id": 46,
     "name": "Romantic Face Line Art",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Romantic Face Line Art.png",
@@ -347,7 +371,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 44,
+    "id": 47,
     "name": "Sage Mickey",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Sage Mickey.png",
@@ -355,7 +379,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 45,
+    "id": 48,
+    "name": "Scribbled Hearts",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Scribbled Hearts.jpg",
+    "slug": "scribbled-hearts",
+    "price": 249
+  },
+  {
+    "id": 49,
     "name": "Sketchbook Cat Pattern",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Sketchbook Cat Pattern.png",
@@ -363,7 +395,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 46,
+    "id": 50,
     "name": "Slow Living",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Slow Living.png",
@@ -371,7 +403,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 47,
+    "id": 51,
     "name": "Smile Bear",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Smile Bear.png",
@@ -379,7 +411,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 48,
+    "id": 52,
     "name": "Soft Bear Case",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Soft Bear Case.png",
@@ -387,7 +419,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 49,
+    "id": 53,
     "name": "Soft Pastel Cloud",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Soft Pastel Cloud.png",
@@ -395,7 +427,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 50,
+    "id": 54,
     "name": "Summer Marigold",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Summer Marigold .png",
@@ -403,7 +435,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 51,
+    "id": 55,
     "name": "Sunday Brunch",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Sunday Brunch.png",
@@ -411,7 +443,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 52,
+    "id": 56,
+    "name": "The Binge-Watcher's Case",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/The Binge-Watcher's Case.png",
+    "slug": "the-binge-watcher-s-case",
+    "price": 249
+  },
+  {
+    "id": 57,
     "name": "Vintage Clockwork Gear",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Vintage Clockwork Gear.png",
@@ -419,7 +459,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 53,
+    "id": 58,
     "name": "Vintage Vinyl",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Vintage Vinyl.png",
@@ -427,7 +467,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 54,
+    "id": 59,
     "name": "Voilet Hearts Case",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Voilet Hearts Case.png",
@@ -435,7 +475,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 55,
+    "id": 60,
+    "name": "Wanderlust K-Culture",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Wanderlust K-Culture.png",
+    "slug": "wanderlust-k-culture",
+    "price": 249
+  },
+  {
+    "id": 61,
     "name": "Wanderlust",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Wanderlust.png",
@@ -443,7 +491,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 56,
+    "id": 62,
     "name": "Wildflower Bouquet",
     "category": "Aesthetic cases",
     "image": "images/Aesthetic cases/Wildflower Bouquet.png",
@@ -451,7 +499,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 57,
+    "id": 63,
     "name": "Anime Muse Case",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Anime Muse Case.png",
@@ -459,7 +507,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 58,
+    "id": 64,
     "name": "Battlegrounds Warrior",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Battlegrounds Warrior.png",
@@ -467,7 +515,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 59,
+    "id": 65,
     "name": "Crimson Splash Case",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Crimson Splash Case.png",
@@ -475,7 +523,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 60,
+    "id": 66,
     "name": "Goal Strike",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Goal Strike.png",
@@ -483,7 +531,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 61,
+    "id": 67,
     "name": "Gojo & Sukuna Split",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Gojo & Sukuna Split.png",
@@ -491,7 +539,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 62,
+    "id": 68,
     "name": "Gojo Satoru Panels",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Gojo Satoru Panels.png",
@@ -499,7 +547,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 63,
+    "id": 69,
     "name": "Gojo Sorcerer",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Gojo Sorcerer.png",
@@ -507,7 +555,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 64,
+    "id": 70,
     "name": "Golden Hour Silhouette",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Golden Hour Silhouette.png",
@@ -515,7 +563,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 65,
+    "id": 71,
     "name": "Kakashi Sharingan Eye",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Kakashi Sharingan Eye.png",
@@ -523,7 +571,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 66,
+    "id": 72,
     "name": "Neon Controller Gamer",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Neon Controller Gamer.png",
@@ -531,7 +579,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 67,
+    "id": 73,
     "name": "Red Torii Gate Forest",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Red Torii Gate Forest.png",
@@ -539,7 +587,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 68,
+    "id": 74,
     "name": "Uchiha Itachi Anime",
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Uchiha Itachi Anime.png",
@@ -547,7 +595,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 69,
+    "id": 75,
     "name": "ApoBangpo",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/ApoBangpo.png",
@@ -555,7 +603,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 70,
+    "id": 76,
     "name": "Bangtan Vibes Case",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Bangtan Vibes Case.png",
@@ -563,7 +611,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 71,
+    "id": 77,
     "name": "Blush whale journey",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Blush whale journey.png",
@@ -571,7 +619,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 72,
+    "id": 78,
     "name": "Chibi squad pile",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Chibi squad pile.png",
@@ -579,7 +627,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 73,
+    "id": 79,
     "name": "Locked boo humor",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Locked boo humor.png",
@@ -587,7 +635,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 74,
+    "id": 80,
     "name": "Love Song Army",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Love Song Army.png",
@@ -595,7 +643,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 75,
+    "id": 81,
     "name": "Minimalist army silhouette",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Minimalist army silhouette.png",
@@ -603,7 +651,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 76,
+    "id": 82,
     "name": "Olive whale jouney",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Olive whale jouney.png",
@@ -611,7 +659,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 77,
+    "id": 83,
     "name": "Pupple whale journey",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Pupple whale journey.png",
@@ -619,7 +667,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 78,
+    "id": 84,
     "name": "Sky blue whale journey",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Sky blue whale journey.png",
@@ -627,7 +675,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 79,
+    "id": 85,
     "name": "The stage 7 bond",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/The stage 7 bond.png",
@@ -635,7 +683,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 80,
+    "id": 86,
     "name": "Tiny tan friends",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Tiny tan friends.png",
@@ -643,7 +691,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 81,
+    "id": 87,
     "name": "Vanilla whale journey",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Vanilla whale journey.png",
@@ -651,7 +699,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 82,
+    "id": 88,
     "name": "Vmin Banter Case",
     "category": "Bts magic shop",
     "image": "images/Bts magic shop/Vmin Banter Case.png",
@@ -659,7 +707,39 @@ const products = [
     "price": 249
   },
   {
-    "id": 83,
+    "id": 89,
+    "name": "Autumn Scrapbook",
+    "category": "Customized",
+    "image": "images/Customized/Autumn Scrapbook.png",
+    "slug": "autumn-scrapbook",
+    "price": 249
+  },
+  {
+    "id": 90,
+    "name": "Blush Brushstrokes",
+    "category": "Customized",
+    "image": "images/Customized/Blush Brushstrokes.png",
+    "slug": "blush-brushstrokes",
+    "price": 249
+  },
+  {
+    "id": 91,
+    "name": "Color-Block Custom",
+    "category": "Customized",
+    "image": "images/Customized/Color-Block Custom.png",
+    "slug": "color-block-custom",
+    "price": 249
+  },
+  {
+    "id": 92,
+    "name": "Cozy Cottage Plaid",
+    "category": "Customized",
+    "image": "images/Customized/Cozy Cottage Plaid.png",
+    "slug": "cozy-cottage-plaid",
+    "price": 249
+  },
+  {
+    "id": 93,
     "name": "Cream Melody Case (2)",
     "category": "Customized",
     "image": "images/Customized/Cream Melody Case (2).png",
@@ -667,7 +747,39 @@ const products = [
     "price": 249
   },
   {
-    "id": 84,
+    "id": 94,
+    "name": "Custom Sky Frame",
+    "category": "Customized",
+    "image": "images/Customized/Custom Sky Frame.png",
+    "slug": "custom-sky-frame",
+    "price": 249
+  },
+  {
+    "id": 95,
+    "name": "Ethereal Vintage Paper",
+    "category": "Customized",
+    "image": "images/Customized/Ethereal Vintage Paper.png",
+    "slug": "ethereal-vintage-paper",
+    "price": 249
+  },
+  {
+    "id": 96,
+    "name": "Floating Polaroids",
+    "category": "Customized",
+    "image": "images/Customized/Floating Polaroids.png",
+    "slug": "floating-polaroids",
+    "price": 249
+  },
+  {
+    "id": 97,
+    "name": "Grid of Memories",
+    "category": "Customized",
+    "image": "images/Customized/Grid of Memories.jpg",
+    "slug": "grid-of-memories",
+    "price": 249
+  },
+  {
+    "id": 98,
     "name": "Lavender Dreams",
     "category": "Customized",
     "image": "images/Customized/Lavender Dreams.png",
@@ -675,7 +787,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 85,
+    "id": 99,
     "name": "Lilac Melody Case",
     "category": "Customized",
     "image": "images/Customized/Lilac Melody Case.png",
@@ -683,7 +795,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 86,
+    "id": 100,
     "name": "Monogram Wine Custom",
     "category": "Customized",
     "image": "images/Customized/Monogram Wine Custom.png",
@@ -691,7 +803,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 87,
+    "id": 101,
     "name": "Name Custom Case",
     "category": "Customized",
     "image": "images/Customized/Name Custom Case.jpg",
@@ -699,7 +811,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 88,
+    "id": 102,
     "name": "Pure Melody Case",
     "category": "Customized",
     "image": "images/Customized/Pure Melody Case.png",
@@ -707,7 +819,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 89,
+    "id": 103,
     "name": "Sage Serenity",
     "category": "Customized",
     "image": "images/Customized/Sage Serenity.png",
@@ -715,7 +827,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 90,
+    "id": 104,
+    "name": "Scrapbook Polaroid",
+    "category": "Customized",
+    "image": "images/Customized/Scrapbook Polaroid.png",
+    "slug": "scrapbook-polaroid",
+    "price": 249
+  },
+  {
+    "id": 105,
     "name": "Script Floral Custom",
     "category": "Customized",
     "image": "images/Customized/Script Floral Custom.png",
@@ -723,7 +843,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 91,
+    "id": 106,
     "name": "Signature Peach Custom",
     "category": "Customized",
     "image": "images/Customized/Signature Peach Custom.png",
@@ -731,7 +851,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 92,
+    "id": 107,
     "name": "Silk & Stripe",
     "category": "Customized",
     "image": "images/Customized/Silk & Stripe.png",
@@ -739,7 +859,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 93,
+    "id": 108,
+    "name": "The Snapshot Layout",
+    "category": "Customized",
+    "image": "images/Customized/The Snapshot Layout.png",
+    "slug": "the-snapshot-layout",
+    "price": 249
+  },
+  {
+    "id": 109,
     "name": "Urban Muse",
     "category": "Customized",
     "image": "images/Customized/Urban Muse.png",
@@ -747,7 +875,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 94,
+    "id": 110,
     "name": "Your Name Edit",
     "category": "Customized",
     "image": "images/Customized/Your Name Edit.png",
@@ -755,7 +883,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 95,
+    "id": 111,
     "name": "Abstract Butterfly Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Abstract Butterfly Case.png",
@@ -763,7 +891,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 96,
+    "id": 112,
     "name": "Ashen Phoenix",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Ashen Phoenix.png",
@@ -771,7 +899,23 @@ const products = [
     "price": 249
   },
   {
-    "id": 97,
+    "id": 113,
+    "name": "Autumn Joy Retriever",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Autumn Joy Retriever.png",
+    "slug": "autumn-joy-retriever",
+    "price": 249
+  },
+  {
+    "id": 114,
+    "name": "Autumn Split",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Autumn Split.png",
+    "slug": "autumn-split",
+    "price": 249
+  },
+  {
+    "id": 115,
     "name": "Autumn Stripe Blocks",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Autumn Stripe Blocks.png",
@@ -779,7 +923,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 98,
+    "id": 116,
     "name": "Berry Mix",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Berry Mix.png",
@@ -787,7 +931,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 99,
+    "id": 117,
     "name": "Blue Drift",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Blue Drift.png",
@@ -795,7 +939,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 100,
+    "id": 118,
     "name": "Botanic Glow Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Botanic Glow Case.png",
@@ -803,7 +947,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 101,
+    "id": 119,
     "name": "Citrus Burst",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Citrus Burst.png",
@@ -811,7 +955,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 102,
+    "id": 120,
     "name": "Deep Red Pour",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Deep Red Pour.png",
@@ -819,7 +963,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 103,
+    "id": 121,
     "name": "Dusk Horizon",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Dusk Horizon.png",
@@ -827,7 +971,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 104,
+    "id": 122,
     "name": "Eternal Flame",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Eternal Flame.png",
@@ -835,7 +979,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 105,
+    "id": 123,
     "name": "Japanese Pagoda Art",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Japanese Pagoda Art.png",
@@ -843,7 +987,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 106,
+    "id": 124,
     "name": "Midnight Koi Pond",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Midnight Koi Pond.png",
@@ -851,7 +995,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 107,
+    "id": 125,
     "name": "Midnight Street",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Midnight Street.png",
@@ -859,7 +1003,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 108,
+    "id": 126,
     "name": "Minimal Butterfly Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Minimal Butterfly Case.png",
@@ -867,7 +1011,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 109,
+    "id": 127,
     "name": "Mist Bloom Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Mist Bloom Case.png",
@@ -875,7 +1019,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 110,
+    "id": 128,
     "name": "Mocha Bloom Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Mocha Bloom Case.png",
@@ -883,7 +1027,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 111,
+    "id": 129,
     "name": "Phoenix Rise",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Phoenix Rise.png",
@@ -891,7 +1035,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 112,
+    "id": 130,
     "name": "Rose Bloom Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Rose Bloom Case.png",
@@ -899,7 +1043,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 113,
+    "id": 131,
+    "name": "Sage Green Horizon",
+    "category": "Modern abstract",
+    "image": "images/Modern abstract/Sage Green Horizon.png",
+    "slug": "sage-green-horizon",
+    "price": 249
+  },
+  {
+    "id": 132,
     "name": "Scarlet Cat Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Scarlet Cat Case.png",
@@ -907,7 +1059,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 114,
+    "id": 133,
     "name": "Shadow Silhouette",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Shadow Silhouette.png",
@@ -915,7 +1067,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 115,
+    "id": 134,
     "name": "Strawberry Patch",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Strawberry Patch.png",
@@ -923,7 +1075,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 116,
+    "id": 135,
     "name": "Sunset Strokes",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Sunset Strokes.png",
@@ -931,7 +1083,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 117,
+    "id": 136,
     "name": "Teal Bloom Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Teal Bloom Case.png",
@@ -939,7 +1091,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 118,
+    "id": 137,
     "name": "Watermelon Splash",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Watermelon Splash.png",
@@ -947,7 +1099,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 119,
+    "id": 138,
     "name": "Wavy Muse Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Wavy Muse Case.png",
@@ -955,7 +1107,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 120,
+    "id": 139,
     "name": "Wine Bloom Case",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Wine Bloom Case.png",
@@ -963,7 +1115,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 121,
+    "id": 140,
     "name": "Wine Glass Hearts",
     "category": "Modern abstract",
     "image": "images/Modern abstract/Wine Glass Hearts.png",
@@ -971,7 +1123,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 122,
+    "id": 141,
     "name": "Audio Mosaic Case",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Audio Mosaic Case.png",
@@ -979,7 +1131,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 123,
+    "id": 142,
     "name": "Black & White Hearts",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Black & White Hearts.png",
@@ -987,7 +1139,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 124,
+    "id": 143,
     "name": "Black & White Puzzle",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Black & White Puzzle.png",
@@ -995,7 +1147,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 125,
+    "id": 144,
     "name": "Blurry Focus Black",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Blurry Focus Black.png",
@@ -1003,7 +1155,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 126,
+    "id": 145,
+    "name": "Chasing Butterflies",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Chasing Butterflies.png",
+    "slug": "chasing-butterflies",
+    "price": 249
+  },
+  {
+    "id": 146,
     "name": "Cosmic Duo Case",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Cosmic Duo Case.png",
@@ -1011,7 +1171,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 127,
+    "id": 147,
     "name": "Cosmic Orbit",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Cosmic Orbit.png",
@@ -1019,7 +1179,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 128,
+    "id": 148,
+    "name": "Cosmic Sparkle Noir",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Cosmic Sparkle Noir.png",
+    "slug": "cosmic-sparkle-noir",
+    "price": 249
+  },
+  {
+    "id": 149,
     "name": "Dark Flora & Butterfly",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Dark Flora & Butterfly.png",
@@ -1027,7 +1195,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 129,
+    "id": 150,
+    "name": "Golden Midnight Pup",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Golden Midnight Pup.png",
+    "slug": "golden-midnight-pup",
+    "price": 249
+  },
+  {
+    "id": 151,
     "name": "Golden Space Explorer",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Golden Space Explorer.png",
@@ -1035,7 +1211,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 130,
+    "id": 152,
     "name": "Hugging Cats",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Hugging Cats.png",
@@ -1043,7 +1219,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 131,
+    "id": 153,
     "name": "Ink Butterfly Case",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Ink Butterfly Case.png",
@@ -1051,7 +1227,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 132,
+    "id": 154,
     "name": "Lucky 67",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Lucky 67.png",
@@ -1059,7 +1235,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 133,
+    "id": 155,
     "name": "Melody Wings",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Melody Wings.png",
@@ -1067,7 +1243,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 134,
+    "id": 156,
     "name": "Midnight Battery Case",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Midnight Battery Case.png",
@@ -1075,7 +1251,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 135,
+    "id": 157,
     "name": "Midnight Hearts",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Midnight Hearts.png",
@@ -1083,7 +1259,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 136,
+    "id": 158,
     "name": "Midnight Smoke Drift",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Midnight Smoke Drift.png",
@@ -1091,7 +1267,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 137,
+    "id": 159,
+    "name": "Moody Watercolor Mist",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Moody Watercolor Mist.png",
+    "slug": "moody-watercolor-mist",
+    "price": 249
+  },
+  {
+    "id": 160,
     "name": "Night Window View",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Night Window View.png",
@@ -1099,7 +1283,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 138,
+    "id": 161,
     "name": "Panda Drip",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Panda Drip.png",
@@ -1107,7 +1291,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 139,
+    "id": 162,
     "name": "Retro Ripple",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Retro Ripple.png",
@@ -1115,7 +1299,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 140,
+    "id": 163,
+    "name": "Rose Gold Monarch",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Rose Gold Monarch.png",
+    "slug": "rose-gold-monarch",
+    "price": 249
+  },
+  {
+    "id": 164,
     "name": "Skeleton Rock Symbol",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Skeleton Rock Symbol.png",
@@ -1123,7 +1315,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 141,
+    "id": 165,
     "name": "The Rebel Logic",
     "category": "Noir gallery",
     "image": "images/Noir gallery/The Rebel Logic.png",
@@ -1131,7 +1323,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 142,
+    "id": 166,
     "name": "Trio Cat Case",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Trio Cat Case.png",
@@ -1139,7 +1331,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 143,
+    "id": 167,
     "name": "World Map Travel",
     "category": "Noir gallery",
     "image": "images/Noir gallery/World Map Travel.png",
@@ -1147,7 +1339,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 144,
+    "id": 168,
     "name": "Amber Bloom Case",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Amber Bloom Case.png",
@@ -1155,7 +1347,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 145,
+    "id": 169,
     "name": "Amethyst Butterfly Case",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Amethyst Butterfly Case.png",
@@ -1163,7 +1355,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 146,
+    "id": 170,
     "name": "Arctic Wave Crest",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Arctic Wave Crest.png",
@@ -1171,7 +1363,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 147,
+    "id": 171,
+    "name": "Blossom Lantern",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Blossom Lantern.png",
+    "slug": "blossom-lantern",
+    "price": 249
+  },
+  {
+    "id": 172,
     "name": "Classic Melody Case",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Classic Melody Case.png",
@@ -1179,7 +1379,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 148,
+    "id": 173,
     "name": "Colorful Retro Flowers",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Colorful Retro Flowers.png",
@@ -1187,7 +1387,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 149,
+    "id": 174,
+    "name": "Comic Strip Romance",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Comic Strip Romance.png",
+    "slug": "comic-strip-romance",
+    "price": 249
+  },
+  {
+    "id": 175,
     "name": "Copy of Soft Pastel Cloud",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Copy of Soft Pastel Cloud.png",
@@ -1195,7 +1403,23 @@ const products = [
     "price": 249
   },
   {
-    "id": 150,
+    "id": 176,
+    "name": "Cozy Interior Corner",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Cozy Interior Corner.png",
+    "slug": "cozy-interior-corner",
+    "price": 249
+  },
+  {
+    "id": 177,
+    "name": "Deep Jade Marble",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Deep Jade Marble.jpg",
+    "slug": "deep-jade-marble",
+    "price": 249
+  },
+  {
+    "id": 178,
     "name": "Deep Plum Petals",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Deep Plum Petals.png",
@@ -1203,7 +1427,23 @@ const products = [
     "price": 249
   },
   {
-    "id": 151,
+    "id": 179,
+    "name": "Deep Wine Marble",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Deep Wine Marble.jpg",
+    "slug": "deep-wine-marble",
+    "price": 249
+  },
+  {
+    "id": 180,
+    "name": "Dreamy Pastel Sky",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Dreamy Pastel Sky.jpg",
+    "slug": "dreamy-pastel-sky",
+    "price": 249
+  },
+  {
+    "id": 181,
     "name": "fluid-line marble",
     "category": "Pastels collection",
     "image": "images/Pastels collection/fluid-line marble.png",
@@ -1211,7 +1451,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 152,
+    "id": 182,
     "name": "Golden Vine Outline",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Golden Vine Outline.png",
@@ -1219,7 +1459,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 153,
+    "id": 183,
     "name": "Ivory Melody Case",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Ivory Melody Case.png",
@@ -1227,7 +1467,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 154,
+    "id": 184,
     "name": "Lavender Melody Case",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Lavender Melody Case.png",
@@ -1235,7 +1475,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 155,
+    "id": 185,
+    "name": "Lo-Fi Summer Days",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Lo-Fi Summer Days.png",
+    "slug": "lo-fi-summer-days",
+    "price": 249
+  },
+  {
+    "id": 186,
     "name": "Lunar Eclipse",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Lunar Eclipse.png",
@@ -1243,7 +1491,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 156,
+    "id": 187,
     "name": "Midnight Smoke Drift",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Midnight Smoke Drift.png",
@@ -1251,7 +1499,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 157,
+    "id": 188,
     "name": "Navy Garden Bloom",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Navy Garden Bloom.png",
@@ -1259,7 +1507,23 @@ const products = [
     "price": 249
   },
   {
-    "id": 158,
+    "id": 189,
+    "name": "Ocean Breeze Ink",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Ocean Breeze Ink.jpg",
+    "slug": "ocean-breeze-ink",
+    "price": 249
+  },
+  {
+    "id": 190,
+    "name": "Purple Marble Swirl",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Purple Marble Swirl.jpg",
+    "slug": "purple-marble-swirl",
+    "price": 249
+  },
+  {
+    "id": 191,
     "name": "Rose Gold Shimmer",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Rose Gold Shimmer.png",
@@ -1267,7 +1531,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 159,
+    "id": 192,
+    "name": "Serene Lilac Clouds",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Serene Lilac Clouds .jpg",
+    "slug": "serene-lilac-clouds",
+    "price": 249
+  },
+  {
+    "id": 193,
     "name": "Tan Urban Plaid",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Tan Urban Plaid.png",
@@ -1275,7 +1547,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 160,
+    "id": 194,
+    "name": "Toasted Almond Swirl",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Toasted Almond Swirl.jpg",
+    "slug": "toasted-almond-swirl",
+    "price": 249
+  },
+  {
+    "id": 195,
     "name": "Twilight Peak View",
     "category": "Pastels collection",
     "image": "images/Pastels collection/Twilight Peak View.png",
@@ -1283,7 +1563,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 161,
+    "id": 196,
     "name": "Bookworm Journal",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Bookworm Journal.png",
@@ -1291,7 +1571,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 162,
+    "id": 197,
     "name": "Explore The World",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Explore The World.png",
@@ -1299,7 +1579,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 163,
+    "id": 198,
     "name": "Field Notes",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Field Notes.png",
@@ -1307,7 +1587,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 164,
+    "id": 199,
     "name": "Global Wanderer",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Global Wanderer.png",
@@ -1315,7 +1595,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 165,
+    "id": 200,
     "name": "Good Day Travels",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Good Day Travels.png",
@@ -1323,7 +1603,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 166,
+    "id": 201,
     "name": "Lavender Dreams",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Lavender Dreams.png",
@@ -1331,7 +1611,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 167,
+    "id": 202,
     "name": "Lo-Fi Reverie",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Lo-Fi Reverie.png",
@@ -1339,7 +1619,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 168,
+    "id": 203,
     "name": "Paper & Bloom",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Paper & Bloom.png",
@@ -1347,7 +1627,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 169,
+    "id": 204,
     "name": "Picture Perfect",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Picture Perfect.png",
@@ -1355,7 +1635,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 170,
+    "id": 205,
     "name": "Vintage Vinyl",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Vintage Vinyl.png",
@@ -1363,7 +1643,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 171,
+    "id": 206,
     "name": "Wanderlust Diary",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Wanderlust Diary.png",
@@ -1371,7 +1651,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 172,
+    "id": 207,
     "name": "Wanderlust",
     "category": "Scrapbook",
     "image": "images/Scrapbook/Wanderlust.png",
@@ -1379,7 +1659,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 173,
+    "id": 208,
     "name": "Agust D",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Agust D.png",
@@ -1387,7 +1667,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 174,
+    "id": 209,
     "name": "Audio Mosaic Case",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Audio Mosaic Case.png",
@@ -1395,7 +1675,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 175,
+    "id": 210,
     "name": "Chai Gossip",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Chai Gossip.png",
@@ -1403,7 +1683,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 176,
+    "id": 211,
+    "name": "Chit-Chat Pastel",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Chit-Chat Pastel.jpg",
+    "slug": "chit-chat-pastel",
+    "price": 249
+  },
+  {
+    "id": 212,
     "name": "Clean Etc. Bold",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Clean _Etc._ Bold.png",
@@ -1411,7 +1699,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 177,
+    "id": 213,
+    "name": "Grunge Smile",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Grunge Smile.png",
+    "slug": "grunge-smile",
+    "price": 249
+  },
+  {
+    "id": 214,
     "name": "Lazy Day Script",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Lazy Day Script.png",
@@ -1419,7 +1715,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 178,
+    "id": 215,
     "name": "Lucky 67",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Lucky 67.png",
@@ -1427,7 +1723,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 179,
+    "id": 216,
     "name": "Manifest Grid",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Manifest Grid.png",
@@ -1435,7 +1731,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 180,
+    "id": 217,
     "name": "Matte Black Offline",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Matte Black _Offline_.png",
@@ -1443,7 +1739,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 181,
+    "id": 218,
     "name": "Midnight Battery Case",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Midnight Battery Case.png",
@@ -1451,7 +1747,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 182,
+    "id": 219,
     "name": "Neon Melt Skull",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Neon Melt Skull.png",
@@ -1459,7 +1755,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 183,
+    "id": 220,
     "name": "Night Window View",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Night Window View.png",
@@ -1467,7 +1763,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 184,
+    "id": 221,
     "name": "Pastel Coffee Bear",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Pastel Coffee Bear.png",
@@ -1475,7 +1771,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 185,
+    "id": 222,
+    "name": "Peeking Cat Paws",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Peeking Cat Paws.jpg",
+    "slug": "peeking-cat-paws",
+    "price": 249
+  },
+  {
+    "id": 223,
     "name": "Polar Bliss",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Polar Bliss.png",
@@ -1483,7 +1787,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 186,
+    "id": 224,
     "name": "Retro Bone",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Retro Bone.png",
@@ -1491,7 +1795,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 187,
+    "id": 225,
     "name": "Retro Ghost Vibes",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Retro Ghost Vibes.png",
@@ -1499,7 +1803,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 188,
+    "id": 226,
     "name": "Sand Battery Case",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Sand Battery Case.png",
@@ -1507,7 +1811,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 189,
+    "id": 227,
     "name": "Side Eye Mood",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Side Eye Mood.png",
@@ -1515,7 +1819,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 190,
+    "id": 228,
     "name": "Skeleton Rock Symbol",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Skeleton Rock Symbol.png",
@@ -1523,7 +1827,15 @@ const products = [
     "price": 249
   },
   {
-    "id": 191,
+    "id": 229,
+    "name": "The Daily Chatter Case",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/The Daily Chatter Case.jpg",
+    "slug": "the-daily-chatter-case",
+    "price": 249
+  },
+  {
+    "id": 230,
     "name": "The Rebel Logic",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/The Rebel Logic.png",
@@ -1531,7 +1843,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 192,
+    "id": 231,
     "name": "Tiny Cat Duo",
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Tiny Cat Duo.png",
@@ -1539,7 +1851,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 193,
+    "id": 232,
     "name": "Arcane Script Case",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Arcane Script Case.png",
@@ -1547,7 +1859,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 194,
+    "id": 233,
     "name": "Marauder’s Map",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Marauder’s Map.png",
@@ -1555,7 +1867,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 195,
+    "id": 234,
     "name": "Noir Wizard Case",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Noir Wizard Case.png",
@@ -1563,7 +1875,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 196,
+    "id": 235,
     "name": "Snape’s Legacy Quote",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Snape’s Legacy Quote.png",
@@ -1571,7 +1883,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 197,
+    "id": 236,
     "name": "Sorting Hat",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Sorting Hat.png",
@@ -1579,7 +1891,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 198,
+    "id": 237,
     "name": "The Chosen One",
     "category": "Wizarding world",
     "image": "images/Wizarding world/The Chosen One.png",
@@ -1587,7 +1899,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 199,
+    "id": 238,
     "name": "Wizard Platform Case",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Wizard Platform Case.png",
@@ -1595,7 +1907,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 200,
+    "id": 239,
     "name": "Wizard Trio",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Wizard Trio.png",
@@ -1603,7 +1915,7 @@ const products = [
     "price": 249
   },
   {
-    "id": 201,
+    "id": 240,
     "name": "Wizarding World Motto",
     "category": "Wizarding world",
     "image": "images/Wizarding world/Wizarding World Motto.png",
