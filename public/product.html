@@ -158,10 +158,8 @@
     document.getElementById('product-detail').innerHTML = `
       <img src="${product.image}" alt="${product.name}" onerror="this.src='images/placeholder.png'"/>
       <div class="details">
-        <div class="model">${product.model}</div>
         <h1>${product.name}</h1>
-        <div class="price-display" id="price-display">₹${defaultPrice}</div>
-        <p class="desc">${product.description}</p>
+        <div class="price-display" id="price-display">${isCustomize ? '<span class="price-original">₹299</span><span class="price-discounted">₹' + defaultPrice + '</span>' : '₹' + defaultPrice}</div>
 
         ${product.variants && product.variants.length > 1 ? `
         <div class="variants-section">
@@ -196,11 +194,11 @@
           <div class="material-options">
             <button type="button" class="material-btn" onclick="selectMaterial(this, 'Soft Case', ${softPrice})">
               <span class="mat-name">Soft Case</span>
-              <span class="mat-price">₹${softPrice}</span>
+              <span class="mat-price">${isCustomize ? '<span class="price-original">₹299</span><span class="price-discounted">₹' + softPrice + '</span>' : '₹' + softPrice}</span>
             </button>
             <button type="button" class="material-btn" onclick="selectMaterial(this, 'Hard Case', ${hardPrice})">
               <span class="mat-name">Hard Case</span>
-              <span class="mat-price">₹${hardPrice}</span>
+              <span class="mat-price">${isCustomize ? '<span class="price-original">₹299</span><span class="price-discounted">₹' + hardPrice + '</span>' : '₹' + hardPrice}</span>
             </button>
             <button type="button" class="material-btn" onclick="selectMaterial(this, 'Glass Case', ${glassPrice})">
               <span class="mat-name">Glass Case</span>
@@ -231,7 +229,12 @@
     btn.classList.add('selected');
     selectedMaterial = material;
     selectedPrice = price;
-    document.getElementById('price-display').textContent = '₹' + price;
+    const pd = document.getElementById('price-display');
+    if (isCustomize && (material === 'Soft Case' || material === 'Hard Case')) {
+      pd.innerHTML = '<span class="price-original">₹299</span><span class="price-discounted">₹' + price + '</span>';
+    } else {
+      pd.textContent = '₹' + price;
+    }
   }
 
   function changeQty(val) {

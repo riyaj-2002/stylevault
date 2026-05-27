@@ -286,6 +286,8 @@ nav .cart-icon span {
 .product-card .info h3 { font-size: 0.97rem; margin-bottom: 4px; color: #3D2B1F; font-weight: 600; }
 .product-card .info small { color: #9CAF88; font-size: 0.8rem; font-weight: 600; }
 .product-card .info .price { color: #E2725B; font-weight: 700; font-size: 1.15rem; margin-top: 6px; }
+.price-original { text-decoration: line-through; color: #aaa; font-size: 0.9em; font-weight: 500; margin-right: 6px; }
+.price-discounted { color: #E2725B; font-weight: 700; }
 .product-card .info button {
   margin-top: 12px;
   width: 100%;
