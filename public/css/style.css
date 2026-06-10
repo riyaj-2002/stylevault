@@ -631,6 +631,12 @@ footer {
   gap: 12px;
   text-align: right;
 }
+.promo-subtitle-left {
+  font-size: 0.95rem;
+  color: rgba(255,245,225,0.72);
+  font-weight: 500;
+  line-height: 1.5;
+}
 .promo-subtitle {
   font-size: 0.95rem;
   color: rgba(255,245,225,0.72);
