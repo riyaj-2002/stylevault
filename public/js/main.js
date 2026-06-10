@@ -53,12 +53,9 @@ function renderProducts() {
   const isHome = path.endsWith('index.html') || path === '/' || path.endsWith('/');
   let list;
   if (isHome) {
-    const seen = new Set();
-    list = products.filter(p => {
-      if (SKIP_CATEGORIES.includes(p.category) || seen.has(p.category)) return false;
-      seen.add(p.category);
-      return true;
-    });
+    // Curated Best Sellers — 12 picks, no Aurora Marble
+    const BEST_SELLER_IDS = [2, 7, 24, 64, 76, 111, 141, 168, 196, 208, 232, 243];
+    list = BEST_SELLER_IDS.map(id => products.find(p => p.id === id)).filter(Boolean);
   } else {
     list = products;
   }
