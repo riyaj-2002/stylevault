@@ -53,8 +53,8 @@ function renderProducts() {
   const isHome = path.endsWith('index.html') || path === '/' || path.endsWith('/');
   let list;
   if (isHome) {
-    // Curated Best Sellers — 12 picks, no Aurora Marble
-    const BEST_SELLER_IDS = [2, 7, 24, 64, 76, 111, 141, 168, 196, 208, 232, 243];
+    // Curated Best Sellers — 12 picks, all verified on disk
+    const BEST_SELLER_IDS = [1, 64, 76, 111, 141, 168, 196, 208, 232, 241, 2, 3];
     list = BEST_SELLER_IDS.map(id => products.find(p => p.id === id)).filter(Boolean);
   } else {
     list = products;
@@ -63,9 +63,10 @@ function renderProducts() {
     const priceHTML = p.originalPrice
       ? `<span class="price-original">&#8377;${p.originalPrice}</span><span class="price-discounted">&#8377;${p.price}</span>`
       : `&#8377;${p.price}`;
+    const imgSrc = p.image.split('/').map(function(seg, i) { return i === 0 ? seg : encodeURIComponent(seg); }).join('/');
     return `
     <div class="product-card" onclick="window.location.href='product.html?id=${p.id}'" style="cursor:pointer">
-      <img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
+      <img src="${imgSrc}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
       <div class="info">
         <h3>${p.name}</h3>
         <p class="price">${priceHTML}</p>

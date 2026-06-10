@@ -124,7 +124,7 @@
     card.className = 'collection-card';
     card.innerHTML = `
       <div class="preview-grid">
-        ${preview.map(p => `<img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>`).join('')}
+        ${preview.map(p => { const imgSrc = p.image.split('/').map((seg,i)=>i===0?seg:encodeURIComponent(seg)).join('/'); return `<img src="${imgSrc}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>`;}).join('')}
       </div>
       <div class="label">
         <h3>${name}</h3>

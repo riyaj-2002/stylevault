@@ -97,9 +97,10 @@
     const priceHTML = p.originalPrice
       ? `<span class="price-original">&#8377;${p.originalPrice}</span><span class="price-discounted">&#8377;${p.price}</span>`
       : `&#8377;${p.price}`;
+    const imgSrc = p.image.split('/').map((seg, i) => i === 0 ? seg : encodeURIComponent(seg)).join('/');
     return `
     <div class="product-card" onclick="window.location.href='product.html?id=${p.id}&${backParam}'" style="cursor:pointer">
-      <img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
+      <img src="${imgSrc}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
       <div class="info">
         <h3>${p.name}</h3>
         <p class="price">${priceHTML}</p>

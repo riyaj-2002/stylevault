@@ -162,7 +162,7 @@
       : '';
 
     document.getElementById('product-detail').innerHTML = `
-      <img src="${product.image}" alt="${product.name}" onerror="this.src='images/placeholder.png'"/>
+      <img src="${product.image.split('/').map((seg,i)=>i===0?seg:encodeURIComponent(seg)).join('/')}" alt="${product.name}" onerror="this.src='images/placeholder.png'"/>
       <div class="details">
         <h1>${product.name}</h1>
         <div class="price-display" id="price-display">${defaultOrig ? '<span class="price-original">\u20B9' + defaultOrig + '</span><span class="price-discounted">\u20B9' + defaultPrice + '</span>' : '\u20B9' + defaultPrice}</div>

@@ -446,7 +446,7 @@ const products = [
     "id": 56,
     "name": "The Binge-Watcher's Case",
     "category": "Aesthetic cases",
-    "image": "images/Aesthetic cases/The Binge-Watcher's Case.png",
+    "image": "images/Aesthetic cases/The Binge-Watcher_s Case.png",
     "slug": "the-binge-watcher-s-case",
     "price": 249
   },
