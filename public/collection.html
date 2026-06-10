@@ -6,6 +6,39 @@
   <title>Collection - StyleVault</title>
   <link rel="stylesheet" href="css/style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+  <style>
+    .collection-banner {
+      text-align: center;
+      padding: 52px 20px 28px;
+      background: linear-gradient(135deg, #3D2B1F 0%, #5c3d2e 50%, #3D2B1F 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .collection-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(226,114,91,0.2) 0%, transparent 65%);
+    }
+    .collection-banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      color: #FFF5E1;
+      margin-bottom: 10px;
+      position: relative;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .collection-banner p {
+      font-size: 1rem;
+      color: rgba(255,245,225,0.75);
+      position: relative;
+    }
+    @media (max-width: 768px) {
+      .collection-banner { padding: 36px 20px 20px; }
+      .collection-banner h1 { font-size: 1.8rem; }
+      .collection-banner p { font-size: 0.9rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -23,7 +56,11 @@
 
 <a href="collections.html" class="back-link" style="display:inline-block;margin:30px 20px 0;color:var(--primary);text-decoration:none;font-size:0.95rem;">← Back to Collections</a>
 
-<h2 class="section-title" id="collection-title"></h2>
+<div class="collection-banner" id="collection-banner">
+  <h1 id="collection-title"></h1>
+  <p id="collection-subtitle"></p>
+</div>
+
 <div class="products-grid" id="products-grid"></div>
 
 <footer><p>&copy; 2026 StyleVault. All rights reserved.</p></footer>
@@ -35,7 +72,12 @@
   const name = params.get('name');
   const ids = params.get('ids').split(',').map(Number);
 
+  const subtitles = {
+    'Couple Spot': 'Matching phone cases for couples'
+  };
+
   document.getElementById('collection-title').textContent = name;
+  document.getElementById('collection-subtitle').textContent = subtitles[name] || '';
   document.title = name + ' - StyleVault';
 
   const grid = document.getElementById('products-grid');
@@ -51,16 +93,20 @@
 
   const backParam = `back=collection&name=${encodeURIComponent(name)}&ids=${params.get('ids')}`;
 
-  grid.innerHTML = items.map(p => `
+  grid.innerHTML = items.map(p => {
+    const priceHTML = p.originalPrice
+      ? `<span class="price-original">&#8377;${p.originalPrice}</span><span class="price-discounted">&#8377;${p.price}</span>`
+      : `&#8377;${p.price}`;
+    return `
     <div class="product-card" onclick="window.location.href='product.html?id=${p.id}&${backParam}'" style="cursor:pointer">
       <img src="${p.image}" alt="${p.name}" onerror="this.src='images/placeholder.png'"/>
       <div class="info">
         <h3>${p.name}</h3>
-        <p class="price">&#8377;${p.price}</p>
+        <p class="price">${priceHTML}</p>
         <button onclick="event.stopPropagation(); window.location.href='product.html?id=${p.id}&${backParam}'">View Details</button>
       </div>
     </div>
-  `).join('');
+  `}).join('');
 </script>
 <script src="js/cookies.js"></script>
 <script src="js/footer.js"></script>

@@ -499,14 +499,6 @@ const products = [
     "price": 249
   },
   {
-    "id": 63,
-    "name": "Anime Muse Case",
-    "category": "Anime & gamer zone",
-    "image": "images/Anime & gamer zone/Anime Muse Case.png",
-    "slug": "anime-muse-case",
-    "price": 249
-  },
-  {
     "id": 64,
     "name": "Battlegrounds Warrior",
     "category": "Anime & gamer zone",
@@ -592,14 +584,6 @@ const products = [
     "category": "Anime & gamer zone",
     "image": "images/Anime & gamer zone/Uchiha Itachi Anime.png",
     "slug": "uchiha-itachi-anime",
-    "price": 249
-  },
-  {
-    "id": 75,
-    "name": "ApoBangpo",
-    "category": "Bts magic shop",
-    "image": "images/Bts magic shop/ApoBangpo.png",
-    "slug": "apobangpo",
     "price": 249
   },
   {
@@ -1043,14 +1027,6 @@ const products = [
     "price": 249
   },
   {
-    "id": 131,
-    "name": "Sage Green Horizon",
-    "category": "Modern abstract",
-    "image": "images/Modern abstract/Sage Green Horizon.png",
-    "slug": "sage-green-horizon",
-    "price": 249
-  },
-  {
     "id": 132,
     "name": "Scarlet Cat Case",
     "category": "Modern abstract",
@@ -1099,14 +1075,6 @@ const products = [
     "price": 249
   },
   {
-    "id": 138,
-    "name": "Wavy Muse Case",
-    "category": "Modern abstract",
-    "image": "images/Modern abstract/Wavy Muse Case.png",
-    "slug": "wavy-muse-case",
-    "price": 249
-  },
-  {
     "id": 139,
     "name": "Wine Bloom Case",
     "category": "Modern abstract",
@@ -1128,22 +1096,6 @@ const products = [
     "category": "Noir gallery",
     "image": "images/Noir gallery/Audio Mosaic Case.png",
     "slug": "audio-mosaic-case",
-    "price": 249
-  },
-  {
-    "id": 142,
-    "name": "Black & White Hearts",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Black & White Hearts.png",
-    "slug": "black-white-hearts",
-    "price": 249
-  },
-  {
-    "id": 143,
-    "name": "Black & White Puzzle",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Black & White Puzzle.png",
-    "slug": "black-white-puzzle",
     "price": 249
   },
   {
@@ -1187,43 +1139,11 @@ const products = [
     "price": 249
   },
   {
-    "id": 149,
-    "name": "Dark Flora & Butterfly",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Dark Flora & Butterfly.png",
-    "slug": "dark-flora-butterfly",
-    "price": 249
-  },
-  {
     "id": 150,
     "name": "Golden Midnight Pup",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Golden Midnight Pup.png",
     "slug": "golden-midnight-pup",
-    "price": 249
-  },
-  {
-    "id": 151,
-    "name": "Golden Space Explorer",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Golden Space Explorer.png",
-    "slug": "golden-space-explorer",
-    "price": 249
-  },
-  {
-    "id": 152,
-    "name": "Hugging Cats",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Hugging Cats.png",
-    "slug": "hugging-cats",
-    "price": 249
-  },
-  {
-    "id": 153,
-    "name": "Ink Butterfly Case",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Ink Butterfly Case.png",
-    "slug": "ink-butterfly-case",
     "price": 249
   },
   {
@@ -1235,14 +1155,6 @@ const products = [
     "price": 249
   },
   {
-    "id": 155,
-    "name": "Melody Wings",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Melody Wings.png",
-    "slug": "melody-wings",
-    "price": 249
-  },
-  {
     "id": 156,
     "name": "Midnight Battery Case",
     "category": "Noir gallery",
@@ -1251,51 +1163,11 @@ const products = [
     "price": 249
   },
   {
-    "id": 157,
-    "name": "Midnight Hearts",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Midnight Hearts.png",
-    "slug": "midnight-hearts",
-    "price": 249
-  },
-  {
-    "id": 158,
-    "name": "Midnight Smoke Drift",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Midnight Smoke Drift.png",
-    "slug": "midnight-smoke-drift",
-    "price": 249
-  },
-  {
-    "id": 159,
-    "name": "Moody Watercolor Mist",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Moody Watercolor Mist.png",
-    "slug": "moody-watercolor-mist",
-    "price": 249
-  },
-  {
     "id": 160,
     "name": "Night Window View",
     "category": "Noir gallery",
     "image": "images/Noir gallery/Night Window View.png",
     "slug": "night-window-view",
-    "price": 249
-  },
-  {
-    "id": 161,
-    "name": "Panda Drip",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Panda Drip.png",
-    "slug": "panda-drip",
-    "price": 249
-  },
-  {
-    "id": 162,
-    "name": "Retro Ripple",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Retro Ripple.png",
-    "slug": "retro-ripple",
     "price": 249
   },
   {
@@ -1320,22 +1192,6 @@ const products = [
     "category": "Noir gallery",
     "image": "images/Noir gallery/The Rebel Logic.png",
     "slug": "the-rebel-logic",
-    "price": 249
-  },
-  {
-    "id": 166,
-    "name": "Trio Cat Case",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/Trio Cat Case.png",
-    "slug": "trio-cat-case",
-    "price": 249
-  },
-  {
-    "id": 167,
-    "name": "World Map Travel",
-    "category": "Noir gallery",
-    "image": "images/Noir gallery/World Map Travel.png",
-    "slug": "world-map-travel",
     "price": 249
   },
   {
@@ -1691,14 +1547,6 @@ const products = [
     "price": 249
   },
   {
-    "id": 212,
-    "name": "Clean Etc. Bold",
-    "category": "Vibes and mood",
-    "image": "images/Vibes and mood/Clean _Etc._ Bold.png",
-    "slug": "clean-etc-bold",
-    "price": 249
-  },
-  {
     "id": 213,
     "name": "Grunge Smile",
     "category": "Vibes and mood",
@@ -1720,14 +1568,6 @@ const products = [
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Lucky 67.png",
     "slug": "lucky-67",
-    "price": 249
-  },
-  {
-    "id": 216,
-    "name": "Manifest Grid",
-    "category": "Vibes and mood",
-    "image": "images/Vibes and mood/Manifest Grid.png",
-    "slug": "manifest-grid",
     "price": 249
   },
   {
@@ -1776,14 +1616,6 @@ const products = [
     "category": "Vibes and mood",
     "image": "images/Vibes and mood/Peeking Cat Paws.jpg",
     "slug": "peeking-cat-paws",
-    "price": 249
-  },
-  {
-    "id": 223,
-    "name": "Polar Bliss",
-    "category": "Vibes and mood",
-    "image": "images/Vibes and mood/Polar Bliss.png",
-    "slug": "polar-bliss",
     "price": 249
   },
   {
@@ -1920,6 +1752,290 @@ const products = [
     "category": "Wizarding world",
     "image": "images/Wizarding world/Wizarding World Motto.png",
     "slug": "wizarding-world-motto",
+    "price": 249
+  },
+  {
+    "id": 241,
+    "name": "Chibi Love Story",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Chibi Love Story.png",
+    "slug": "chibi-love-story",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 242,
+    "name": "Sweet Crown Duo",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Sweet Crown Duo.png",
+    "slug": "sweet-crown-duo",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 243,
+    "name": "Stroll Together",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Stroll Together.png",
+    "slug": "stroll-together",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 244,
+    "name": "Pastel Anime Girl",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Pastel Anime Girl.png",
+    "slug": "pastel-anime-girl",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 245,
+    "name": "Royal Pair",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Royal Pair.png",
+    "slug": "royal-pair",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 246,
+    "name": "Fine Line Hearts",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Fine Line Hearts.png",
+    "slug": "fine-line-hearts",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 247,
+    "name": "Heartline Duo",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Heartline Duo.png",
+    "slug": "heartline-duo",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 248,
+    "name": "Shadow Girl Aesthetic",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Shadow Girl Aesthetic.png",
+    "slug": "shadow-girl-aesthetic",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 249,
+    "name": "Dark Feather",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Dark Feather.png",
+    "slug": "dark-feather",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 250,
+    "name": "Together Forever",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Together Forever.png",
+    "slug": "together-forever",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 251,
+    "name": "Linked Hearts",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Linked Hearts.png",
+    "slug": "linked-hearts",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 252,
+    "name": "Starlit Crown",
+    "category": "Couple Spot",
+    "image": "images/Couple Spot/Starlit Crown.png",
+    "slug": "starlit-crown",
+    "price": 349,
+    "originalPrice": 499
+  },
+  {
+    "id": 253,
+    "name": "Dark Silhouette Case",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Dark Silhouette Case.png",
+    "slug": "dark-silhouette-case",
+    "price": 249
+  },
+  {
+    "id": 254,
+    "name": "Anime Shadow Profile",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Anime Shadow Profile.png",
+    "slug": "anime-shadow-profile",
+    "price": 249
+  },
+  {
+    "id": 255,
+    "name": "Space Drift",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Space Drift.png",
+    "slug": "space-drift",
+    "price": 249
+  },
+  {
+    "id": 256,
+    "name": "Moody Figure Case",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Moody Figure Case.png",
+    "slug": "moody-figure-case",
+    "price": 249
+  },
+  {
+    "id": 257,
+    "name": "Soft Anime Scene",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Soft Anime Scene.png",
+    "slug": "soft-anime-scene",
+    "price": 249
+  },
+  {
+    "id": 258,
+    "name": "Hooded Anime Boy",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Hooded Anime Boy.png",
+    "slug": "hooded-anime-boy",
+    "price": 249
+  },
+  {
+    "id": 259,
+    "name": "Dark Bloom Strike",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Dark Bloom Strike.png",
+    "slug": "dark-bloom-strike",
+    "price": 249
+  },
+  {
+    "id": 260,
+    "name": "Sakura Collage",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Sakura Collage.png",
+    "slug": "sakura-collage",
+    "price": 249
+  },
+  {
+    "id": 261,
+    "name": "Dark Smile Case",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Dark Smile Case.png",
+    "slug": "dark-smile-case",
+    "price": 249
+  },
+  {
+    "id": 262,
+    "name": "Astronaut Float",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Astronaut Float.png",
+    "slug": "astronaut-float",
+    "price": 249
+  },
+  {
+    "id": 263,
+    "name": "Mona Lisa Drip",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Mona Lisa Drip.png",
+    "slug": "mona-lisa-drip",
+    "price": 249
+  },
+  {
+    "id": 264,
+    "name": "Blue Character Pop",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Blue Character Pop.png",
+    "slug": "blue-character-pop",
+    "price": 249
+  },
+  {
+    "id": 265,
+    "name": "Skull Grunge",
+    "category": "Anime & gamer zone",
+    "image": "images/Anime & gamer zone/Skull Grunge.png",
+    "slug": "skull-grunge",
+    "price": 249
+  },
+  {
+    "id": 266,
+    "name": "Black Rose Tulip",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Black Rose Tulip.png",
+    "slug": "black-rose-tulip",
+    "price": 249
+  },
+  {
+    "id": 267,
+    "name": "Noir Minimal Case",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Noir Minimal Case.png",
+    "slug": "noir-minimal-case",
+    "price": 249
+  },
+  {
+    "id": 268,
+    "name": "Flutter Pastel",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Flutter Pastel.png",
+    "slug": "flutter-pastel",
+    "price": 249
+  },
+  {
+    "id": 269,
+    "name": "Blush Petal Soft",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Blush Petal Soft.png",
+    "slug": "blush-petal-soft",
+    "price": 249
+  },
+  {
+    "id": 270,
+    "name": "Rose Heart Minimal",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Rose Heart Minimal.png",
+    "slug": "rose-heart-minimal",
+    "price": 249
+  },
+  {
+    "id": 271,
+    "name": "Nude Aesthetic",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Nude Aesthetic.png",
+    "slug": "nude-aesthetic",
+    "price": 249
+  },
+  {
+    "id": 272,
+    "name": "Blue Cat Drift",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Blue Cat Drift.png",
+    "slug": "blue-cat-drift",
+    "price": 249
+  },
+  {
+    "id": 273,
+    "name": "Deep Thinker",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Deep Thinker.png",
+    "slug": "deep-thinker",
+    "price": 249
+  },
+  {
+    "id": 274,
+    "name": "Red Heart Lock",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Red Heart Lock.png",
+    "slug": "red-heart-lock",
     "price": 249
   }
 ];

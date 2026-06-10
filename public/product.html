@@ -120,13 +120,19 @@
 
   // ── Pricing ──
   const isCustomize = product && product.category === 'Customized';
-  const softPrice = isCustomize ? 249 : 249;
-  const hardPrice = isCustomize ? 249 : 249;
-  const glassPrice = 349;
-  const defaultPrice = isCustomize ? 249 : (product ? product.price : 249);
+  const isCoupleSpot = product && product.category === 'Couple Spot';
+  const softPrice  = isCoupleSpot ? 349 : 249;
+  const hardPrice  = isCoupleSpot ? 349 : (isCustomize ? 249 : 249);
+  const glassPrice = isCoupleSpot ? 499 : 349;
+  const softOrig   = isCoupleSpot ? 499 : null;
+  const hardOrig   = isCoupleSpot ? 499 : null;
+  const glassOrig  = isCoupleSpot ? 599 : null;
+  const defaultPrice = isCoupleSpot ? 349 : (isCustomize ? 249 : (product ? product.price : 249));
+  const defaultOrig  = isCoupleSpot ? 499 : (isCustomize ? 299 : null);
 
   let selectedMaterial = '';
   let selectedPrice = defaultPrice;
+  let selectedOrig = defaultOrig;
 
   // ── Back link ──
   const backLink = document.getElementById('back-link');
@@ -159,7 +165,7 @@
       <img src="${product.image}" alt="${product.name}" onerror="this.src='images/placeholder.png'"/>
       <div class="details">
         <h1>${product.name}</h1>
-        <div class="price-display" id="price-display">${isCustomize ? '<span class="price-original">₹299</span><span class="price-discounted">₹' + defaultPrice + '</span>' : '₹' + defaultPrice}</div>
+        <div class="price-display" id="price-display">${defaultOrig ? '<span class="price-original">\u20B9' + defaultOrig + '</span><span class="price-discounted">\u20B9' + defaultPrice + '</span>' : '\u20B9' + defaultPrice}</div>
 
         ${product.variants && product.variants.length > 1 ? `
         <div class="variants-section">
@@ -192,17 +198,17 @@
         <div class="material-selector">
           <label>Choose Case Material</label>
           <div class="material-options">
-            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Soft Case', ${softPrice})">
+            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Soft Case', ${softPrice}, ${softOrig})">
               <span class="mat-name">Soft Case</span>
-              <span class="mat-price">${isCustomize ? '<span class="price-original">₹299</span><span class="price-discounted">₹' + softPrice + '</span>' : '₹' + softPrice}</span>
+              <span class="mat-price">${softOrig ? '<span class="price-original">\u20B9' + softOrig + '</span><span class="price-discounted">\u20B9' + softPrice + '</span>' : (isCustomize ? '<span class="price-original">\u20B9299</span><span class="price-discounted">\u20B9' + softPrice + '</span>' : '\u20B9' + softPrice)}</span>
             </button>
-            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Hard Case', ${hardPrice})">
+            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Hard Case', ${hardPrice}, ${hardOrig})">
               <span class="mat-name">Hard Case</span>
-              <span class="mat-price">${isCustomize ? '<span class="price-original">₹299</span><span class="price-discounted">₹' + hardPrice + '</span>' : '₹' + hardPrice}</span>
+              <span class="mat-price">${hardOrig ? '<span class="price-original">\u20B9' + hardOrig + '</span><span class="price-discounted">\u20B9' + hardPrice + '</span>' : (isCustomize ? '<span class="price-original">\u20B9299</span><span class="price-discounted">\u20B9' + hardPrice + '</span>' : '\u20B9' + hardPrice)}</span>
             </button>
-            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Glass Case', ${glassPrice})">
+            <button type="button" class="material-btn" onclick="selectMaterial(this, 'Glass Case', ${glassPrice}, ${glassOrig})">
               <span class="mat-name">Glass Case</span>
-              <span class="mat-price">₹${glassPrice}</span>
+              <span class="mat-price">${glassOrig ? '<span class="price-original">\u20B9' + glassOrig + '</span><span class="price-discounted">\u20B9' + glassPrice + '</span>' : '\u20B9' + glassPrice}</span>
             </button>
           </div>
         </div>
@@ -224,16 +230,19 @@
     document.getElementById('others-brand-box').style.display = brand === 'Others' ? 'block' : 'none';
   }
 
-  function selectMaterial(btn, material, price) {
+  function selectMaterial(btn, material, price, orig) {
     document.querySelectorAll('.material-btn').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
     selectedMaterial = material;
     selectedPrice = price;
+    selectedOrig = orig || null;
     const pd = document.getElementById('price-display');
-    if (isCustomize && (material === 'Soft Case' || material === 'Hard Case')) {
-      pd.innerHTML = '<span class="price-original">₹299</span><span class="price-discounted">₹' + price + '</span>';
+    if (selectedOrig) {
+      pd.innerHTML = '<span class="price-original">\u20B9' + selectedOrig + '</span><span class="price-discounted">\u20B9' + price + '</span>';
+    } else if (isCustomize && (material === 'Soft Case' || material === 'Hard Case')) {
+      pd.innerHTML = '<span class="price-original">\u20B9299</span><span class="price-discounted">\u20B9' + price + '</span>';
     } else {
-      pd.textContent = '₹' + price;
+      pd.textContent = '\u20B9' + price;
     }
   }
 
