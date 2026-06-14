@@ -54,7 +54,7 @@ function renderProducts() {
   let list;
   if (isHome) {
     // Curated Best Sellers — 12 picks, all verified on disk
-    const BEST_SELLER_IDS = [1, 64, 76, 111, 141, 168, 196, 208, 232, 241, 2, 3];
+    const BEST_SELLER_IDS = [1, 64, 76, 111, 141, 168, 196, 208, 241, 2, 3, 275];
     list = BEST_SELLER_IDS.map(id => products.find(p => p.id === id)).filter(Boolean);
   } else {
     list = products;

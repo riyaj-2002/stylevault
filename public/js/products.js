@@ -1685,72 +1685,72 @@ const products = [
   {
     "id": 232,
     "name": "Arcane Script Case",
-    "category": "Wizarding world",
-    "image": "images/Wizarding world/Arcane Script Case.png",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Arcane Script Case.png",
     "slug": "arcane-script-case",
     "price": 249
   },
   {
     "id": 233,
     "name": "Marauder’s Map",
-    "category": "Wizarding world",
-    "image": "images/Wizarding world/Marauder’s Map.png",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Marauder's Map.png",
     "slug": "marauder-s-map",
     "price": 249
   },
   {
     "id": 234,
     "name": "Noir Wizard Case",
-    "category": "Wizarding world",
-    "image": "images/Wizarding world/Noir Wizard Case.png",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Noir Wizard Case.png",
     "slug": "noir-wizard-case",
     "price": 249
   },
   {
     "id": 235,
     "name": "Snape’s Legacy Quote",
-    "category": "Wizarding world",
-    "image": "images/Wizarding world/Snape’s Legacy Quote.png",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Snape's Legacy Quote.png",
     "slug": "snape-s-legacy-quote",
     "price": 249
   },
   {
     "id": 236,
     "name": "Sorting Hat",
-    "category": "Wizarding world",
-    "image": "images/Wizarding world/Sorting Hat.png",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Sorting Hat.png",
     "slug": "sorting-hat",
     "price": 249
   },
   {
     "id": 237,
     "name": "The Chosen One",
-    "category": "Wizarding world",
-    "image": "images/Wizarding world/The Chosen One.png",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/The Chosen One.png",
     "slug": "the-chosen-one",
     "price": 249
   },
   {
     "id": 238,
     "name": "Wizard Platform Case",
-    "category": "Wizarding world",
-    "image": "images/Wizarding world/Wizard Platform Case.png",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Wizard Platform Case.png",
     "slug": "wizard-platform-case",
     "price": 249
   },
   {
     "id": 239,
     "name": "Wizard Trio",
-    "category": "Wizarding world",
-    "image": "images/Wizarding world/Wizard Trio.png",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Wizard Trio.png",
     "slug": "wizard-trio",
     "price": 249
   },
   {
     "id": 240,
     "name": "Wizarding World Motto",
-    "category": "Wizarding world",
-    "image": "images/Wizarding world/Wizarding World Motto.png",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Wizarding World Motto.png",
     "slug": "wizarding-world-motto",
     "price": 249
   },
@@ -2037,5 +2037,245 @@ const products = [
     "image": "images/Vibes and mood/Red Heart Lock.png",
     "slug": "red-heart-lock",
     "price": 249
+  },
+  {
+    "id": 275,
+    "price": 249,
+    "category": "Aesthetic cases",
+    "name": "Y2K Checker Cute",
+    "image": "images/Aesthetic cases/Y2K Checker Cute.png",
+    "slug": "y2k-checker-cute"
+  },
+  {
+    "id": 276,
+    "price": 249,
+    "category": "Aesthetic cases",
+    "name": "Sunflower Wanderer",
+    "image": "images/Aesthetic cases/Sunflower Wanderer.png",
+    "slug": "sunflower-wanderer"
+  },
+  {
+    "id": 277,
+    "price": 249,
+    "category": "Aesthetic cases",
+    "name": "Oriental Floral Case",
+    "image": "images/Aesthetic cases/Oriental Floral Case.png",
+    "slug": "oriental-floral-case"
+  },
+  {
+    "id": 278,
+    "price": 249,
+    "category": "Aesthetic cases",
+    "name": "Paris Eiffel Pastel",
+    "image": "images/Aesthetic cases/Paris Eiffel Pastel.png",
+    "slug": "paris-eiffel-pastel"
+  },
+  {
+    "id": 279,
+    "price": 249,
+    "category": "Aesthetic cases",
+    "name": "City Dreamer",
+    "image": "images/Aesthetic cases/City Dreamer.png",
+    "slug": "city-dreamer"
+  },
+  {
+    "id": 280,
+    "price": 249,
+    "category": "Anime & gamer zone",
+    "name": "Road Trip Rider",
+    "image": "images/Anime & gamer zone/Road Trip Rider.png",
+    "slug": "road-trip-rider"
+  },
+  {
+    "id": 281,
+    "price": 249,
+    "category": "Anime & gamer zone",
+    "name": "Ghibli Meadow Boy",
+    "image": "images/Anime & gamer zone/Ghibli Meadow Boy.png",
+    "slug": "ghibli-meadow-boy"
+  },
+  {
+    "id": 282,
+    "price": 249,
+    "category": "Anime & gamer zone",
+    "name": "Ocean Sunset Muse",
+    "image": "images/Anime & gamer zone/Ocean Sunset Muse.png",
+    "slug": "ocean-sunset-muse"
+  },
+  {
+    "id": 283,
+    "price": 249,
+    "category": "Anime & gamer zone",
+    "name": "Blaze Fire Case",
+    "image": "images/Anime & gamer zone/Blaze Fire Case.jpeg",
+    "slug": "blaze-fire-case"
+  },
+  {
+    "id": 284,
+    "price": 249,
+    "category": "Customized",
+    "name": "Pink Magazine Collage",
+    "image": "images/Customized/Pink Magazine Collage.png",
+    "slug": "pink-magazine-collage"
+  },
+  {
+    "id": 285,
+    "price": 249,
+    "category": "Noir gallery",
+    "name": "Dark Bloom Noir",
+    "image": "images/Noir gallery/Dark Bloom Noir.png",
+    "slug": "dark-bloom-noir"
+  },
+  {
+    "id": 286,
+    "price": 249,
+    "category": "Noir gallery",
+    "name": "Noir Grid Case",
+    "image": "images/Noir gallery/Noir Grid Case.png",
+    "slug": "noir-grid-case"
+  },
+  {
+    "id": 287,
+    "price": 249,
+    "category": "Noir gallery",
+    "name": "Midnight Moon Cat",
+    "image": "images/Noir gallery/Midnight Moon Cat.png",
+    "slug": "midnight-moon-cat"
+  },
+  {
+    "id": 288,
+    "price": 249,
+    "category": "Noir gallery",
+    "name": "Ocean Eclipse",
+    "image": "images/Noir gallery/Ocean Eclipse.png",
+    "slug": "ocean-eclipse"
+  },
+  {
+    "id": 289,
+    "price": 249,
+    "category": "Noir gallery",
+    "name": "Black Tulip Stems",
+    "image": "images/Noir gallery/Black Tulip Stems.png",
+    "slug": "black-tulip-stems"
+  },
+  {
+    "id": 290,
+    "price": 249,
+    "category": "Noir gallery",
+    "name": "Starry Night Case",
+    "image": "images/Noir gallery/Starry Night Case.png",
+    "slug": "starry-night-case"
+  },
+  {
+    "id": 291,
+    "price": 249,
+    "category": "Noir gallery",
+    "name": "Daisy Noir",
+    "image": "images/Noir gallery/Daisy Noir.png",
+    "slug": "daisy-noir"
+  },
+  {
+    "id": 292,
+    "price": 249,
+    "category": "Pastels collection",
+    "name": "Blue Bunny Gingham",
+    "image": "images/Pastels collection/Blue Bunny Gingham.png",
+    "slug": "blue-bunny-gingham"
+  },
+  {
+    "id": 293,
+    "price": 249,
+    "category": "Pastels collection",
+    "name": "Cherry Blossom Pink",
+    "image": "images/Pastels collection/Cherry Blossom Pink.png",
+    "slug": "cherry-blossom-pink"
+  },
+  {
+    "id": 294,
+    "price": 249,
+    "category": "Pastels collection",
+    "name": "Butterfly Dream",
+    "image": "images/Pastels collection/Butterfly Dream.png",
+    "slug": "butterfly-dream"
+  },
+  {
+    "id": 295,
+    "price": 249,
+    "category": "Pastels collection",
+    "name": "Pink Gingham Check",
+    "image": "images/Pastels collection/Pink Gingham Check.png",
+    "slug": "pink-gingham-check"
+  },
+  {
+    "id": 296,
+    "price": 249,
+    "category": "Pastels collection",
+    "name": "Pink Heart Dots",
+    "image": "images/Pastels collection/Pink Heart Dots.png",
+    "slug": "pink-heart-dots"
+  },
+  {
+    "id": 297,
+    "price": 249,
+    "category": "Scrapbook",
+    "name": "Puppy Sticker Pack",
+    "image": "images/Scrapbook/Puppy Sticker Pack.png",
+    "slug": "puppy-sticker-pack"
+  },
+  {
+    "id": 298,
+    "price": 249,
+    "category": "Scrapbook",
+    "name": "Blue Cafe Collage",
+    "image": "images/Scrapbook/Blue Cafe Collage.png",
+    "slug": "blue-cafe-collage"
+  },
+  {
+    "id": 299,
+    "price": 249,
+    "category": "Scrapbook",
+    "name": "Aesthetic Memo Board",
+    "image": "images/Scrapbook/Aesthetic Memo Board.png",
+    "slug": "aesthetic-memo-board"
+  },
+  {
+    "id": 300,
+    "price": 249,
+    "category": "Scrapbook",
+    "name": "Doodle Dream Diary",
+    "image": "images/Scrapbook/Doodle Dream Diary.png",
+    "slug": "doodle-dream-diary"
+  },
+  {
+    "id": 301,
+    "price": 249,
+    "category": "Scrapbook",
+    "name": "Vintage Pink Bloom",
+    "image": "images/Scrapbook/Vintage Pink Bloom.png",
+    "slug": "vintage-pink-bloom"
+  },
+  {
+    "id": 302,
+    "price": 249,
+    "category": "Scrapbook",
+    "name": "Blue Butterfly Muse",
+    "image": "images/Scrapbook/Blue Butterfly Muse.png",
+    "slug": "blue-butterfly-muse"
+  },
+  {
+    "id": 303,
+    "price": 249,
+    "category": "Scrapbook",
+    "name": "Amalfi Coast Dream",
+    "image": "images/Scrapbook/Amalfi Coast Dream.png",
+    "slug": "amalfi-coast-dream"
+  },
+  {
+    "id": 304,
+    "price": 249,
+    "category": "Scrapbook",
+    "name": "Paris Vintage Rose",
+    "image": "images/Scrapbook/Paris Vintage Rose.png",
+    "slug": "paris-vintage-rose"
   }
 ];
