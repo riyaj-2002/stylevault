@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 import { getDB } from '../lib/db.js';
 import { getRawBody } from '../lib/rawBody.js';
-import { emailPaymentConfirmed, notifyOwnerPaymentConfirmed } from '../utils/email.js';
+import { emailOrderPlaced, notifyOwnerOrder } from '../utils/email.js';
 
 export const config = { runtime: 'nodejs' };
 
@@ -79,11 +79,15 @@ export default async function handler(req, res) {
   // ── 5a. Clear cart now that payment is confirmed ──────────────────────────
   await sql`DELETE FROM cart WHERE user_id = ${order.user_id}`;
 
-  // ── 6. Send confirmation emails (non-blocking — won't crash payment flow) ─
+  // ── 6. Fetch order items and address for confirmation email ─────────────
+  const items = await sql`SELECT * FROM order_items WHERE order_id = ${order.id}`;
+  const [address] = await sql`SELECT * FROM addresses WHERE user_id = ${order.user_id} ORDER BY created_at DESC LIMIT 1`;
+
+  // ── 7. Send full order confirmation emails (non-blocking) ────────────────
   try {
     await Promise.all([
-      emailPaymentConfirmed(order.email, order.name, order.id, order.total),
-      notifyOwnerPaymentConfirmed(order.id, order.name, order.email, order.total)
+      emailOrderPlaced(order.email, order.name, order.id, items, address || {}, order.total, order.shipping),
+      notifyOwnerOrder(order.id, { name: order.name, email: order.email }, items, address || {}, order.total, order.shipping)
     ]);
   } catch (emailErr) {
     console.error('Email send failed (non-fatal):', emailErr.message);

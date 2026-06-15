@@ -1,7 +1,6 @@
 import Razorpay from 'razorpay';
 import { getDB } from '../../lib/db.js';
 import { getUserFromRequest } from '../../lib/auth.js';
-import { emailOrderPlaced, notifyOwnerOrder } from '../../utils/email.js';
 
 export const config = { runtime: 'nodejs' };
 
@@ -58,16 +57,7 @@ export default async function handler(req, res) {
     }
 
     // ── 5. Cart is cleared ONLY after payment confirmed via webhook ──────────
-
-    // ── 6. Send order placed emails (non-blocking) ───────────────────────────
-    try {
-      await Promise.all([
-        emailOrderPlaced(user.email, user.name, order_id, cartItems, address || {}, amount, shipping || 0),
-        notifyOwnerOrder(order_id, user, cartItems, address || {}, amount, shipping || 0)
-      ]);
-    } catch (emailErr) {
-      console.error('Order email failed (non-fatal):', emailErr.message);
-    }
+    // ── 6. Emails are sent ONLY after payment confirmed via webhook ───────────
 
     res.json({ success: true, order: rzpOrder, order_id, key: process.env.RAZORPAY_KEY_ID });
   } catch (err) {
