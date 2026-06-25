@@ -2277,5 +2277,213 @@ const products = [
     "name": "Paris Vintage Rose",
     "image": "images/Scrapbook/Paris Vintage Rose.png",
     "slug": "paris-vintage-rose"
+  },
+  {
+    "id": 305,
+    "name": "Blue Butterfly Wings",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Blue Butterfly Wings.png",
+    "slug": "blue-butterfly-wings",
+    "price": 249
+  },
+  {
+    "id": 306,
+    "name": "Rainbow Hearts",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Rainbow Hearts.png",
+    "slug": "rainbow-hearts",
+    "price": 249
+  },
+  {
+    "id": 307,
+    "name": "Teal Clover Swirl",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Teal Clover Swirl.png",
+    "slug": "teal-clover-swirl",
+    "price": 249
+  },
+  {
+    "id": 308,
+    "name": "Minimal Botanical Clear",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Minimal Botanical Clear.png",
+    "slug": "minimal-botanical-clear",
+    "price": 249
+  },
+  {
+    "id": 309,
+    "name": "Blue Cloud Moon",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Blue Cloud Moon.png",
+    "slug": "blue-cloud-moon",
+    "price": 249
+  },
+  {
+    "id": 310,
+    "name": "Abstract Face Art",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Abstract Face Art.png",
+    "slug": "abstract-face-art",
+    "price": 249
+  },
+  {
+    "id": 311,
+    "name": "Evil Eye Hamsa",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Evil Eye Hamsa.png",
+    "slug": "evil-eye-hamsa",
+    "price": 249
+  },
+  {
+    "id": 312,
+    "name": "Pink Bow Ribbon",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Pink Bow Ribbon.png",
+    "slug": "pink-bow-ribbon",
+    "price": 249
+  },
+  {
+    "id": 313,
+    "name": "Dreamy Moon Clouds",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Dreamy Moon Clouds.png",
+    "slug": "dreamy-moon-clouds",
+    "price": 249
+  },
+  {
+    "id": 314,
+    "name": "Lilac Butterfly Swarm",
+    "category": "Aesthetic cases",
+    "image": "images/Aesthetic cases/Lilac Butterfly Swarm.png",
+    "slug": "lilac-butterfly-swarm",
+    "price": 249
+  },
+  {
+    "id": 315,
+    "name": "Astro Star Doodle",
+    "category": "Noir gallery",
+    "image": "images/Noir gallery/Astro Star Doodle.png",
+    "slug": "astro-star-doodle",
+    "price": 249
+  },
+  {
+    "id": 316,
+    "name": "White Tulip Clear",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/White Tulip Clear.png",
+    "slug": "white-tulip-clear",
+    "price": 249
+  },
+  {
+    "id": 317,
+    "name": "Cream Heart Doodle",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Cream Heart Doodle.png",
+    "slug": "cream-heart-doodle",
+    "price": 249
+  },
+  {
+    "id": 318,
+    "name": "Hot Pink Floral Burst",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Hot Pink Floral Burst.png",
+    "slug": "hot-pink-floral-burst",
+    "price": 249
+  },
+  {
+    "id": 319,
+    "name": "Purple Floral Mosaic",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Purple Floral Mosaic.png",
+    "slug": "purple-floral-mosaic",
+    "price": 249
+  },
+  {
+    "id": 320,
+    "name": "Soft Floral Scatter",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Soft Floral Scatter.png",
+    "slug": "soft-floral-scatter",
+    "price": 249
+  },
+  {
+    "id": 321,
+    "name": "Retro Daisy Pop",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Retro Daisy Pop.png",
+    "slug": "retro-daisy-pop",
+    "price": 249
+  },
+  {
+    "id": 322,
+    "name": "Brown Wildflower",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Brown Wildflower.png",
+    "slug": "brown-wildflower",
+    "price": 249
+  },
+  {
+    "id": 323,
+    "name": "Cherry Blossom Fall",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Cherry Blossom Fall.png",
+    "slug": "cherry-blossom-fall",
+    "price": 249
+  },
+  {
+    "id": 324,
+    "name": "Black Hearts Scatter",
+    "category": "Pastels collection",
+    "image": "images/Pastels collection/Black Hearts Scatter.png",
+    "slug": "black-hearts-scatter",
+    "price": 249
+  },
+  {
+    "id": 325,
+    "name": "Ghost Floral Stickers",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Ghost Floral Stickers.png",
+    "slug": "ghost-floral-stickers",
+    "price": 249
+  },
+  {
+    "id": 326,
+    "name": "Take A Break Collage",
+    "category": "Scrapbook",
+    "image": "images/Scrapbook/Take A Break Collage.png",
+    "slug": "take-a-break-collage",
+    "price": 249
+  },
+  {
+    "id": 327,
+    "name": "Cherry Bear Case",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Cherry Bear Case.png",
+    "slug": "cherry-bear-case",
+    "price": 249
+  },
+  {
+    "id": 328,
+    "name": "Polka Dot Bunny",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Polka Dot Bunny.png",
+    "slug": "polka-dot-bunny",
+    "price": 249
+  },
+  {
+    "id": 329,
+    "name": "Good Things Quote",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Good Things Quote.png",
+    "slug": "good-things-quote",
+    "price": 249
+  },
+  {
+    "id": 330,
+    "name": "Dino Boba Clear",
+    "category": "Vibes and mood",
+    "image": "images/Vibes and mood/Dino Boba Clear.png",
+    "slug": "dino-boba-clear",
+    "price": 249
   }
 ];
